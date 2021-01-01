@@ -1,0 +1,68 @@
+
+.view {
+   width: 373px;
+   height: 229px;
+   margin: 10px;
+   float: left;
+
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   box-shadow: 0px 0px 5px #aaa;
+   cursor: default;
+}
+.view .mask, .view .content {
+   width: 373px;
+   height: 229px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view img {
+   display: block;
+   position: relative;
+}
+.view a.info {
+   background:url(../img/link.png) center no-repeat;
+   display: inline-block;
+   text-decoration: none;
+   padding:0;
+   text-indent:-9999px;
+   width:20px;
+   height:20px;
+}
+
+
+.fourth-effect .mask {
+	position:absolute; /* Center the mask */
+	top:50px;
+	left:200px;
+	cursor:pointer;
+    border-radius: 50px;
+    border-width: 200px;
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+	border: 50px solid rgba(0, 0, 0, 0.7);
+	-moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+	opacity:1;
+	visibility:visible;
+	-moz-transform:scale(4);
+	-webkit-transform:scale(4);
+	-o-transform:scale(4);
+	-ms-transform:scale(4);
+	transform:scale(4);
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+	-o-transition:all 0.3s ease-in-out;
+	-ms-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+.fourth-effect:hover .mask {
+   opacity: 0;
+   border:0px solid rgba(0,0,0,0.7);
+   visibility:hidden;
+}

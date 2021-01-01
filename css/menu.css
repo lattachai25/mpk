@@ -1,0 +1,107 @@
+nav a {
+	display: block;
+	padding: 0 10px;
+	color: #fff;
+	font-size: 16px !important;
+	line-height: 60px;
+	text-decoration: none;
+}
+a:hover {
+	color: #040100;
+	text-decoration-color: #ff6634;
+	-moz-text-decoration-color: #ff6634;
+}
+
+nav {
+	margin: 0;
+	background-color: #fff;
+	font-size: 16px !important;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+}
+
+nav ul li {
+	display: inline-block;
+	background-color: none;
+}
+
+nav a {
+	display: block;
+	padding: 0 10px;
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #fff;
+}
+
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 60px;
+}
+
+nav ul li:hover > ul {
+	display: inherit;
+}
+
+nav ul ul li {
+	width: 170px;
+	float: none;
+	display: list-item;
+	position: relative;
+}
+
+nav ul ul ul li {
+	position: relative;
+	top: -60px;
+	left: 170px;
+}
+
+/* Change this in order to change the Dropdown symbol */
+/* li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; } */
+
+.active {
+	background-color: #fff;
+}
+
+.active a {
+	color: #040100;
+	text-decoration-color: #ff6634 !important;
+	-moz-text-decoration-color: #ff6634 !important;
+	text-decoration: underline;
+}
+
+.search_input_top {
+	margin-top: 0px;
+	width: 68%;
+	height: 24px;
+	border: none;
+	border-bottom: 3px solid #fff;
+	float: left;
+	margin-left: 7px;
+    background-color: transparent;
+}
+.search_input_top ~ i {
+	color: white;
+}
+.search_input_top:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+    outline: none;
+    color: white;
+}
+
+#mainNav {
+	border-color: transparent;
+	background-color: transparent;
+}

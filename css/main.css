@@ -1,0 +1,641 @@
+@import url(fontAll.css);
+@font-face {
+    font-family: 'arialbold_italic';
+    src: url('arial_bold_italic-webfont.eot');
+    src: url('arial_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('arial_bold_italic-webfont.woff2') format('woff2'),
+         url('arial_bold_italic-webfont.woff') format('woff'),
+         url('arial_bold_italic-webfont.ttf') format('truetype'),
+         url('arial_bold_italic-webfont.svg#arialbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'arial bold';
+    src: url('arial_bold-webfont.eot');
+    src: url('arial_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('arial_bold-webfont.woff2') format('woff2'),
+         url('arial_bold-webfont.woff') format('woff'),
+         url('arial_bold-webfont.ttf') format('truetype'),
+         url('arial_bold-webfont.svg#arialbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'arial italic';
+    src: url('arial_italic-webfont.eot');
+    src: url('arial_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('arial_italic-webfont.woff2') format('woff2'),
+         url('arial_italic-webfont.woff') format('woff'),
+         url('arial_italic-webfont.ttf') format('truetype'),
+         url('arial_italic-webfont.svg#arialitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'arial regular';
+    src: url('arial-webfont.eot');
+    src: url('arial-webfont.eot?#iefix') format('embedded-opentype'),
+         url('arial-webfont.woff2') format('woff2'),
+         url('arial-webfont.woff') format('woff'),
+         url('arial-webfont.ttf') format('truetype'),
+         url('arial-webfont.svg#arialregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'theano_didotregular';
+    src: url('theanodidot-regular.eot');
+    src: url('theanodidot-regular.eot?#iefix') format('embedded-opentype'),
+         url('theanodidot-regular.woff2') format('woff2'),
+         url('theanodidot-regular.woff') format('woff'),
+         url('theanodidot-regular.ttf') format('truetype'),
+         url('theanodidot-regular.svg#theano_didotregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face{
+    font-family: 'ufonts.com_century_gothic__2_';
+    src: url('ufonts.com_century_gothic__2_.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'CordiaNew';
+	src: url('CordiaNew.eot');
+	src: url('CordiaNew.eot?#iefix') format('embedded-opentype'),
+		url('CordiaNew.woff') format('woff'),
+		url('CordiaNew.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ThaiSansNeue-ExtraBold';
+  src: url('ThaiSansNeue-ExtraBold.eot');
+  src: url('ThaiSansNeue-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-ExtraBold.woff2') format('woff2'),
+       url('ThaiSansNeue-ExtraBold.woff') format('woff'),
+       url('ThaiSansNeue-ExtraBold.ttf') format('truetype'),
+       url('ThaiSansNeue-ExtraBold.svg#ThaiSansNeue-ExtraBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-ExtraBoldItalic';
+  src: url('ThaiSansNeue-ExtraBoldItalic.eot');
+  src: url('ThaiSansNeue-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-ExtraBoldItalic.woff2') format('woff2'),
+       url('ThaiSansNeue-ExtraBoldItalic.woff') format('woff'),
+       url('ThaiSansNeue-ExtraBoldItalic.ttf') format('truetype'),
+       url('ThaiSansNeue-ExtraBoldItalic.svg#ThaiSansNeue-ExtraBoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-ExtraLight';
+  src: url('ThaiSansNeue-ExtraLight.eot');
+  src: url('ThaiSansNeue-ExtraLight.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-ExtraLight.woff2') format('woff2'),
+       url('ThaiSansNeue-ExtraLight.woff') format('woff'),
+       url('ThaiSansNeue-ExtraLight.ttf') format('truetype'),
+       url('ThaiSansNeue-ExtraLight.svg#ThaiSansNeue-ExtraLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-ExtraLightItalic';
+  src: url('ThaiSansNeue-ExtraLightItalic.eot');
+  src: url('ThaiSansNeue-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-ExtraLightItalic.woff2') format('woff2'),
+       url('ThaiSansNeue-ExtraLightItalic.woff') format('woff'),
+       url('ThaiSansNeue-ExtraLightItalic.ttf') format('truetype'),
+       url('ThaiSansNeue-ExtraLightItalic.svg#ThaiSansNeue-ExtraLightItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-Italic';
+  src: url('ThaiSansNeue-Italic.eot');
+  src: url('ThaiSansNeue-Italic.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-Italic.woff2') format('woff2'),
+       url('ThaiSansNeue-Italic.woff') format('woff'),
+       url('ThaiSansNeue-Italic.ttf') format('truetype'),
+       url('ThaiSansNeue-Italic.svg#ThaiSansNeue-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-Light';
+  src: url('ThaiSansNeue-Light.eot');
+  src: url('ThaiSansNeue-Light.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-Light.woff2') format('woff2'),
+       url('ThaiSansNeue-Light.woff') format('woff'),
+       url('ThaiSansNeue-Light.ttf') format('truetype'),
+       url('ThaiSansNeue-Light.svg#ThaiSansNeue-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-LightItalic';
+  src: url('ThaiSansNeue-LightItalic.eot');
+  src: url('ThaiSansNeue-LightItalic.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-LightItalic.woff2') format('woff2'),
+       url('ThaiSansNeue-LightItalic.woff') format('woff'),
+       url('ThaiSansNeue-LightItalic.ttf') format('truetype'),
+       url('ThaiSansNeue-LightItalic.svg#ThaiSansNeue-LightItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-Regular';
+  src: url('ThaiSansNeue-Regular.eot');
+  src: url('ThaiSansNeue-Regular.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-Regular.woff2') format('woff2'),
+       url('ThaiSansNeue-Regular.woff') format('woff'),
+       url('ThaiSansNeue-Regular.ttf') format('truetype'),
+       url('ThaiSansNeue-Regular.svg#ThaiSansNeue-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-SemiBold';
+  src: url('ThaiSansNeue-SemiBold.eot');
+  src: url('ThaiSansNeue-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-SemiBold.woff2') format('woff2'),
+       url('ThaiSansNeue-SemiBold.woff') format('woff'),
+       url('ThaiSansNeue-SemiBold.ttf') format('truetype'),
+       url('ThaiSansNeue-SemiBold.svg#ThaiSansNeue-SemiBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-SemiBoldItalic';
+  src: url('ThaiSansNeue-SemiBoldItalic.eot');
+  src: url('ThaiSansNeue-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-SemiBoldItalic.woff2') format('woff2'),
+       url('ThaiSansNeue-SemiBoldItalic.woff') format('woff'),
+       url('ThaiSansNeue-SemiBoldItalic.ttf') format('truetype'),
+       url('ThaiSansNeue-SemiBoldItalic.svg#ThaiSansNeue-SemiBoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-UltraBold';
+  src: url('ThaiSansNeue-UltraBold.eot');
+  src: url('ThaiSansNeue-UltraBold.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-UltraBold.woff2') format('woff2'),
+       url('ThaiSansNeue-UltraBold.woff') format('woff'),
+       url('ThaiSansNeue-UltraBold.ttf') format('truetype'),
+       url('ThaiSansNeue-UltraBold.svg#ThaiSansNeue-UltraBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-UltraBoldItalic';
+  src: url('ThaiSansNeue-UltraBoldItalic.eot');
+  src: url('ThaiSansNeue-UltraBoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-UltraBoldItalic.woff2') format('woff2'),
+       url('ThaiSansNeue-UltraBoldItalic.woff') format('woff'),
+       url('ThaiSansNeue-UltraBoldItalic.ttf') format('truetype'),
+       url('ThaiSansNeue-UltraBoldItalic.svg#ThaiSansNeue-UltraBoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-UltraLight';
+  src: url('ThaiSansNeue-UltraLight.eot');
+  src: url('ThaiSansNeue-UltraLight.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-UltraLight.woff2') format('woff2'),
+       url('ThaiSansNeue-UltraLight.woff') format('woff'),
+       url('ThaiSansNeue-UltraLight.ttf') format('truetype'),
+       url('ThaiSansNeue-UltraLight.svg#ThaiSansNeue-UltraLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-UltraLightItalic';
+  src: url('ThaiSansNeue-UltraLightItalic.eot');
+  src: url('ThaiSansNeue-UltraLightItalic.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-UltraLightItalic.woff2') format('woff2'),
+       url('ThaiSansNeue-UltraLightItalic.woff') format('woff'),
+       url('ThaiSansNeue-UltraLightItalic.ttf') format('truetype'),
+       url('ThaiSansNeue-UltraLightItalic.svg#ThaiSansNeue-UltraLightItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-Black';
+  src: url('ThaiSansNeue-Black.eot');
+  src: url('ThaiSansNeue-Black.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-Black.woff2') format('woff2'),
+       url('ThaiSansNeue-Black.woff') format('woff'),
+       url('ThaiSansNeue-Black.ttf') format('truetype'),
+       url('ThaiSansNeue-Black.svg#ThaiSansNeue-Black') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-BlackItalic';
+  src: url('ThaiSansNeue-BlackItalic.eot');
+  src: url('ThaiSansNeue-BlackItalic.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-BlackItalic.woff2') format('woff2'),
+       url('ThaiSansNeue-BlackItalic.woff') format('woff'),
+       url('ThaiSansNeue-BlackItalic.ttf') format('truetype'),
+       url('ThaiSansNeue-BlackItalic.svg#ThaiSansNeue-BlackItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-Bold';
+  src: url('ThaiSansNeue-Bold.eot');
+  src: url('ThaiSansNeue-Bold.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-Bold.woff2') format('woff2'),
+       url('ThaiSansNeue-Bold.woff') format('woff'),
+       url('ThaiSansNeue-Bold.ttf') format('truetype'),
+       url('ThaiSansNeue-Bold.svg#ThaiSansNeue-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ThaiSansNeue-BoldItalic';
+  src: url('ThaiSansNeue-BoldItalic.eot');
+  src: url('ThaiSansNeue-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('ThaiSansNeue-BoldItalic.woff2') format('woff2'),
+       url('ThaiSansNeue-BoldItalic.woff') format('woff'),
+       url('ThaiSansNeue-BoldItalic.ttf') format('truetype'),
+       url('ThaiSansNeue-BoldItalic.svg#ThaiSansNeue-BoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/*   menu header  */
+.bg{
+
+	width: 100%;
+	height: 131px;
+	margin: 0 auto;
+	background: url('../image/BG/hendBG.png') no-repeat;
+	margin-top: 0;
+    background-size:100%;
+    width: 100%;
+    height:131px;
+    top:0;
+    left:0;
+}
+.menu{
+	width: 800px;
+	height: 42px;
+	margin-top: -515px;
+	background: #FFF;
+	position: absolute;
+	z-index: 999;
+}
+.nav{
+	margin: 10px;
+	height: 42px;
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-top: -0px;
+	background: #FFF;
+	float: right;
+
+}
+.nav li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+.nav li a{
+	color: #FFF;
+	padding-top: 5px;
+	height: 35px;
+	font-family:'Arial';
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+	margin: 0;
+	line-height: 33px;
+	overflow: hidden;
+	float: left;
+	width: 98px;
+	text-align: center;
+	background: url('../image/menu/menu.png') no-repeat;
+	border: 1px solid #FFF;
+}
+.nav li a:hover{
+	color: #80A23F;
+	background: #FFF;
+}
+.bgsilde{
+	width:802px;
+	height: 123px;
+	background: url('../image/home/slide.png') no-repeat;
+	margin-top: -100px; 
+	position: absolute;
+	z-index: 99;
+	}
+
+.logomenu{
+	width: 156px;
+	height: 71px;
+	margin-left: 27px;
+	margin-top: -530px;
+	float: left;
+	position: absolute;
+	z-index: 9999;
+
+}
+.lang{
+	width: 45px;
+	height: 20px;
+	margin-top: -540px;
+	margin-left: 720px;
+	position: absolute;
+	z-index: 9999;
+
+}
+.th{
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-right: 5px;
+	font-family:'Arial';
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.th a{
+	text-decoration: none;
+	color: #4D4D4D;
+}
+
+.en{
+	width: 20px;
+	height: 20px;
+	float: left;
+	font-family:'Arial';
+	font-weight: bold;
+	font-size: 14px;
+}
+.en a{
+	text-decoration: none;
+	color: #4D4D4D;
+}
+
+
+
+
+/*---------------------------------*/
+/*       main     */
+.body{
+	width: 800px;
+	height: 160px;
+	margin:0 auto !important;
+	
+}
+.HIGHLGHT{
+	width: 800px;
+	height: 131px;
+	margin:0 auto;
+	background: url('../image/home/highlght.png') no-repeat;
+	margin-top: 430px;
+}
+.box_imghome{
+	width: 650px;
+	height: 95px;
+	padding-top: 7px;
+	margin-left: 115px; 
+	position: absolute;
+
+
+}
+.pic1{
+	width: 100px;
+	height: 95px; 
+	margin-top: 10px;
+}
+.pic2{
+	width: 142px;
+	height: 95px;
+	margin-left:125px;
+	margin-top: -95px;
+}
+.pic3
+{
+	width: 142px;
+	height: 95px;
+	margin-left:248px;
+	margin-top: -95px;
+}
+.pic4
+{
+	width: 142px;
+	height: 95px;
+	margin-left:370px;
+	margin-top: -95px;
+}
+.pic5
+{
+	width: 142px;
+	height: 95px;
+	margin-left:493px;
+	margin-top: -95px;
+}
+
+/*--------------------------------*/
+/*  footer   */
+.bgfooter{
+    background: url('../image/BG/footerbg.png') no-repeat;
+    margin-bottom: 0;
+    background-size:100%;
+    width: 100%;
+    padding-top: 5px;
+	border-top: 1px solid #767474;
+	height: 145px;
+    bottom:0;
+}
+
+.companey{
+	color: #808080;
+	width: 200px;
+	height: 99px;
+	font-family:'Arial';
+	font-size: 12px;
+  	float: left;
+  	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+.footmap{
+	width: 207px;
+	height: 131px;
+	margin-top:10px; 
+	float: left;
+
+}
+
+.menufooter{
+	width: 450px;
+	height: 132px;
+	margin-right:-100px;
+	float: right;
+	color: #808080;
+	font-family:'Arial';
+	font-size: 14px;
+
+}
+.aboutbas{
+	width: 117px;
+	height: 120px;
+	float: left;
+	color: #808080;
+	font-family:'Arial';
+	font-size: 12px;
+	margin-top: 15px;
+	text-decoration: none;
+
+}
+.aboutbas ul li{
+text-decoration: none;
+list-style-type: none;
+color: #808080;
+}
+
+.aboutbas a{
+	text-decoration: none;
+	color: #808080;
+}
+
+.services{
+	width:135px;
+	height:120px;
+	float: left;
+	color: #808080;
+	font-family:'Arial';
+	font-size: 12px;
+	margin-top: 15px;
+}
+
+.services ul li{
+text-decoration: none;
+list-style-type: none;
+color: #808080;
+}
+.services a{
+	text-decoration: none;
+	color: #808080;
+}
+
+.products{
+	width:110px;
+	height:120px;
+	float: left;
+	color: #808080;
+	font-family:'Arial';
+	font-weight: bold;
+	font-size: 12px;
+	margin-top: 15px;
+	text-decoration: none;
+
+}
+.products ul li{
+text-decoration: none;
+list-style-type: none;
+color: #808080;
+}
+.products a{
+	text-decoration: none;
+	color: #808080;
+}
+/*-----------------------------------*/
+/*-----------------------------------*/
+.content{
+	width: 800px;
+	margin: 0 auto;
+}
+
+
+.footercontent{
+	width: 800px;
+	height: 131px;
+	margin: 0 auto;
+}
+
+.mainmenu{
+	width: 500px;
+	height: 71px;
+	margin-top: 38px;
+	float: right;
+}
+.box_menu{
+	width: 800px;
+	height: 535px;
+	margin-top: 100px;
+	margin: 0 auto;
+}

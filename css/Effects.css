@@ -1,0 +1,508 @@
+/* products page  */
+
+.box_pro{
+   width: 800px;
+   height:280px;
+   margin-top:0px; 
+   float: left;
+   position: relative;
+}
+
+/*---------------------------------*/
+.box_pro2{
+   width: 800px;
+   height: 280px;
+   float: left;
+   margin-top:14px; 
+   position: relative;
+}
+
+/*----------------------------------*/
+.box_pro3{
+   width: 800px;
+   height: 332px;
+   float: left;
+   margin-top:14px; 
+   position: relative;
+}
+/*--------------------------------------*/
+
+
+
+/* CSS3 STYLE GENERIC */
+.view {
+   width: 380px;
+   height: 280px;
+   margin: 4px;
+   float: left;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   box-shadow: 0px 0px 5px #aaa;
+   cursor: default;
+}
+.view .mask, .view .content {
+   width: 398px;
+   height: 280px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view img {
+   display: block;
+   position: relative;
+}
+/* MENU STYLE------------------------------------------------- */
+
+/* FOURTH EFFECTS */
+
+.palm .mask {
+   position:absolute; /* Center the mask */
+   top:100px;
+   left:180px;
+   cursor:pointer;
+    display: inline-block;
+    height:0px;
+    width: 0px;
+   border: 80px solid rgba(0, 0, 0, 0.8);
+   -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+   opacity:1;
+   visibility:visible;
+   -moz-transform:scale(4);
+   -webkit-transform:scale(4);
+   -o-transform:scale(4);
+   -ms-transform:scale(4);
+   transform:scale(4);
+   -moz-transition:all 0.3s ease-in-out;
+   -webkit-transition:all 0.3s ease-in-out;
+   -o-transition:all 0.3s ease-in-out;
+   -ms-transition:all 0.3s ease-in-out;
+   transition:all 0.3s ease-in-out;
+}
+.palm:hover .mask {
+   opacity: 0;
+   border:0px solid rgba(0,0,0,0.7);
+   visibility:hidden;
+}
+
+
+/* CSS3 STYLE GENERIC   206 X 229 ---------------------------------------------*/
+.view1 {
+   width: 380px;
+   height: 280px;
+   margin: 4px;
+   float: left;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   box-shadow: 0px 0px 5px #aaa;
+   cursor: default;
+}
+.view1 .mask1, .view1 .content {
+   width: 398px;
+   height: 280px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view1 img {
+   display: block;
+   position: relative;
+}
+/* MENU STYLE------------------------------------------------- */
+
+/* FOURTH EFFECTS */
+
+.palm1 .mask1 {
+   position:absolute; /* Center the mask */
+   top:100px;
+   left:180px;
+   cursor:pointer;
+    display: inline-block;
+    height:0px;
+    width: 0px;
+   border: 80px solid rgba(0, 0, 0, 0.8);
+   -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+   opacity:1;
+   visibility:visible;
+   -moz-transform:scale(4);
+   -webkit-transform:scale(4);
+   -o-transform:scale(4);
+   -ms-transform:scale(4);
+   transform:scale(4);
+   -moz-transition:all 0.3s ease-in-out;
+   -webkit-transition:all 0.3s ease-in-out;
+   -o-transition:all 0.3s ease-in-out;
+   -ms-transition:all 0.3s ease-in-out;
+   transition:all 0.3s ease-in-out;
+}
+.palm1:hover .mask1 {
+   opacity: 0;
+   border:0px solid rgba(0,0,0,0.7);
+   visibility:hidden;
+}
+
+
+/* CSS3 STYLE GENERIC   185 X 108 ---------------------------------------------*/
+.view2 {
+   width: 200px;
+   height: 108px;
+   margin: 4px;
+   float: left;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   box-shadow: 0px 0px 5px #aaa;
+   cursor: default;
+}
+.view2 .mask2, .view2 .content {
+   width: 200px;
+   height: 108px; 
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view2 img {
+   display: block;
+   position: relative;
+}
+/* MENU STYLE------------------------------------------------- */
+
+/* FOURTH EFFECTS */
+
+.palm2 .mask2 {
+   position:absolute; /* Center the mask */
+   top:50px;
+   left:70px;
+   cursor:pointer;
+    display: inline-block;
+    height:0px;
+    width: 0px;
+   border: 60px solid rgba(0, 0, 0, 0.8);
+   -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+   opacity:1;
+   visibility:visible;
+   -moz-transform:scale(4);
+   -webkit-transform:scale(4);
+   -o-transform:scale(4);
+   -ms-transform:scale(4);
+   transform:scale(4);
+   -moz-transition:all 0.3s ease-in-out;
+   -webkit-transition:all 0.3s ease-in-out;
+   -o-transition:all 0.3s ease-in-out;
+   -ms-transition:all 0.3s ease-in-out;
+   transition:all 0.3s ease-in-out;
+}
+.palm2:hover .mask2 {
+   opacity: 0;
+   border:0px solid rgba(0,0,0,0.7);
+   visibility:hidden;
+}
+/* CSS3 STYLE GENERIC   185 X 108 ---------------------------------------------*/
+.view3 {
+   width: 185px;
+   height: 108px;
+   margin: 4px;
+   float: left;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   box-shadow: 0px 0px 5px #aaa;
+   cursor: default;
+}
+.view3 .mask3, .view3 .content {
+   width: 185px;
+   height: 108px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view3 img {
+   display: block;
+   position: relative;
+}
+/* MENU STYLE------------------------------------------------- */
+
+/* FOURTH EFFECTS */
+
+.palm3 .mask3 {
+   position:absolute; /* Center the mask */
+   top:50px;
+   left:80px;
+   cursor:pointer;
+    display: inline-block;
+    height:0px;
+    width: 0px;
+   border: 50px solid rgba(0, 0, 0, 0.8);
+   -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+   opacity:1;
+   visibility:visible;
+   -moz-transform:scale(4);
+   -webkit-transform:scale(4);
+   -o-transform:scale(4);
+   -ms-transform:scale(4);
+   transform:scale(4);
+   -moz-transition:all 0.3s ease-in-out;
+   -webkit-transition:all 0.3s ease-in-out;
+   -o-transition:all 0.3s ease-in-out;
+   -ms-transition:all 0.3s ease-in-out;
+   transition:all 0.3s ease-in-out;
+}
+.palm3:hover .mask3 {
+   opacity: 0;
+   border:0px solid rgba(0,0,0,0.7);
+   visibility:hidden;
+}
+
+
+/* CSS3 STYLE GENERIC   193 X 299 ---------------------------------------------*/
+.view4 {
+   width: 373px;
+   height: 229px;
+   margin: 4px;
+   float: left;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   box-shadow: 0px 0px 5px #aaa;
+   cursor: default;
+}
+.view4 .mask4, .view4 .content {
+   width: 373px;
+   height: 229px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view4 img {
+   display: block;
+   position: relative;
+}
+/* MENU STYLE------------------------------------------------- */
+
+/* FOURTH EFFECTS */
+
+.palm4 .mask4 {
+   position:absolute; /* Center the mask */
+   top:100px;
+   left:140px;
+   cursor:pointer;
+    display: inline-block;
+    height:0px;
+    width: 0px;
+   border: 50px solid rgba(0, 0, 0, 0.8);
+   -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+   opacity:1;
+   visibility:visible;
+   -moz-transform:scale(4);
+   -webkit-transform:scale(4);
+   -o-transform:scale(4);
+   -ms-transform:scale(4);
+   transform:scale(4);
+   -moz-transition:all 0.3s ease-in-out;
+   -webkit-transition:all 0.3s ease-in-out;
+   -o-transition:all 0.3s ease-in-out;
+   -ms-transition:all 0.3s ease-in-out;
+   transition:all 0.3s ease-in-out;
+}
+.palm4:hover .mask4 {
+   opacity: 0;
+   border:0px solid rgba(0,0,0,0.7);
+   visibility:hidden;
+}
+
+
+/* CSS3 STYLE GENERIC   373 X 299 ---------------------------------------------*/
+.view5 {
+   width: 410px;
+   height: 229px;
+   margin: 4px;
+   float: left;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   box-shadow: 0px 0px 5px #aaa;
+   cursor: default;
+}
+.view5 .mask5, .view5 .content {
+   width: 410px;
+   height: 229px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view5 img {
+   display: block;
+   position: relative;
+}
+/* MENU STYLE------------------------------------------------- */
+
+/* FOURTH EFFECTS */
+
+.palm5 .mask5 {
+   position:absolute; /* Center the mask */
+   top:100px;
+   left:150px;
+   cursor:pointer;
+    display: inline-block;
+    height:0px;
+    width: 0px;
+   border: 80px solid rgba(0, 0, 0, 0.8);
+   -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+   opacity:1;
+   visibility:visible;
+   -moz-transform:scale(4);
+   -webkit-transform:scale(4);
+   -o-transform:scale(4);
+   -ms-transform:scale(4);
+   transform:scale(4);
+   -moz-transition:all 0.3s ease-in-out;
+   -webkit-transition:all 0.3s ease-in-out;
+   -o-transition:all 0.3s ease-in-out;
+   -ms-transition:all 0.3s ease-in-out;
+   transition:all 0.3s ease-in-out;
+}
+.palm5:hover .mask5 {
+   opacity: 0;
+   border:0px solid rgba(0,0,0,0.7);
+   visibility:hidden;
+}
+
+
+
+
+/* CSS3 STYLE GENERIC   500 X 299 ---------------------------------------------*/
+.view6 {
+   width: 250px;
+   height: 229px;
+   margin: 4px;
+   float: left;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   box-shadow: 0px 0px 5px #aaa;
+   cursor: default;
+}
+.view6 .mask6, .view6 .content {
+   width: 250px;
+   height: 229px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view6 img {
+   display: block;
+   position: relative;
+}
+/* MENU STYLE------------------------------------------------- */
+
+/* FOURTH EFFECTS */
+
+.palm6 .mask6 {
+   position:absolute; /* Center the mask */
+   top:100px;
+   left:100px;
+   cursor:pointer;
+    display: inline-block;
+    height:0px;
+    width: 0px;
+   border: 50px solid rgba(0, 0, 0, 0.8);
+   -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+   opacity:1;
+   visibility:visible;
+   -moz-transform:scale(4);
+   -webkit-transform:scale(4);
+   -o-transform:scale(4);
+   -ms-transform:scale(4);
+   transform:scale(4);
+   -moz-transition:all 0.3s ease-in-out;
+   -webkit-transition:all 0.3s ease-in-out;
+   -o-transition:all 0.3s ease-in-out;
+   -ms-transition:all 0.3s ease-in-out;
+   transition:all 0.3s ease-in-out;
+}
+.palm6:hover .mask6 {
+   opacity: 0;
+   border:0px solid rgba(0,0,0,0.7);
+   visibility:hidden;
+}
+
+/* CSS3 STYLE GENERIC   280 X 299 ---------------------------------------------*/
+.view7 {
+   width: 282px;
+   height: 229px;
+   margin: 4px;
+   float: left;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   box-shadow: 0px 0px 5px #aaa;
+   cursor: default;
+}
+.view7 .mask7, .view7 .content {
+   width: 282px;
+   height: 229px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view7 img {
+   display: block;
+   position: relative;
+}
+/* MENU STYLE------------------------------------------------- */
+
+/* FOURTH EFFECTS */
+
+.palm7 .mask7 {
+   position:absolute; /* Center the mask */
+   top:80px;
+   left:120px;
+   cursor:pointer;
+    display: inline-block;
+    height:0px;
+    width: 0px;
+   border: 50px solid rgba(0, 0, 0, 0.8);
+   -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+   opacity:1;
+   visibility:visible;
+   -moz-transform:scale(4);
+   -webkit-transform:scale(4);
+   -o-transform:scale(4);
+   -ms-transform:scale(4);
+   transform:scale(4);
+   -moz-transition:all 0.3s ease-in-out;
+   -webkit-transition:all 0.3s ease-in-out;
+   -o-transition:all 0.3s ease-in-out;
+   -ms-transition:all 0.3s ease-in-out;
+   transition:all 0.3s ease-in-out;
+}
+.palm7:hover .mask7 {
+   opacity: 0;
+   border:0px solid rgba(0,0,0,0.7);
+   visibility:hidden;
+}
