@@ -16,7 +16,7 @@ a:hover{
   color:black;
 }
 .hamberger{
-  display:none;
+  display:inline-block;
 }
 @media only screen and (max-width: 1150px) {
   .menu ul li {
@@ -35,6 +35,21 @@ width:80%;
   align-items: center;
 }
 }
+
+.search_input_top {
+    margin-top: 0px;
+    width: 68%;
+    height: 24px;
+    border: none;
+    border-bottom: 3px solid #000 !important;
+    float: left;
+    margin-left: 7px;
+    background-color: transparent;
+}
+.search_input_top ~ i {
+    color: #000 !important;
+}
+
 </style>
 
 <?php
@@ -53,7 +68,7 @@ $main_category = $query->result();
             <li class='logo'><img src="<?php echo base_url();?>img/icon_menu/MPK_logo-02.png" width="150" alt=""></li>
     
             <li style="margin-left:50px;"></li>
-            <li class=" divMenu" ><a href="<?php echo base_url('Home');?>" style="color:#000;">HOME</a></li>
+            <li class="divMenu" ><a href="<?php echo base_url('Home');?>" style="color:#000;">HOME</a></li>
 
             <li <?php if($this->uri->segment(1)=="select_your_bike")
             {echo 'class="active"';}
@@ -103,13 +118,60 @@ $main_category = $query->result();
               <input type="text" class="search_input_top divMenu" name="search" style="width:100px; margin:0 0px -6px 0">
               <i class="fas fa-search search_top divMenu" style="margin-left:-20px; position: absolute; fone-size:20px; z-index:1; "></i>
             </li>
-            <li style="margin: 0 0 0 7px; "><a  class='divMenu' href="<?php echo base_url('Register');?>">Register</a></li>
-            <li><a class='divMenu' href="<?php echo base_url('Contact');?>"><i class="fas fa-map-marker-alt" onclick="
-            this.style.Color = '#000'; 
-            this.style.color = '#ff6634';
-            <?php if($this->uri->segment(1)=="About"){echo "this.style.color = '#ff6634';";}?>
-            "></i></a></li>
-            <li class='hamberger' ><img src="<?php echo base_url();?>/img/icon_menu/menu1_14.png" width="70px" /></li>
+            <li <?php if($this->uri->segment(1)=="Register"){echo 'class="active"';}?> style="margin: 0 0 0 7px; "><a  class='divMenu' href="<?php echo base_url('Register');?>">Register</a></li>
+            <li><a class='divMenu' href="<?php echo base_url('Contact');?>"><i <?php if($this->uri->segment(1)=="Contact"){echo "this.style.color = '#ff6634'";}?> class="fas fa-map-marker-alt"></i></a></li>
+            <li class='hamberger' id="bt" onclick="toggle(this)"><img src="<?php echo base_url();?>/img/icon_menu/menu1_14.png" width="70px" /></li>
+            
+            <div class="col-12" style="display:none; position: absolute; z-index:9; margin-left:15px;" id="cont">
+            
+            <div class="row">
+            <div class="col-8"></div>
+            
+            <div class="col-4" style="background-color:#fff;">
+
+
+
+              <div class="col-12" style="margin-top:10px;">
+              <span style="color:#ff6634; font-size:15px; text-align:left;">MPK CONCEPT-</span> The authorzed<br>import / distributing center of <br>superbikes' world leading brand<br>parts and accessories with fully<br>one stop service
+              
+              <div class="text_title" style="color:#ff6634; font-size:15px;"> QUICK INFO </div>
+              </div>
+              <div class="box_line">
+              <div class="row" style="margin-top:5px;">
+              <div class="col-1"><img src="<?php echo base_url();?>img/contact/location_orange.png" width="15px" alt=""/ ></div> 
+              <div class="col-8">1097 Rama 3 Rd. <br>Chong Nonsi  Yannawa, <br>Bangkok 10120</div>
+              </div>
+
+              <div class="row" style="margin-top:10px;">
+              <div class="col-1"> <img src="<?php echo base_url();?>img/contact/time_orange.png" width="15px" alt=""/ ></div> 
+              <div class="col-8">Mon-Sat : 10am - 6.30pm</div>
+              </div>
+
+              <div class="row" style="margin-top:10px;">
+              
+              <div class="col-1"><img src="<?php echo base_url();?>img/contact/tel_orange.png" width="15px" alt=""/ ></div> 
+              <div class="col-8">(+66)86-326-1730</div>
+              </div>
+
+              <div class="row" style="margin-top:10px;">
+              
+              <div class="col-1"><img src="<?php echo base_url();?>img/contact/mail_orange.png" width="15px" alt=""/ ></div> 
+              <div class="col-8">mpkconcept.th@gmail.com</div>
+              </div>
+
+
+              <div class="row" style="margin-top:10px;">
+              
+              <div class="col-1"><img src="<?php echo base_url();?>img/contact/chat_orange.png" width="15px" alt=""/ ></div> 
+              <div class="col-8">@mpkconcept</div>
+              </div>
+              <br>
+              <br>
+
+              </div>
+              </div>
+            </div>
+          </div>
         </ul>
 </div>  
 <!-- <div class="col-1"></div> -->
@@ -126,7 +188,7 @@ $(document).ready(function(){
     $(".divMenu").hover(function(e){
           $(this).css("color",e.type === "mouseenter"?"#000":"#000");
         })
-	  if (scroll > 300) {
+	  if (scroll > 100) {
         $("#mainNav").css("background" , "#f7f7f7");  
         $("nav a").css("color","#000");
         $("nav ul li ul li a").css("color","#000");
@@ -143,13 +205,26 @@ $(document).ready(function(){
         $("nav a").css("color","#000");
         $(".active a").css("color","#000");
         $("nav ul li ul li a").css("color","#000");
-        $(".search_input_top").css("border-color","#fff");
-        $(".search_input_top").css("border-color","#fff");
-        $(".search_input_top ~ i").css("color","#fff");
+        $(".search_input_top").css("border-color","#000");
+        $(".search_input_top").css("border-color","#000");
+        $(".search_input_top ~ i").css("color","#000");
         $("#mainNav").css("background" , "transparent");
-        $(".search_input_top").css("color","#fff");
+        $(".search_input_top").css("color","#000");
         
 	  }
   })
 })
+
+function toggle(ele) {
+        var cont = document.getElementById('cont');
+        if (cont.style.display == 'block') {
+            cont.style.display = 'none';
+
+            document.getElementById(ele.id).value = 'Show DIV';
+        }
+        else {
+            cont.style.display = 'block';
+            document.getElementById(ele.id).value = 'Hide DIV';
+        }
+    }
 </script>

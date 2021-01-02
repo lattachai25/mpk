@@ -58,15 +58,14 @@
     font-weight:bold;
     color:#666666;  
 }
-.text_bmw{
-    margin-left:100px;
-    margin-top:100px;
-    font-size:18px;
-    text-align:left;
-    font-weight:bold;
-    color:#666666;   
+.text_bmw {
+    margin-left: 117px;
+    margin-top: 23px;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+    color: #666666;
 }
-
 
 
 .container {
