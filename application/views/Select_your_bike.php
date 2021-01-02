@@ -156,6 +156,7 @@
 
 .text_title{
     margin-top:10px;
+    margin-left:10px;
     font-size:17px;
     color:#000;
     font-weight: bold;
@@ -164,6 +165,7 @@
 font-size:15px;
 color:#bbbbbb;
 font-weight: bold;
+margin-left:10px;
 }
 .text_price2{
   padding-left:30px;
@@ -599,6 +601,7 @@ $category = $query->result();
                                 <div class="col-5"></div>
                                 <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
                             </div>
+                            <br><br>
                         </div>
                          <?php } ?>
     </div>
