@@ -1,14 +1,14 @@
 <style>
 .bg-footer{
     font-family:'helvetica';
-    font-size:25px;
+    font-size:15px;
     background-color:#000;
     color:#fff;
 }
 .address{
     font-family:'helvetica';
     font-weight:100;
-    font-size:17px;
+    font-size:15px;
     color:#fff;
     color:#929292;
 }
@@ -26,7 +26,7 @@
     font-family:'helvetica';
     font-weight:100;
     color:#929292;
-    font-size:18px;
+    font-size:15px;
 }
 .menu_number:hover{
   color:#929292;
@@ -37,7 +37,7 @@
     font-family:'helvetica';
     font-weight:100;
     color:#929292;
-    font-size:18px;
+    font-size:15px;
 }
 .quick_link:hover{
     color:#929292;
@@ -48,7 +48,7 @@
     font-weight:100;
     color:#929292;
     font-size:15px;
-    margin-top:180px;
+    margin-top:88px;
 }
 .icon{
     margin-left:-10px;
@@ -69,12 +69,12 @@
 .title_col{
     font-weight:bold;
     margin-top:40px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .iconFooter{
     margin-top:20px;
-    margin-bottom:50px;
+    margin-bottom:0px;
 
 }
 
@@ -96,7 +96,7 @@
                     <img class="style_icon" src="<?php echo base_url();?>img/icon_footer/chat_white.png" width="35px"/>
                 </div>
                 <br/>
-                <div class="col-12 call"> <img class="style_icon" src="<?php echo base_url();?>img/icon_footer/footer_tel_orange.png" width="25px"/>     086-3261730 </div>
+                <div class="col-12 call"> <img class="style_icon" src="<?php echo base_url();?>img/icon_footer/footer_tel_orange.png" width="20px"/>     086-3261730 </div>
                 <br/>
                 <div class="col-12 address">1097 Rama 3 Rd. Chong nonsi <br /> Yannawa Bangkok 10120 </div>
             <br>
