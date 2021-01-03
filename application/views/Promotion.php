@@ -167,12 +167,14 @@ img {
     font-size:17px;
     color:#000;
     font-weight: bold;
+    margin-left: -15px;
 }
 
 .text_price1{
 font-size:15px;
 color:#bbbbbb;
 font-weight: bold;
+margin-left: -15px;
 }
 .text_price2{
   padding-left:30px;
