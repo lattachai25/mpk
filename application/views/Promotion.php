@@ -1,4 +1,3 @@
-
 <style>
 .bx-viewport, .bx-wrapper{
     position:relative;
@@ -76,17 +75,25 @@
 }
 
 .container {
-  position: relative;
-  width: 270px;
-  height: 270px;
-  border:1px solid #bbbbbb;
-  padding: 5px;
+  position: relative; 
 }
 
 .image {
-  display: block;
-  width: 230px;
-  margin-top:30px;
+  
+  /* width: -webkit-fill-available; */
+  	margin-top: 30px;
+    margin-bottom: 20px;
+    height: auto;
+  /* display: block;
+  max-height: fit-content;
+  margin-left: auto;
+  margin-right: auto; */
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .overlay {
@@ -108,7 +115,7 @@
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -117,25 +124,25 @@
   transform: translate(-50%, -50%);
   text-align: center;
   border:2px solid #fff;
-  padding:10px;
-  width:200px;
+  padding:10px 10px 10px 10px;
+  width:auto; 
 }
 
 .show_top{
-    width:150px;
-    margin-top: -5px;
-    margin-left: -5px;
+	width:150px;
+	 margin-left: -15px;
+	 margin-top:-1px;
     position: absolute;
     color:#FFF;
     font-size: 15px;
     font-weight: 700;
     background-image:url("<?php echo base_url();?>img/promotion/orange.png");
-    background-repeat: no-repeat, repeat;
+	background-repeat: no-repeat, repeat;
+
 }
 .show_top2{
     width:150px;
-    margin-top: -5px;
-    margin-left: -5px;
+    margin-left: -15px;
     position: absolute;
     color:#FFF;
     font-size: 15px;
@@ -146,8 +153,7 @@
 
 .show_top3{
     width:150px;
-    margin-top: -5px;
-    margin-left: -5px;
+    margin-left: -15px;
     position: absolute;
     color:#FFF;
     font-size: 15px;
@@ -156,14 +162,13 @@
     background-repeat: no-repeat, repeat;
 }
 
-
-
 .text_title{
     margin-top:10px;
     font-size:17px;
     color:#000;
     font-weight: bold;
 }
+
 .text_price1{
 font-size:15px;
 color:#bbbbbb;
@@ -183,6 +188,31 @@ span{
 .bg{
     margin-top:0px;
 }
+
+.edge1{
+	width: auto;
+	border:4px solid #ff6633;
+	height: 270px;
+	
+}
+
+.edge2{
+	width: auto;
+	border:4px solid red;
+	height: 270px;
+}
+
+.edge3{
+	width: auto;
+	border:4px solid #0A3458;
+	height: 270px;
+}
+
+.edge4{
+	width: auto;
+	height: 270px;
+}
+
 
 </style>
 <?php
@@ -239,54 +269,55 @@ $pro_none = $query->result();
 
 
 <div class="bg" style="margin-top:120px;"></div>
-<div class="row">
-<div class="col-1"></div>
-<div class="col-10">
-<img src="<?php echo base_url();?>img/promotion/2_01_02.png" width="100%" alt=""/>
-<br><br>
-        <div class="bxslider">
-        <?php foreach($promo as $promos): ?>
-        <div>
-        <img src="<?php echo base_url();?>assets/uploads/img_promotion_slide/<?php echo $promos->img_slide;?>" style="width:100%" alt="" />
-        </div>
-        <?php endforeach; ?>  
-        </div>
-        <br>
-        <br>
-    <img src="<?php echo base_url();?>img/promotion/bar_top.png" width="100%" alt=""/>
-</div>
+
+<div >
+	<div class="row">
+		<div class="col-1"></div>
+		<div class="col-10">
+		<img src="<?php echo base_url();?>img/promotion/2_01_02.png" width="100%" alt=""/>
+		<br><br>
+			<div class="bxslider">
+				<?php foreach($promo as $promos): ?>
+				<div>
+					<img src="<?php echo base_url();?>assets/uploads/img_promotion_slide/<?php echo $promos->img_slide;?>" style="width:100%" alt="" />
+				</div>
+				<?php endforeach; ?>  
+			</div>
+		<br><br>
+			<img src="<?php echo base_url();?>img/promotion/bar_top.png" width="100%" alt=""/>
+		</div>
+	</div>
 </div>
 
-<div class="row">
+
+<div >
+	<div class="row">
         <div class="col-1"></div>
         <div class="col-10" style="min-height:500px;">
             <div class="row justify-content-center">
-                <div class="col-12" style="min-height:500px;">
+                <div class="col-12" style="min-height:500px; ">
 
-                    <div class="row">
-             
-                 <div class="col-12" style="margin-top:30px; text-align: right; color:#999999; font-weight:700;"> <span>1</span> / 3 < | > </div>                   
-                
+                <div class="row">
+                	<div class="col-12" style="margin-top:30px; text-align: right; color:#999999; font-weight:700;"> <span>1</span> / 3 < | > </div>                   
                     <?php foreach($pro as $pros): ?>
-                        <div class="col-3">
+                        <div class="col-3" >
                         <a href="<?php base_url();?>Promotion/view/<?php echo $pros->id;?>">
                         <br>
-                            <div class="container">
+                            <div class ="container edge1" >
                                 <div class="show_top"> &nbsp; &nbsp; HOT DEAL</div>
-                                <center>
-                                <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pros->img1;?>" class="image" alt="" />
+                                <center >
+                                <img  class="image"  src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pros->img1;?>"  alt="" />
                                 </center>
                                 <div class="overlay">
-                                    <div class="text">READ MORD <i class="fas fa-arrow-right"></i></div>
+                                    <div class="text">READ MORE <i class="fas fa-arrow-right"></i></div>
                                 </div>
                             </div>
                             </a> 
 
                             <div class="row">
-                                
                                 <div class="col-12 text_title"><?php echo $pros->name;?></div>
                                 <div class="col-12" style="height:10px;"></div>
-                                
+
                                 <div class="col-2 text_price1"><s>฿<?php echo $pros->discount_price;?></s></div>
                                 <div class="col-2 text_price2">฿<?php echo $pros->price;?></div>
                                 <div class="col-5"></div>
@@ -299,11 +330,11 @@ $pro_none = $query->result();
                         <div class="col-3">
                         <a href="<?php base_url();?>Promotion/view/<?php echo $pro_saves->id;?>">
                         <br>
-                            <div class="container">
+                            <div class="container edge2" >
                                 <div class="show_top2"> &nbsp; &nbsp; SAVE</div>
-                                <center>
+                                <center class="image">
             
-                                <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro_saves->img1;?>" class="image"  alt="" />
+                                <img  src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro_saves->img1;?>"  alt="" />
                                 </center>
                                 <div class="overlay">
                                     <div class="text">READ MORE <i class="fas fa-arrow-right"></i></div>
@@ -328,16 +359,15 @@ $pro_none = $query->result();
                         <div class="col-3">
                         <a href="<?php base_url();?>Promotion/view/<?php echo $pro_news->id;?>">
                   
-                        <!-- <a href="{{ url('Promotion_show') }}"> -->
+                        <!-- <a href="{{ url('Promotion_show') }}"> --> 
                         <br>
-                            <div class="container">
+                            <div class="container edge3">
                                 <div class="show_top3"> &nbsp; &nbsp; NEW</div>
-                                <center>
-                               
-                                <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro_news->img1;?>" class="image" style="width:80%"  alt="" />
+                                <center class="image">
+                                <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro_news->img1;?>"   alt="" />
                                 </center>
                                 <div class="overlay">
-                                    <div class="text">READ MORD <i class="fas fa-arrow-right"></i></div>
+                                    <div class="text">READ MORE <i class="fas fa-arrow-right"></i></div>
                                 </div>
                             </div>
                         </a>
@@ -361,14 +391,13 @@ $pro_none = $query->result();
 
                         <!-- <a href="{{ url('Promotion_show') }}"> -->
                         <br>
-                            <div class="container">
+                            <div class="container edge4" style="border:1px solid #bbbbbb;">
                                 
-                                <center>
-                                <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro_nones->img1;?>" class="image" style="width:80%" alt="" />
-                            
+                                <center class="image">
+                                <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro_nones->img1;?>" alt="" />
                                 </center>
                                 <div class="overlay">
-                                    <div class="text">READ MORD <i class="fas fa-arrow-right"></i></div>
+                                    <div class="text">READ MORE <i class="fas fa-arrow-right"></i></div>
                                 </div>
                             </div>
                        </a> 
@@ -389,6 +418,8 @@ $pro_none = $query->result();
                 </div>
             </div>
         </div>
+</div>
+
 </div>
 
 <br><br>
