@@ -325,6 +325,8 @@ $pro_none = $query->result();
                                 <div class="col-5"></div>
                                 <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
                             </div>
+                            <br>
+                            <br>
                         </div>
                         <?php endforeach; ?>
 
@@ -353,7 +355,9 @@ $pro_none = $query->result();
                                 <div class="col-2 text_price2">฿<?php echo $pro_saves->price;?></div>
                                 <div class="col-5"></div>
                                 <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
-                            </div>
+                            </div> 
+                            <br>
+                            <br>
                         </div>
                         <?php endforeach; ?>
 
@@ -383,7 +387,8 @@ $pro_none = $query->result();
                                 <div class="col-5"></div>
                                 <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
                             </div>
-                            
+                            <br>
+                            <br>
                         </div>
                         <?php endforeach; ?>
 
@@ -411,7 +416,8 @@ $pro_none = $query->result();
                                 <div class="col-5"></div>
                                 <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
                             </div>
-                        
+                            <br>
+                            <br>
                         </div>
                         <?php endforeach; ?>
 

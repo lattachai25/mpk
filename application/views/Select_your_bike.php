@@ -265,6 +265,13 @@ $query = $this->db->get();
 $category = $query->result();
 ?>
 
+<?php
+$this->db->select("*");
+$this->db->from("select_your_bike");
+$query = $this->db->get();
+$select_your_bike = $query->result();
+?>
+
 <div class="bg" style="margin-top:120px;"></div>
 <div class="row">
 <div class="col-1"></div>
@@ -379,55 +386,6 @@ $category = $query->result();
   </div>
   <?php endforeach; ?>
 
-
-
-
-
-
-
-        <!-- <!DOCTYPE html>
-<html>
-   <head>
-      <title>Try v1.2 Bootstrap Online</title>
-      <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <script src="bootstrap/scripts/jquery.min.js"></script>
-      <script src="/bootstrap/js/bootstrap.min.js"></script>
-   </head>
-   <body>
-      <nav class = "navbar navbar-default" role = "navigation">
-         <div class = "navbar-header">
-            <a class = "navbar-brand" href = "#">TutorialsPoint</a>
-         </div>
-         <div>
-            <ul class = "nav navbar-nav">
-               <li class = "active"><a href = "#">iOS</a></li>
-               <li><a href = "#">SVN</a></li>
-               <li class = "dropdown">
-                  <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">
-                  Java 
-                  <b class = "caret"></b>
-                  </a>
-                  <ul class = "dropdown-menu">
-                     <li><a href = "#">jmeter</a></li>
-                     <li><a href = "#">EJB</a></li>
-                     <li><a href = "#">Jasper Report</a></li>
-                     <li class = "divider"></li>
-                     <li><a href = "#">Separated link</a></li>
-                     <li class = "divider"></li>
-                     <li><a href = "#">One more separated link</a></li>
-                  </ul>
-               </li>
-            </ul>
-         </div>  
-      </nav>
-   </body>
-</html> -->
-
-
-
-
-
-     
 
 <div class="dropdown">
   <button class="btn dropdown-toggle <?php if($this->uri->segment(1)==""){echo "active";}?> menuside" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" >
@@ -577,14 +535,14 @@ $category = $query->result();
     <div class="col-1"></div>
     <div class="col-11">
     <div class="row">
-                         <?php for ($i = 1; $i < 13; $i++) { ?>
+                      <?php foreach($select_your_bike as $select_your_bikes): ?>
                         <div class="col-4">
                         <a href="<?php echo base_url('Promotion_show'); ?>">
                         
                         <br>
                             <div class="container">
                                 <center>
-                                <img src="<?php echo base_url();?>img/product/<?php echo $i ?>.png" class="image" />
+                                <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $select_your_bikes->img1;?>" class="image" />
                                 </center>
                                 <div class="overlay">
                                     <div class="text">READ MORE <i class="fas fa-arrow-right"></i></div>
@@ -593,16 +551,16 @@ $category = $query->result();
                             </a> 
 
                             <div class="row">
-                                <div class="col-12 text_title">SLIP ON CARBON S1000 RR 2019</div>
+                                <div class="col-12 text_title"><?php echo $select_your_bikes->name_product;?></div>
                                 <div class="col-12" style="height:10px;"></div>
-                                <div class="col-2 text_price1"><s>฿3,210</s></div>
-                                <div class="col-2 text_price2">฿1,234</div>
+                                <div class="col-2 text_price1"><s>฿<?php echo $select_your_bikes->Price;?></s></div>
+                                <div class="col-2 text_price2">฿<?php echo $select_your_bikes->discount;?></div>
                                 <div class="col-5"></div>
                                 <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
                             </div>
                             <br><br>
                         </div>
-                         <?php } ?>
+                        <?php endforeach; ?>
     </div>
     </div>
 
@@ -615,9 +573,13 @@ $category = $query->result();
     <div class="row">
                 <div class="col-4"></div>
                     <div class="col-4">
+                    <a href="http://[::1]/mpk/select_your_bike" data-ci-pagination-page="1" rel="prev">
                     <img src="<?php echo base_url();?>img/gallery/back_orange.png"  width="10px" />
-                     &nbsp; &nbsp; 1 &nbsp; &nbsp; 2 &nbsp; &nbsp; 3 &nbsp; &nbsp; 4 &nbsp; &nbsp; 5 &nbsp; &nbsp; <span> 6 </span>&nbsp; &nbsp; 
+                    </a>
+                    <?php echo $links; ?>
+                    <a href="http://[::1]/mpk/select_your_bike/1" data-ci-pagination-page="2" rel="next">
                     <img src="<?php echo base_url();?>img/gallery/next_orange.png"  width="10px" />
+                    </a>
                      </div>
                 <div class="col-4"></div>     
             </div> 
@@ -632,7 +594,6 @@ $category = $query->result();
 </div><!-- row min-height -->
 </body>
 
-<<<<<<< HEAD
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -650,11 +611,10 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 </script>
-=======
 <script src="bootstrap/scripts/jquery.min.js"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 
 </html>
->>>>>>> d65fce6fa0210019d3e61b0e2a671492c3918b92
+
