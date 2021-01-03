@@ -37,15 +37,15 @@ color:#bbbbbb;
 font-weight: bold;
 }
 .text_price2{
-  padding-left:30px;
+  padding-left:50px;
   font-size:15px;
   color:#ff5e0d;
   font-weight: bold;
 }
 .container {
-  width: 240px;
-  height: 240px;
-  border:1px solid #bbbbbb;
+  /* width: 240px;
+  height: 240px; */
+	border:1px solid #bbbbbb;
   padding: 0px;
 }
 
@@ -285,20 +285,44 @@ HOME / PRODUCT / <?php echo $id_cate->Name;?> / <span><?php echo $id_sub->name_s
                 <div class="col-12">
                 <a href="<?php echo base_url();?>Promotion/view/<?php echo $randoms->id;?>">
                 <div class="container">
-                  <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $randoms->img1;?>" width="100%" style="object-fit: cover; width:237px; height:237px;" />
-                </div>    
-                    <div class="row">
-                        <div class="col-12 text_title2"><?php echo $pro->name;?></div>
-                        <div class="col-12" style="height:10px;"></div>
-                        <div class="col-2 text_price1"><s>฿<?php echo $randoms->discount_price;?></s></div>
-                        <div class="col-2 text_price2">฿<?php echo $randoms->price;?></div>
-                        <div class="col-4"></div>
-                        <div class="col-2">
-                        <div class="card_2">
-                        <img src="<?php echo base_url();?>img/promotion/cart.png" width="30px" style="margin-top:-15px;">
+									<img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $randoms->img1;?>" width="100%"  />	
+								</div>  
+									<div class="col-12 text_title2"><?php echo $pro->name;?></div> 
+									<div class="col-12" style="height:10px;"></div>
+
+								<div class="container">
+									<div class="row">
+										<div class="col-3 text_price1">
+											<div ><s>฿<?php echo $randoms->discount_price;?></s></div>
+										</div>
+										<div class="col-1" ></div>
+										<div class="col-3 text_price2" style="float: left;">
+											<div >฿<?php echo $randoms->price;?></div>
+										</div>
+										<div class="col-1" ></div>
+										<div class="col-3 card_2" style="float: right;" >
+											<img src="<?php echo base_url();?>img/promotion/cart.png" width="30px" >
+										</div>
+									</div>
+								</div>  
+
+
+
+								<!-- <div class="row">
+											
+												<div class="col-12" ></div>
+												<div class="row">
+													
+													
+													
+													<div class="col-1"></div>
+													
+													<div class="col-3">
+														<div class="card_2">
+														</div>
+													</div>
                         </div>
-                        </div>
-                    </div>
+                    </div> -->
                   </a>  
                 </div>
             </div>

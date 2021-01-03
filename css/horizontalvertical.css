@@ -71,7 +71,7 @@
     padding: 0;
     float: left;
     position: relative;
-    margin-left: 60px;
+    /* margin-left: 60px; */
 }
 
 .vertical-wrapper {
