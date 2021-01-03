@@ -53,6 +53,7 @@ $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 $route['select_your_bike/(:num)'] = 'select_your_bike';
+
 /*
 | -------------------------------------------------------------------------
 | Sample REST API Routes

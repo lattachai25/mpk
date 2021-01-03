@@ -581,6 +581,7 @@ $select_your_bike = $query->result();
                     <img src="<?php echo base_url();?>img/gallery/next_orange.png"  width="10px" />
                     </a>
                      </div>
+                     
                 <div class="col-4"></div>     
             </div> 
     <br>       

@@ -36,6 +36,7 @@ class Select_your_bike extends CI_Controller {
   }
   public function view($id=null){
 
+	
 	$contents['cart_session'] = $this->session->userdata('cart_session');
 	$template=array(
 		'title'   => 'MPK Promotion',

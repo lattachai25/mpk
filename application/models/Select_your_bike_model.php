@@ -11,6 +11,7 @@ class Select_your_bike_model extends CI_Model{
         return $this->db->count_all($this->table);
     }
 
+    
     public function get_select_your_bike($limit, $start) {
         $this->db->limit($limit, $start);
         $query = $this->db->get($this->table);
