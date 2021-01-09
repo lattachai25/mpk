@@ -242,6 +242,8 @@ $news = $query->result();
 <div class="col-1"></div>
 </div>
 
+
+
 <div class="row" style="margin-top:50px;">
         <div class="col-1"></div>
         <div class="col-10" style="min-height:500px;">

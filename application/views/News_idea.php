@@ -242,7 +242,8 @@ $news = $query->result();
 <div class="col-1"></div>
 </div>
 
-<div class="row" style="margin-top:50px;">
+
+	<div class="row" style="margin-top:50px;">
         <div class="col-1"></div>
         <div class="col-10" style="min-height:500px;">
             <div class="row justify-content-center">
@@ -282,6 +283,8 @@ $news = $query->result();
             </div>
         </div>
 </div>
+
+
 
 <br><br>
 <img src="<?php echo base_url();?>img/promotion/03-13-06-2020_promotion_10.png"  width="100%" alt=""/>
