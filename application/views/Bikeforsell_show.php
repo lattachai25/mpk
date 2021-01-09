@@ -43,10 +43,19 @@ font-weight: bold;
   font-weight: bold;
 }
 .container {
-  width: 240px;
-  height: 240px;
+  /* width: 240px;
+  height: 240px; */
   border:1px solid #bbbbbb;
   padding: 0px;
+}
+
+
+
+.container1{
+	border:1px solid #bbbbbb;
+	padding: 0px;
+    height: 220px;
+    width: auto;
 }
 
 .brand{
@@ -80,8 +89,8 @@ font-weight: bold;
 }
 
 #horizon-slider ul li {
-    width: 600px;
-    height: 86% !important;
+	width: 600px;
+    height: 60% !important;
     float: left;
     display: inline;
     text-align: center;
@@ -145,10 +154,15 @@ HOME / PRODUCT / BRAKE SYSTEM / <span>DISC BRAKE</span>
 
             </ul>
           </div>
-        </div>
-        <div class="horizon-wrapper">
+				</div>
+				
+				<div class="row">
+					<div class="col-2"></div>
+					<div class="col-6">
+
+      <div class="horizon-wrapper"  style=" margin-left: -100px; width: 605px;">
           <div id="horizon-slider">
-            <ul style="width: 7000px; height: 700px; left: 0px; top: 0px;">
+            <ul style="width: 500px; height: 700px; left: 0px; top: 0px;">
               <li
               data-image="<?php echo base_url('img/product/category/1.png');?>"
                 class="ui-draggable"
@@ -170,6 +184,11 @@ HOME / PRODUCT / BRAKE SYSTEM / <span>DISC BRAKE</span>
           </div>
 
         </div>
+					</div>
+					<div class="col-4"></div>
+
+				</div>
+  
       </div>
   </div>
   <div class="col-4">
@@ -236,10 +255,10 @@ HOME / PRODUCT / BRAKE SYSTEM / <span>DISC BRAKE</span>
         <!-- row -->
         <div class="row">
             <div id="owl-demo" class="owl-carousel owl-theme">
-            @for ($i = 1; $i < 8; $i++)
+            <!-- @for ($i = 1; $i < 8; $i++) -->
             <div class="item">
                 <div class="col-12">
-                <div class="container">
+                <div class="container1">
                 <img src="<?php echo base_url();?>img/product/'.$i.'.png"width="100%" style="object-fit: cover; width:237px; height:237px;" / >
 
                 </div>    
@@ -258,7 +277,7 @@ HOME / PRODUCT / BRAKE SYSTEM / <span>DISC BRAKE</span>
                     </div>
                 </div>
             </div>
-            @endfor
+            <!-- @endfor -->
             </div>
         </div>
         <!-- row -->
