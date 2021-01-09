@@ -101,7 +101,8 @@
 }
 
 .overlay1 {
-  position: absolute;
+	position: absolute;
+
   top: 0;
   bottom: 0;
   left: 0px;
@@ -120,10 +121,11 @@
 
 
 .overlay2 {
-  position: absolute;
+	position: absolute;
+	
   top: 0;
   bottom: 0;
-  left: 0px;
+  left: 20px;
   right: 0;
   height: 56%;
   width: 100%;
@@ -137,10 +139,11 @@
 }
 
 .overlay3 {
-  position: absolute;
+	position: absolute;
+	
   top: 0;
   bottom: 0;
-  left: 0px;
+  left: 40px;
   right: 0;
   height: 56%;
   width: 100%;
@@ -155,10 +158,11 @@
 
 
 .overlay4 {
-  position: absolute;
+	position: absolute;
+	
   top: 0;
   bottom: 0;
-  left: 0px;
+  left: 60px;
   right: 0;
   height: 56%;
   width: 100%;
@@ -344,7 +348,7 @@ $bike = $query->result();
           <!--End row scall -->
         </div>
         <!-- End box scall-->
-        <div class="row"  style="width:100%; margin-top:-140px;">
+        <div class="row"  style="width:100%; margin-top:-140px; margin-left: 50px;">
           <div class="col-3"></div>
           <div class="col-9"><!--col-8-->
           <div class="row"> <!--row-->
@@ -353,7 +357,7 @@ $bike = $query->result();
           <div class="boximage col-3">
             <div class="container1">
               <a data-fancybox="gallery" href ="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img2;?>"> 
-              <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img2;?>" width="100%"  class="image2"alt="" />
+              <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img2;?>" width="100%"  class="image2" style="margin-left:-20px;" alt="" />
                 <div class="overlay1">
                   <div class="text">FULL IMAGE</div>
                 </div>
@@ -366,7 +370,7 @@ $bike = $query->result();
           <div class="boximage col-3">
             <div class="container2">
               <a data-fancybox="gallery" href ="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img3;?>"> 
-              <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img3;?>" width="100%"  class="image2" alt="" />
+              <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img3;?>" width="100%"  class="image2" style="margin-left:0px;" alt="" />
                 <div class="overlay2">
                   <div class="text">FULL IMAGE</div>
                 </div>
@@ -378,7 +382,7 @@ $bike = $query->result();
           <div class="boximage col-3">
             <div class="container3">
               <a data-fancybox="gallery" href ="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img4;?>"> 
-              <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img4;?>" width="100%"  class="image2"alt="" />
+              <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img4;?>" width="100%"  class="image2" style="margin-left:20px;" alt="" />
                 <div class="overlay3">
                   <div class="text">FULL IMAGE</div>
                 </div>
@@ -390,7 +394,7 @@ $bike = $query->result();
           <div class="boximage col-3">
             <div class="container4">
               <a data-fancybox="gallery" href ="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img5;?>"> 
-              <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img5;?>" width="100%"  class="image2" alt="" />
+              <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img5;?>" width="100%"  class="image2" style="margin-left:40px;"  alt="" />
                 <div class="overlay4">
                   <div class="text">FULL IMAGE</div>
                 </div>
