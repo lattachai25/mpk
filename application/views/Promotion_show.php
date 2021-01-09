@@ -88,7 +88,7 @@ font-weight: bold;
 
 #horizon-slider ul li {
     width: 600px;
-    height: 86% !important;
+    height: 60% !important;
     float: left;
     display: inline;
     text-align: center;
