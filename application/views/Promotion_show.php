@@ -46,7 +46,14 @@ font-weight: bold;
   /* width: 240px;
   height: 240px; */
 	border:1px solid #bbbbbb;
-  padding: 0px;
+	padding: 0px;
+}
+
+.container1{
+	border:1px solid #bbbbbb;
+	padding: 0px;
+    height: 220px;
+    width: auto;
 }
 
 .brand{
@@ -99,6 +106,29 @@ font-weight: bold;
     background-color:#f5f5f5;
 }
 
+
+.image {
+  
+  width: -webkit-fill-available;
+  
+    margin-bottom: 20px;
+		height: auto;
+		
+  display: block;
+  max-height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.image1{
+		margin-top: 10px;
+		padding-bottom: 20px;
+		padding-right: 5px;
+    padding-left: 5px;
+    height: 220px;
+    max-width: 100%;
+}
 </style>
 
 
@@ -156,6 +186,7 @@ HOME / PRODUCT / <?php echo $id_cate->Name;?> / <span><?php echo $id_sub->name_s
 <div class="row">
 <div class="product">
 
+
 <div class="row">    
   <div class="col-7">
       <div
@@ -192,30 +223,37 @@ HOME / PRODUCT / <?php echo $id_cate->Name;?> / <span><?php echo $id_sub->name_s
 
             </ul>
           </div>
-        </div>
-        <div class="horizon-wrapper">
-          <div id="horizon-slider">
-            <ul style="width: 7000px; height: 700px; left: 0px; top: 0px;">
-              <li
-                data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img1;?>"
-                class="ui-draggable"
-              ></li>
-              <li
-              data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img2;?>"                
-              class="ui-draggable"
-              ></li>
-              <li
-              data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img3;?>"                
-                class="ui-draggable"
-              ></li>
-              <li
-              data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img4;?>"                
-                class="ui-draggable"
-              ></li>
-            </ul>
-          </div>
-
-        </div>
+				</div>				
+		<div class="row" >
+			<div class="col-2"></div>
+			<div class="col-6">
+				<div class="horizon-wrapper" style=" margin-left: -100px; width: 605px;">
+								<div id="horizon-slider">
+									<ul style="width: 500px; height: 700px; top: 0px; left: 0px;" >
+									<!-- -->
+										<li
+											data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img1;?>"
+											
+										></li>
+										<li
+										data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img2;?>"                
+										
+										></li>
+										<li
+										data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img3;?>"                
+											
+										></li>
+										<li
+										data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img4;?>"                
+											
+										></li>
+									</ul>
+								</div>
+							</div>
+			</div>
+			<div class="col-4"></div>
+		</div>
+        
       </div>
   </div>
   <div class="col-4">
@@ -230,7 +268,10 @@ HOME / PRODUCT / <?php echo $id_cate->Name;?> / <span><?php echo $id_sub->name_s
       DESCRIPTION <br>
       <?php echo $pro->detail;?>
       </div>
-  </div>  
+	</div>  
+	
+
+
   <div class="box_num">
 
       <div class="row">
@@ -259,6 +300,7 @@ HOME / PRODUCT / <?php echo $id_cate->Name;?> / <span><?php echo $id_sub->name_s
 
   </div>
 </div>
+<div class="col-1"></div>
 </div>
 
     </div>
@@ -278,29 +320,31 @@ HOME / PRODUCT / <?php echo $id_cate->Name;?> / <span><?php echo $id_sub->name_s
         </div>
         <div class="col-10">
         <!-- row -->
-        <div class="row">
+        <div class="row" >
             <div id="owl-demo" class="owl-carousel owl-theme">
             <?php foreach($random as $randoms): ?>
             <div class="item">
                 <div class="col-12">
                 <a href="<?php echo base_url();?>Promotion/view/<?php echo $randoms->id;?>">
-                <div class="container">
-									<img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $randoms->img1;?>" width="100%"  />	
+                <div class="container1 " >
+								<center>
+									<img  class="image1" src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $randoms->img1;?>"   />	
+								</center>
 								</div>  
 									<div class="col-12 text_title2"><?php echo $pro->name;?></div> 
 									<div class="col-12" style="height:10px;"></div>
 
-								<div class="container">
+								<div >
 									<div class="row">
-										<div class="col-3 text_price1">
+										<div class="col-2 text_price1">
 											<div ><s>฿<?php echo $randoms->discount_price;?></s></div>
 										</div>
-										<div class="col-1" ></div>
-										<div class="col-3 text_price2" style="float: left;">
+										<div class="col-3" ></div>
+										<div class="col-2 text_price2" style="float: left;">
 											<div >฿<?php echo $randoms->price;?></div>
 										</div>
 										<div class="col-1" ></div>
-										<div class="col-3 card_2" style="float: right;" >
+										<div class="col-2 card_2" >
 											<img src="<?php echo base_url();?>img/promotion/cart.png" width="30px" >
 										</div>
 									</div>
