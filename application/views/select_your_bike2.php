@@ -258,13 +258,9 @@ $query = $this->db->get();
 $year = $query->result();
 ?>
 
-
 <?php
-$this->db->select('main_category.*, sub_category.*');
-$this->db->from('main_category');
-$this->db->join('sub_category', 'main_category.category_id = sub_category.category_id');
-    //  ->where('main_category.category_id', $id)
-
+$this->db->select("*");
+$this->db->from("main_category");
 $query = $this->db->get();
 $category = $query->result();
 ?>
@@ -294,45 +290,40 @@ $select_your_bike = $query->result();
 <div class="row" style="margin-top:100px;">
 <div class="col-2"></div>
 <div class="col-8">
-
-<form action="<?php echo base_url();?>Show.php" method="post">
     <div class="form-row">
     <div class="form-group col-md-3">
-        <select id="inputState" class="form-control" name="brand">
+        <select id="inputState" class="form-control">
             <option selected> BRAND <i class="far fa-caret-circle-down"></i> </option>
             <?php foreach($brand as $brands): ?>
-            <option value="<?php echo $brands->name;?>"><?php echo $brands->name;?></option>
+            <option><?php echo $brands->name;?></option>
             <?php endforeach; ?>
         </select>
         </div>
 
         <div class="form-group col-md-3">
-        <select id="inputState" class="form-control" name="model">
+        <select id="inputState" class="form-control">
             <option selected> MODEL <i class="far fa-caret-circle-down"></i></option>
             <?php foreach($model as $models): ?>
-            <option value="<?php echo $models->name;?>"><?php echo $models->name;?></option>
+            <option><?php echo $models->name;?></option>
             <?php endforeach; ?>
         </select>
         </div>
 
         <div class="form-group col-md-3">
-        <select id="inputState" class="form-control" name="year">
+        <select id="inputState" class="form-control">
             <option selected> YEAR <i class="far fa-caret-circle-down"></i></option>
             <?php foreach($year as $years): ?>
-            <option value="<?php echo $years->name_year;?>"><?php echo $years->name_year;?></option>
+            <option><?php echo $years->name_year;?></option>
             <?php endforeach; ?>
             
         </select>
         </div>
 
-        <button type="submit" class="form-group col-md-2 bottom_searce">SEARCE</button>
-
-        <!-- <div class="form-group col-md-2 bottom_searce">
-        <input type="submit" > SEARCE </input>
-        </div> -->
+        <div class="form-group col-md-2 bottom_searce">
+        <a href="" type="submit" > SEARCE </a>
+        </div>
     </div>
     </div>
-  </form>
 </div>
 
 
@@ -381,19 +372,19 @@ $select_your_bike = $query->result();
            
         </div>
 
-<!-- <?php foreach($category as $categorys): ?>
+<?php foreach($category as $categorys): ?>
 <button class="dropdown-btn">
 <div class="row">
 <div class="col-9"><?php echo $categorys->Name; ?></div>
 <div class="col-1"><i class="fa fa-plus fa-sm"></i></div>
 </div>
 </button>
-
   <div class="dropdown-container">
-    <a href="<?php echo $categorys->id; ?>"><?php echo $categorys->name_subcategory; ?> <?php echo $categorys->id; ?>
-    </a>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
   </div>
-  <?php endforeach; ?> -->
+  <?php endforeach; ?>
 
 
 <div class="dropdown">
@@ -401,17 +392,14 @@ $select_your_bike = $query->result();
   BRAKE SYSTEM
   </button>
   <ul class="dropdown-menu" >
-    <!-- <li><a class="<?php if($this->uri->segment(1)==""){echo "active";}?> dropdown-item menuside" href="">BRAKE MASTER CYLINDER</a></li> -->
-    <?php foreach($category as $categorys): ?>
-      <li><a class="dropdown-item menuside" href="<?php echo $categorys->sub_category_id; ?>"><?php echo $categorys->name_subcategory; ?></a></li>
-    <?php endforeach; ?>
-    <!-- <li><a class="dropdown-item menuside" href="#">CLUTCH MASTER CYLINDER</a></li>
+    <li><a class="<?php if($this->uri->segment(1)==""){echo "active";}?> dropdown-item menuside" href="">BRAKE MASTER CYLINDER</a></li>
+    <li><a class="dropdown-item menuside" href="#">CLUTCH MASTER CYLINDER</a></li>
     <li><a class="dropdown-item menuside" href="#">REAR BRAKE MASTER CYLINDER</a></li>
     <li><a class="dropdown-item menuside" href="#">FRONT CALIPER</a></li>
     <li><a class="dropdown-item menuside" href="#">REAR CALIPER</a></li>
     <li><a class="dropdown-item menuside" href="#" >DISC BRAKE</a></li>
     <li><a class="dropdown-item menuside" href="#">BRAKE PAD</a></li>
-    <li><a class="dropdown-item menuside" href="#">SWITCH</a></li> -->
+    <li><a class="dropdown-item menuside" href="#">SWITCH</a></li>
   </ul>
 </div>
 
