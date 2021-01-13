@@ -401,7 +401,7 @@ $year_id = $query->row();
         <div class="col-6 text_bmw">
         HOME / SELECT YOUR BIKE /
 
-        <?php echo $brand_id->name; ?> / <?php echo $model_id->name; ?> / <?php echo $year_id->name_year; ?>
+        <?php echo $band_id->name; ?>  / <?php echo $model_id->name; ?> / <?php echo $year_id->name_year; ?>
 
         </div>
     </div>
