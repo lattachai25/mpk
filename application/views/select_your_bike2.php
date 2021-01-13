@@ -279,6 +279,39 @@ $query = $this->db->get();
 $select_your_bike = $query->result();
 ?>
 
+<?php
+$this->db->select("*");
+$this->db->from("select_your_bike");
+$query = $this->db->get();
+$select_2 = $query->row();
+?>
+
+<?php $select_band = $select_2->brand; ?>
+<?php
+$this->db->select("*");
+$this->db->from("brand");
+$this->db->where("brand.id",$select_band);
+$query = $this->db->get();
+$band_id = $query->row();
+?>
+
+<?php  $select_model = $select_2->model; ?>
+<?php
+$this->db->select("*");
+$this->db->from("model");
+$this->db->where("model.id",$select_model);
+$query = $this->db->get();
+$model_id = $query->row();
+?>
+
+<?php  $select_year = $select_2->name_year; ?>
+<?php
+$this->db->select("*");
+$this->db->from("year");
+$this->db->where("year.id",$select_year);
+$query = $this->db->get();
+$year_id = $query->row();
+?>
 
 <div class="bg" style="margin-top:120px;"></div>
 <div class="row">
@@ -345,7 +378,7 @@ $select_your_bike = $query->result();
     <div class="col-10" style="padding-right: 0px !important; padding-left: 0px !important;">
         <div class="bar_item">
         <br><br>
-                <div class="col-12 textbrand"><center> BMW - S1000RR - 2020 <?php echo $id; ?> </center></div>
+                <div class="col-12 textbrand"><center> <?php echo $band_id->name; ?> - <?php echo $model_id->name; ?> - <?php echo $year_id->name_year; ?> </center></div>
                 <div class="col-12 textbrand_sub"><center> 25 ITEMS FOUND </center></div>
 
         </div>
@@ -360,7 +393,8 @@ $select_your_bike = $query->result();
     <div class="row">
     
         <div class="col-6 text_bmw">
-        HOME / BMW / S1000RR / 2020 
+       HOME / <?php echo $band_id->name; ?> / <?php echo $model_id->name; ?> / <?php echo $year_id->name_year; ?>
+       
         </div>
     </div>
 

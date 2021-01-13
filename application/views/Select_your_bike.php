@@ -384,7 +384,7 @@ $year_id = $query->row();
     <div class="col-10" style="padding-right: 0px !important; padding-left: 0px !important;">
         <div class="bar_item">
         <br><br>
-                <div class="col-12 textbrand"><center> BMW - S1000RR - 2020 </center></div>
+                <div class="col-12 textbrand"><center> <?php echo $band_id->name; ?> - <?php echo $model_id->name; ?> - <?php echo $year_id->name_year; ?> </center></div>
                 <div class="col-12 textbrand_sub"><center> 25 ITEMS FOUND </center></div>
 
         </div>
@@ -399,9 +399,10 @@ $year_id = $query->row();
     <div class="row">
     
         <div class="col-6 text_bmw">
-        HOME / SELECT YOUR BIKE /
-
-        <?php echo $band_id->name; ?>  / <?php echo $model_id->name; ?> / <?php echo $year_id->name_year; ?>
+        <a style="color: #666666; text-decoration: none;" href="<?php echo base_url();?>home">  HOME </a> / 
+        <a style="color: #666666; text-decoration: none;" href="<?php echo base_url();?>select_your_bike">SELECT YOUR BIKE</a> /
+        <?php echo $band_id->name; ?>  / <?php echo $model_id->name; ?> /
+         <?php echo $year_id->name_year; ?>
 
         </div>
     </div>
