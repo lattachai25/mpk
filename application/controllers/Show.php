@@ -12,14 +12,12 @@ class Show extends CI_Controller {
 		  );
 		  
 
-		  echo $brand = $_POST['brand'];
-		  echo $model = $_POST['model'];
-		  echo $year = $_POST['year'];
+		//   echo $brand = $_POST['brand'];
+		//   echo $model = $_POST['model'];
+		//   echo $year = $_POST['year'];
 		  
-
-
-		// $template['content'] = $this->load->view('Show',$contents,TRUE);
-		// $this->load->view('template2',$template);
+		$template['content'] = $this->load->view('Show',$contents,TRUE);
+		$this->load->view('template2',$template);
 	
 	}
 }

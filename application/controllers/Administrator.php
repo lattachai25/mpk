@@ -547,6 +547,7 @@ function statusDis($value)
 			->display_as('datetime',' datetime');
 			$crud->order_by('id','desc');
 	
+			$crud->set_relation('brand','brand','name');
 			$crud->set_relation('model','model','name');
 			$crud->set_relation('name_color','color','name_color');
 			$crud->set_relation('name_year','year','name_year');

@@ -32,10 +32,12 @@
     font-weight:bold;
     color:#fff;
     background:#ff6634;
+    border-radius:5px;
 }
 .bottom_searce a{
     padding-top:7px;
     color:#fff;
+    border-radius:5px;
 }
 .bar_item{
     width:100%;
@@ -276,6 +278,48 @@ $query = $this->db->get();
 $select_your_bike = $query->result();
 ?>
 
+<?php
+$this->db->select("*");
+$this->db->from("select_your_bike");
+$query = $this->db->get();
+$select_2 = $query->row();
+?>
+
+<?php $select_band = $select_2->brand; ?>
+<?php
+$this->db->select("*");
+$this->db->from("brand");
+$this->db->where("brand.id",$select_band);
+$query = $this->db->get();
+$band_id = $query->row();
+?>
+
+<?php  $select_model = $select_2->model; ?>
+<?php
+$this->db->select("*");
+$this->db->from("model");
+$this->db->where("model.id",$select_model);
+$query = $this->db->get();
+$model_id = $query->row();
+?>
+
+<?php  $select_year = $select_2->name_year; ?>
+<?php
+$this->db->select("*");
+$this->db->from("year");
+$this->db->where("year.id",$select_year);
+$query = $this->db->get();
+$year_id = $query->row();
+?>
+
+
+
+
+
+
+
+
+
 <div class="bg" style="margin-top:120px;"></div>
 <div class="row">
 <div class="col-1"></div>
@@ -295,7 +339,7 @@ $select_your_bike = $query->result();
 <div class="col-2"></div>
 <div class="col-8">
 
-<form action="<?php echo base_url();?>Show.php" method="post" enctype="multipart/form-data">
+<form action="<?php echo base_url();?>Show" method="post" enctype="multipart/form-data">
     <div class="form-row">
     <div class="form-group col-md-3">
         <select id="inputState" class="form-control" name="brand">
@@ -326,10 +370,6 @@ $select_your_bike = $query->result();
         </div>
 
         <button type="submit" class="form-group col-md-2 bottom_searce">SEARCE</button>
-
-        <!-- <div class="form-group col-md-2 bottom_searce">
-        <input type="submit" > SEARCE </input>
-        </div> -->
     </div>
     </div>
   </form>
@@ -359,7 +399,10 @@ $select_your_bike = $query->result();
     <div class="row">
     
         <div class="col-6 text_bmw">
-        HOME / BMW / S1000RR / 2020 
+        HOME / SELECT YOUR BIKE /
+
+        <?php echo $brand_id->name; ?> / <?php echo $model_id->name; ?> / <?php echo $year_id->name_year; ?>
+
         </div>
     </div>
 

@@ -32,10 +32,12 @@
     font-weight:bold;
     color:#fff;
     background:#ff6634;
+    border-radius:5px;
 }
 .bottom_searce a{
     padding-top:7px;
     color:#fff;
+    border-radius:5px;
 }
 .bar_item{
     width:100%;
@@ -272,9 +274,11 @@ $category = $query->result();
 <?php
 $this->db->select("*");
 $this->db->from("select_your_bike");
+$this->db->where("select_your_bike.id",$id);
 $query = $this->db->get();
 $select_your_bike = $query->result();
 ?>
+
 
 <div class="bg" style="margin-top:120px;"></div>
 <div class="row">
@@ -295,7 +299,7 @@ $select_your_bike = $query->result();
 <div class="col-2"></div>
 <div class="col-8">
 
-<form action="<?php echo base_url();?>Show.php" method="post" enctype="multipart/form-data">
+<form action="<?php echo base_url();?>Show" method="post" enctype="multipart/form-data">
     <div class="form-row">
     <div class="form-group col-md-3">
         <select id="inputState" class="form-control" name="brand">
@@ -327,9 +331,6 @@ $select_your_bike = $query->result();
 
         <button type="submit" class="form-group col-md-2 bottom_searce">SEARCE</button>
 
-        <!-- <div class="form-group col-md-2 bottom_searce">
-        <input type="submit" > SEARCE </input>
-        </div> -->
     </div>
     </div>
   </form>
@@ -344,7 +345,7 @@ $select_your_bike = $query->result();
     <div class="col-10" style="padding-right: 0px !important; padding-left: 0px !important;">
         <div class="bar_item">
         <br><br>
-                <div class="col-12 textbrand"><center> BMW - S1000RR - 2020 </center></div>
+                <div class="col-12 textbrand"><center> BMW - S1000RR - 2020 <?php echo $id; ?> </center></div>
                 <div class="col-12 textbrand_sub"><center> 25 ITEMS FOUND </center></div>
 
         </div>
@@ -593,7 +594,7 @@ $select_your_bike = $query->result();
     font-weight: bolder;
 }
     </style>
-    <div class="row">
+    <!-- <div class="row">
                 <div class="col-4"></div>
                     <div class="col-4">
 
@@ -604,7 +605,7 @@ $select_your_bike = $query->result();
                 <div class="col-4"></div>     
             </div> 
     <br>       
-    </div>
+    </div> -->
    
     <img src="<?php echo base_url();?>img/product/bat_footer.png" style="float:right;" width="100%" alt=""/>
 </div>
