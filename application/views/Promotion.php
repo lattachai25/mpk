@@ -303,7 +303,7 @@ $pro_none = $query->result();
                 	<div class="col-12" style="margin-top:30px; text-align: right; color:#999999; font-weight:700;"> <span>1</span> / 3 < | > </div>                   
                     <?php foreach($pro as $pros): ?>
                         <div class="col-3" >
-                        <a href="<?php base_url();?>Promotion/view/<?php echo $pros->id;?>">
+                        <a href="<?php echo base_url();?>Promotion/view/<?php echo $pros->id;?>">
                         <br>
                             <div class ="container edge1" >
                                 <div class="show_top"> &nbsp; &nbsp; HOT DEAL</div>

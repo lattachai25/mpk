@@ -98,17 +98,57 @@ font-weight: bold;
     min-height:400px;
     background-color:#f5f5f5;
 }
-
+.image1{
+		margin-top: 10px;
+		padding-bottom: 20px;
+		padding-right: 5px;
+    padding-left: 5px;
+    height: 220px;
+    max-width: 100%;
+}
 </style>
 
+<?php
+$this->db->select("*");
+$this->db->from("select_your_bike");
+$this->db->order_by('id','RANDOM');
+$query = $this->db->get();
+$random = $query->result();
+?>
+<?php
+$this->db->select("*");
+$this->db->from("select_your_bike");
+$this->db->where("select_your_bike.id",$id);
+$query = $this->db->get();
+$select= $query->row();
+?>
+<?php $id_category = $select->category; ?>
+<?php
+$this->db->select("*");
+$this->db->from("main_category");
+$this->db->where("main_category.category_id",$id_category);
+$query = $this->db->get();
+$id_cate= $query->row();
+?>
+
+<?php $sub_category_id = $select->sub_category; ?>
+<?php
+$this->db->select("*");
+$this->db->from("sub_category");
+$this->db->where("sub_category.sub_category_id",$sub_category_id);
+$query = $this->db->get();
+$sub_cat= $query->row();
+?>
+
 <div class="bg" style="margin-top:75px;"></div>
+
 <div class="row">
 <!-- top -->
 <div class="brand_top">
 <img src="<?php echo base_url();?>img/product/product_detel/top.png" width="100%"/>
 </div>
 <div class="text_top">
-HOME / PRODUCT / BRAKE SYSTEM / <span>DISC BRAKE</span>
+HOME / SELECT YOUR BIKE / <?php echo $id_cate->Name;?> / <span><?php echo $sub_cat->name_subcategory;?></span>
 </div>
 <!-- top -->
 <!-- Center --->
@@ -233,29 +273,37 @@ HOME / PRODUCT / BRAKE SYSTEM / <span>DISC BRAKE</span>
         </div>
         <div class="col-10">
         <!-- row -->
-        <div class="row">
+        <div class="row" >
             <div id="owl-demo" class="owl-carousel owl-theme">
-            @for ($i = 1; $i < 8; $i++)
+            <?php foreach($random as $randoms): ?>
             <div class="item">
                 <div class="col-12">
-                <div class="container">
-                    <img src="<?php echo base_url();?>img/product/'<?php echo $i ?>'.png" width="100%" style="object-fit: cover; width:237px; height:237px;" />
-                </div>    
-                    <div class="row">
-                        <div class="col-12 text_title2">BRAKE DISC 321X6 EWC <br> S1000 RR 2019</div>
-                        <div class="col-12" style="height:10px;"></div>
-                        <div class="col-2 text_price1"><s>฿3,210</s></div>
-                        <div class="col-2 text_price2">฿1,234</div>
-                        <div class="col-4"></div>
-                        <div class="col-2">
-                        <div class="card_2">
-                        <img src="<?php echo base_url();?>img/promotion/cart.png" width="30px" style="margin-top:-15px;">
-                        </div>
-                        </div>
-                    </div>
+                <a href="<?php echo base_url();?>Select_show/view/<?php echo $randoms->id;?>">
+                <div class="container1 " >
+								<center>
+									<img  class="image1" src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $randoms->img1;?>"   />	
+								</center>
+								</div>  
+									<div class="col-12 text_title2"><?php echo $randoms->name_product;?></div> 
+									<div class="col-12" style="height:10px;"></div>
+
+								<div >
+									<div class="row">
+										<div class="col-3 text_price1">
+											<div ><s>฿<?php echo $randoms->discount;?></s></div>
+										</div>
+										<div class="col-3 text_price2" style="float: left;">
+											<div >฿<?php echo $randoms->Price;?></div>
+										</div>
+										<div class="col-6 card_2" >
+											<img src="<?php echo base_url();?>img/promotion/cart.png" width="30px" >
+										</div>
+									</div>
+								</div>  
+                  </a>  
                 </div>
             </div>
-            @endfor
+            <?php endforeach; ?>
             </div>
         </div>
         <!-- row -->

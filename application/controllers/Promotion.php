@@ -26,7 +26,7 @@ class Promotion extends CI_Controller {
 			'id' => $id
 			);
 	
-		 $contents['id'] = $id;
+		$contents['id'] = $id;
 		 $template['content'] = $this->load->view('Promotion_show',$contents,TRUE);
 		 $this->load->view('template2',$template);
 		}

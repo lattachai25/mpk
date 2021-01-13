@@ -130,8 +130,6 @@ font-weight: bold;
     max-width: 100%;
 }
 </style>
-
-
 <?php
 $this->db->select("*");
 $this->db->from("promotion_product");
@@ -144,7 +142,7 @@ $pro= $query->row();
 <?php
 $this->db->select("*");
 $this->db->from("main_category");
-$this->db->where("main_category.id",$id_category);
+$this->db->where("main_category.category_id",$id_category);
 $query = $this->db->get();
 $id_cate= $query->row();
 ?>
@@ -153,7 +151,7 @@ $id_cate= $query->row();
 <?php
 $this->db->select("*");
 $this->db->from("sub_category");
-$this->db->where("sub_category.id",$id_subcate);
+$this->db->where("sub_category.sub_category_id",$id_subcate);
 $query = $this->db->get();
 $id_sub= $query->row();
 ?>
@@ -349,24 +347,6 @@ HOME / PRODUCT / <?php echo $id_cate->Name;?> / <span><?php echo $id_sub->name_s
 										</div>
 									</div>
 								</div>  
-
-
-
-								<!-- <div class="row">
-											
-												<div class="col-12" ></div>
-												<div class="row">
-													
-													
-													
-													<div class="col-1"></div>
-													
-													<div class="col-3">
-														<div class="card_2">
-														</div>
-													</div>
-                        </div>
-                    </div> -->
                   </a>  
                 </div>
             </div>

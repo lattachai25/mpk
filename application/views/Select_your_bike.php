@@ -285,13 +285,13 @@ $select_your_bike = $query->result();
     <div class="col-1"></div>
     <div class="col-10" style="margin-top:160px;"></div>
 </div>
-<div class="row">
+<div class="row" style="margin-top:50px;">
     <div class="col-3"></div>
     <div class="col-6 text_select"> SELECT YOUR BIKE  </div>
     <div class="col-3"></div>
 </div>
 
-<div class="row" style="margin-top:100px;">
+<div class="row" style="margin-top:50px;">
 <div class="col-2"></div>
 <div class="col-8">
 
@@ -403,7 +403,7 @@ $select_your_bike = $query->result();
   <ul class="dropdown-menu" >
     <!-- <li><a class="<?php if($this->uri->segment(1)==""){echo "active";}?> dropdown-item menuside" href="">BRAKE MASTER CYLINDER</a></li> -->
     <?php foreach($category as $categorys): ?>
-      <li><a class="dropdown-item menuside" href="<?php echo $categorys->sub_category_id; ?>"><?php echo $categorys->name_subcategory; ?></a></li>
+      <li> <a class="dropdown-item menuside" href="<?php echo base_url();?>Select_your_bike/view2/<?php echo $categorys->sub_category_id;?>"><?php echo $categorys->name_subcategory; ?></a></li>
     <?php endforeach; ?>
     <!-- <li><a class="dropdown-item menuside" href="#">CLUTCH MASTER CYLINDER</a></li>
     <li><a class="dropdown-item menuside" href="#">REAR BRAKE MASTER CYLINDER</a></li>
@@ -545,11 +545,11 @@ $select_your_bike = $query->result();
     <!-- ROW BOX -->
     <div class="row">
     <div class="col-1"></div>
-    <div class="col-11">
+    <div class="col-10">
     <div class="row">
                       <?php foreach($select_your_bike as $select_your_bikes): ?>
                         <div class="col-4">
-                        <a href="<?php echo base_url('Promotion_show'); ?>">
+                        <a href="<?php echo base_url();?>Select_your_bike/view/<?php echo $select_your_bikes->id;?>">
                         
                         <br>
                             <div class="container">
@@ -567,7 +567,7 @@ $select_your_bike = $query->result();
                                 <div class="col-12" style="height:10px;"></div>
                                 <div class="col-3 text_price1"><s>฿<?php echo $select_your_bikes->Price;?></s></div>
                                 <div class="col-3 text_price2">฿<?php echo $select_your_bikes->discount;?></div>
-                                <div class="col-5"><img src="<?php echo base_url();?>img/promotion/cart.png" style="width:30px; float: right; margin-right: -5px;"></div>
+                                <div class="col-5"><img src="<?php echo base_url();?>img/promotion/cart.png" style="width:30px; float: right; margin-right: -18px;"></div>
                             </div>
                             <br><br>
                         </div>
@@ -581,16 +581,24 @@ $select_your_bike = $query->result();
     </div>
     <!-- ROW BOX -->
     <br>
+    <style>
+    a {
+    color: #ff6634;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    }
+    b, strong {
+    font-size: 20px;
+    font-weight: bolder;
+}
+    </style>
     <div class="row">
                 <div class="col-4"></div>
                     <div class="col-4">
-                    <a href="http://[::1]/mpk/select_your_bike" data-ci-pagination-page="1" rel="prev">
-                    <img src="<?php echo base_url();?>img/gallery/back_orange.png"  width="10px" />
-                    </a>
+
                     <?php echo $links; ?>
-                    <a href="http://[::1]/mpk/select_your_bike/1" data-ci-pagination-page="2" rel="next">
-                    <img src="<?php echo base_url();?>img/gallery/next_orange.png"  width="10px" />
-                    </a>
+
                      </div>
                      
                 <div class="col-4"></div>     

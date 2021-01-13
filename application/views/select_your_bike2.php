@@ -103,7 +103,7 @@
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: 13px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -113,7 +113,7 @@
   text-align: center;
   border:2px solid #fff;
   padding:10px;
-  width:200px;
+  width:120px;
 }
 
 .show_top{
@@ -161,16 +161,16 @@
     font-weight: bold;
 }
 .text_price1{
-font-size:15px;
+font-size:17px;
 color:#bbbbbb;
-font-weight: bold;
 margin-left:10px;
+bottom: -6px;
 }
 .text_price2{
   padding-left:30px;
-  font-size:15px;
+  font-size:17px;
   color:#ff5e0d;
-  font-weight: bold;
+  bottom: -6px;
 }
 
 span{
@@ -258,9 +258,13 @@ $query = $this->db->get();
 $year = $query->result();
 ?>
 
+
 <?php
-$this->db->select("*");
-$this->db->from("main_category");
+$this->db->select('main_category.*, sub_category.*');
+$this->db->from('main_category');
+$this->db->join('sub_category', 'main_category.category_id = sub_category.category_id');
+    //  ->where('main_category.category_id', $id)
+
 $query = $this->db->get();
 $category = $query->result();
 ?>
@@ -281,49 +285,54 @@ $select_your_bike = $query->result();
     <div class="col-1"></div>
     <div class="col-10" style="margin-top:160px;"></div>
 </div>
-<div class="row">
+<div class="row" style="margin-top:50px;">
     <div class="col-3"></div>
     <div class="col-6 text_select"> SELECT YOUR BIKE  </div>
     <div class="col-3"></div>
 </div>
 
-<div class="row" style="margin-top:100px;">
+<div class="row" style="margin-top:50px;">
 <div class="col-2"></div>
 <div class="col-8">
+
+<form action="<?php echo base_url();?>Show.php" method="post" enctype="multipart/form-data">
     <div class="form-row">
     <div class="form-group col-md-3">
-        <select id="inputState" class="form-control">
+        <select id="inputState" class="form-control" name="brand">
             <option selected> BRAND <i class="far fa-caret-circle-down"></i> </option>
             <?php foreach($brand as $brands): ?>
-            <option><?php echo $brands->name;?></option>
+            <option value="<?php echo $brands->name;?>"><?php echo $brands->name;?></option>
             <?php endforeach; ?>
         </select>
         </div>
 
         <div class="form-group col-md-3">
-        <select id="inputState" class="form-control">
+        <select id="inputState" class="form-control" name="model">
             <option selected> MODEL <i class="far fa-caret-circle-down"></i></option>
             <?php foreach($model as $models): ?>
-            <option><?php echo $models->name;?></option>
+            <option value="<?php echo $models->name;?>"><?php echo $models->name;?></option>
             <?php endforeach; ?>
         </select>
         </div>
 
         <div class="form-group col-md-3">
-        <select id="inputState" class="form-control">
+        <select id="inputState" class="form-control" name="year">
             <option selected> YEAR <i class="far fa-caret-circle-down"></i></option>
             <?php foreach($year as $years): ?>
-            <option><?php echo $years->name_year;?></option>
+            <option value="<?php echo $years->name_year;?>"><?php echo $years->name_year;?></option>
             <?php endforeach; ?>
             
         </select>
         </div>
 
-        <div class="form-group col-md-2 bottom_searce">
-        <a href="" type="submit" > SEARCE </a>
-        </div>
+        <button type="submit" class="form-group col-md-2 bottom_searce">SEARCE</button>
+
+        <!-- <div class="form-group col-md-2 bottom_searce">
+        <input type="submit" > SEARCE </input>
+        </div> -->
     </div>
     </div>
+  </form>
 </div>
 
 
@@ -372,19 +381,19 @@ $select_your_bike = $query->result();
            
         </div>
 
-<?php foreach($category as $categorys): ?>
+<!-- <?php foreach($category as $categorys): ?>
 <button class="dropdown-btn">
 <div class="row">
 <div class="col-9"><?php echo $categorys->Name; ?></div>
 <div class="col-1"><i class="fa fa-plus fa-sm"></i></div>
 </div>
 </button>
+
   <div class="dropdown-container">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+    <a href="<?php echo $categorys->id; ?>"><?php echo $categorys->name_subcategory; ?> <?php echo $categorys->id; ?>
+    </a>
   </div>
-  <?php endforeach; ?>
+  <?php endforeach; ?> -->
 
 
 <div class="dropdown">
@@ -392,14 +401,17 @@ $select_your_bike = $query->result();
   BRAKE SYSTEM
   </button>
   <ul class="dropdown-menu" >
-    <li><a class="<?php if($this->uri->segment(1)==""){echo "active";}?> dropdown-item menuside" href="">BRAKE MASTER CYLINDER</a></li>
-    <li><a class="dropdown-item menuside" href="#">CLUTCH MASTER CYLINDER</a></li>
+    <!-- <li><a class="<?php if($this->uri->segment(1)==""){echo "active";}?> dropdown-item menuside" href="">BRAKE MASTER CYLINDER</a></li> -->
+    <?php foreach($category as $categorys): ?>
+      <li> <a class="dropdown-item menuside" href="<?php echo base_url();?>Select_your_bike/view2/<?php echo $categorys->sub_category_id;?>"><?php echo $categorys->name_subcategory; ?></a></li>
+    <?php endforeach; ?>
+    <!-- <li><a class="dropdown-item menuside" href="#">CLUTCH MASTER CYLINDER</a></li>
     <li><a class="dropdown-item menuside" href="#">REAR BRAKE MASTER CYLINDER</a></li>
     <li><a class="dropdown-item menuside" href="#">FRONT CALIPER</a></li>
     <li><a class="dropdown-item menuside" href="#">REAR CALIPER</a></li>
     <li><a class="dropdown-item menuside" href="#" >DISC BRAKE</a></li>
     <li><a class="dropdown-item menuside" href="#">BRAKE PAD</a></li>
-    <li><a class="dropdown-item menuside" href="#">SWITCH</a></li>
+    <li><a class="dropdown-item menuside" href="#">SWITCH</a></li> -->
   </ul>
 </div>
 
@@ -533,11 +545,11 @@ $select_your_bike = $query->result();
     <!-- ROW BOX -->
     <div class="row">
     <div class="col-1"></div>
-    <div class="col-11">
+    <div class="col-10">
     <div class="row">
                       <?php foreach($select_your_bike as $select_your_bikes): ?>
                         <div class="col-4">
-                        <a href="<?php echo base_url('Promotion_show'); ?>">
+                        <a href="<?php echo base_url('Select_show'); ?>">
                         
                         <br>
                             <div class="container">
@@ -553,10 +565,9 @@ $select_your_bike = $query->result();
                             <div class="row">
                                 <div class="col-12 text_title"><?php echo $select_your_bikes->name_product;?></div>
                                 <div class="col-12" style="height:10px;"></div>
-                                <div class="col-2 text_price1"><s>฿<?php echo $select_your_bikes->Price;?></s></div>
-                                <div class="col-2 text_price2">฿<?php echo $select_your_bikes->discount;?></div>
-                                <div class="col-5"></div>
-                                <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
+                                <div class="col-3 text_price1"><s>฿<?php echo $select_your_bikes->Price;?></s></div>
+                                <div class="col-3 text_price2">฿<?php echo $select_your_bikes->discount;?></div>
+                                <div class="col-5"><img src="<?php echo base_url();?>img/promotion/cart.png" style="width:30px; float: right; margin-right: -18px;"></div>
                             </div>
                             <br><br>
                         </div>
@@ -570,16 +581,24 @@ $select_your_bike = $query->result();
     </div>
     <!-- ROW BOX -->
     <br>
+    <style>
+    a {
+    color: #ff6634;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    }
+    b, strong {
+    font-size: 20px;
+    font-weight: bolder;
+}
+    </style>
     <div class="row">
                 <div class="col-4"></div>
                     <div class="col-4">
-                    <a href="http://[::1]/mpk/select_your_bike" data-ci-pagination-page="1" rel="prev">
-                    <img src="<?php echo base_url();?>img/gallery/back_orange.png"  width="10px" />
-                    </a>
+
                     <?php echo $links; ?>
-                    <a href="http://[::1]/mpk/select_your_bike/1" data-ci-pagination-page="2" rel="next">
-                    <img src="<?php echo base_url();?>img/gallery/next_orange.png"  width="10px" />
-                    </a>
+
                      </div>
                      
                 <div class="col-4"></div>     
