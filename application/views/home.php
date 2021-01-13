@@ -143,12 +143,12 @@ $pro = $query->result();
     font-weight:bold;
     color:#fff;
     background:#ff6634;
-    margin-left:4px;
-    border-radius: 5px;
+    border-radius:5px;
 }
 .bottom_searce a{
     padding-top:7px;
     color:#fff;
+    border-radius:5px;
 }
 .bg_play{
     margin-top: -250px !important;
@@ -376,6 +376,7 @@ span{
 
 <!-- SELECT YOUR BIKE -->    
 <div class="col-12">
+<form action="<?php echo base_url();?>Show" method="post" enctype="multipart/form-data">
     <div class="row">
     <div class="col-1"> </div>
         <div class="col-10 bg_select">
@@ -415,14 +416,13 @@ span{
                                 <?php endforeach; ?>
                             </select>
                         </div>
-                        <div class="form-group col-md-2 bottom_searce">
-                            <a href="" type="submit" > SEARCH </a>
-                        </div>
+                        <button type="submit" class="form-group col-md-2 bottom_searce">SEARCE</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </form>
 </div>
 <!-- SELECT YOUR BIKE --> 
 <!-- Best Seller -->
