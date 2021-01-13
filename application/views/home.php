@@ -143,6 +143,8 @@ $pro = $query->result();
     font-weight:bold;
     color:#fff;
     background:#ff6634;
+    margin-left:4px;
+    border-radius: 5px;
 }
 .bottom_searce a{
     padding-top:7px;
@@ -162,7 +164,8 @@ $pro = $query->result();
     color:#fff;
     text-align:left;
     font-weight:bold;
-    font-size:50px;
+    font-size:34px;
+    margin-top: 20px;
 }
 .play_vdo{
    margin-top:20%;
@@ -338,30 +341,32 @@ span{
                <br>
                <br>               
                 <div class="row">
+
                     <div class="col-3">
                         <div class="row">
-                            <div class="col-5"><img src="<?php echo base_url();?>img/home/back_icon/BestQuality.png" width="50px" alt=""></div>
+                            <div class="col-5"><img style="float: right; margin-right: -20px;" src="<?php echo base_url();?>img/home/back_icon/BestQuality.png" width="50px" alt=""></div>
                             <div class="col-7 text4">BEST <br> QUALITY</div>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="row">
-                            <div class="col-5"><img src="<?php echo base_url();?>img/home/back_icon/Service.png" width="50px" alt=""></div>
+                            <div class="col-5"><img style="float: right; margin-right: -20px;" src="<?php echo base_url();?>img/home/back_icon/Service.png" width="50px" alt=""></div>
                             <div class="col-7 text4">EXPERTISE <br> SERVICE</div>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="row">
-                            <div class="col-5"><img src="<?php echo base_url();?>img/home/back_icon/Guarantee.png" width="50px" alt=""></div>
+                            <div class="col-5"><img style="float: right; margin-right: -20px;" src="<?php echo base_url();?>img/home/back_icon/Guarantee.png" width="50px" alt=""></div>
                             <div class="col-7 text4">AUTHENTIC <br> GUARANTEE</div>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="row">
-                            <div class="col-5"><img src="<?php echo base_url();?>img/home/back_icon/SH_01.png" width="50px" alt=""></div>
+                            <div class="col-5"><img style="float: right; margin-right: -20px;" src="<?php echo base_url();?>img/home/back_icon/SH_01.png" width="50px" alt=""></div>
                             <div class="col-7 text4">SHIPPING <br> WORLDWIDE</div>
                         </div>
                     </div>
+           
                 </div>
             </div>
             <div class="col-1"></div>
@@ -377,12 +382,12 @@ span{
             <div class="row">
                 <div class="col-12" style="margin-top:160px;"></div>
             </div>
-            <div class="row">
+            <div class="row" style="margin-top:50px;">
                 <div class="col-3"></div>
                 <div class="col-6 text_select"> SELECT YOUR BIKE  </div>
                 <div class="col-3"></div>
             </div>
-            <div class="row" style="margin-top:100px;">
+            <div class="row" style="margin-top:30px;">
                 <div class="col-2"></div>
                 <div class="col-8">
                     <div class="form-row">
@@ -434,11 +439,11 @@ span{
 <div class="col-10">
 <div class="bg_play">
     <div class="row play_vdo">
-        <div class="col-3"></div>
-        <div class="col-6" style="margin-top:260px;">
+        <div class="col-2"></div>
+        <div class="col-8" style="margin-top:260px;">
             <div class="row">
                 <div class="col-8 text_vdo">
-                <?php echo $homeplaylist->Model; ?> <br> Review
+                <?php echo $homeplaylist->Model; ?> Review
                 </div>
                 <div class="col-4 icon_play">
                 <center>
@@ -470,13 +475,13 @@ span{
 
 
         <?php foreach($pro as $pros): ?>
-                        <div class="col-4">
+                        <div class="col-3">
                         <div class="col-11" style="border:1px solid #000;">
                         <a href="<?php base_url();?>Promotion/view/<?php echo $pros->id;?>">
                         <br>
                             <div class="container">
                                 <center>
-                                <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pros->img1;?>" width="90%" height="230px" alt="" />
+                                <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pros->img1;?>" width="100%" height="200px" alt="" />
                                 </center>
                                 <div class="overlay">
                                     <div class="text">READ MORD <i class="fas fa-arrow-right"></i></div>
@@ -484,7 +489,7 @@ span{
                             </div>
                         </a> 
 
-                            <div class="row">
+                            <!-- <div class="row">
                                 
                                 <div class="col-12 text_title"><?php echo $pros->name;?></div>
                                 <div class="col-12" style="height:10px;"></div>
@@ -494,7 +499,7 @@ span{
                                 <div class="col-5"></div>
                                 <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
                                 <div class="col-12" style="height:40px;"></div>
-                            </div>
+                            </div> -->
                         </div>    
                         </div>
         <?php endforeach; ?>
@@ -558,9 +563,10 @@ span{
 <!-- New Arrivals -->
 
 <!-- bike for sell -->
+<div class="col-12">
 <div class="row" style=" width:100%; height:auto; ">
-<!-- <div class="col-1"></div> -->
-<div class="col-12" style="padding:0;">
+<div class="col-1"></div>
+<div class="col-10" style="padding:0;">
     <div class="top" style="height:auto; width:100%;  background-color:#000;">
     <img src="<?php echo base_url();?>img/home/MPK_Design_001_OK_150820_1A_create_19.png" width="100%" alt=""/>
 
@@ -585,7 +591,7 @@ span{
 
     </div>
 </div>
-
+</div>
 
 </div>
 <!-- bike for sell -->

@@ -103,7 +103,7 @@
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: 13px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -113,7 +113,7 @@
   text-align: center;
   border:2px solid #fff;
   padding:10px;
-  width:200px;
+  width:120px;
 }
 
 .show_top{
@@ -161,16 +161,16 @@
     font-weight: bold;
 }
 .text_price1{
-font-size:15px;
+font-size:17px;
 color:#bbbbbb;
-font-weight: bold;
 margin-left:10px;
+bottom: -6px;
 }
 .text_price2{
   padding-left:30px;
-  font-size:15px;
+  font-size:17px;
   color:#ff5e0d;
-  font-weight: bold;
+  bottom: -6px;
 }
 
 span{
@@ -295,7 +295,7 @@ $select_your_bike = $query->result();
 <div class="col-2"></div>
 <div class="col-8">
 
-<form action="<?php echo base_url();?>Show.php" method="post">
+<form action="<?php echo base_url();?>Show.php" method="post" enctype="multipart/form-data">
     <div class="form-row">
     <div class="form-group col-md-3">
         <select id="inputState" class="form-control" name="brand">
@@ -565,10 +565,9 @@ $select_your_bike = $query->result();
                             <div class="row">
                                 <div class="col-12 text_title"><?php echo $select_your_bikes->name_product;?></div>
                                 <div class="col-12" style="height:10px;"></div>
-                                <div class="col-2 text_price1"><s>฿<?php echo $select_your_bikes->Price;?></s></div>
-                                <div class="col-2 text_price2">฿<?php echo $select_your_bikes->discount;?></div>
-                                <div class="col-5"></div>
-                                <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
+                                <div class="col-3 text_price1"><s>฿<?php echo $select_your_bikes->Price;?></s></div>
+                                <div class="col-3 text_price2">฿<?php echo $select_your_bikes->discount;?></div>
+                                <div class="col-5"><img src="<?php echo base_url();?>img/promotion/cart.png" style="width:30px; float: right; margin-right: -5px;"></div>
                             </div>
                             <br><br>
                         </div>

@@ -47,7 +47,7 @@ span{ color:#ff6634; }
     color:#ff6634;
     font-family:'rsu';
     font-weight:600;
-    font-size:60px;
+    font-size:55px;
     text-align: left;
     margin-top:150px;
     margin-left:60px;

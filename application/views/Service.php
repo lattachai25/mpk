@@ -20,7 +20,6 @@ margin:10px;
     color:#000;
     font-family:'helvetica';
     text-align: right;
-    font-weight:bold;
     text-align: center;
     font-size:20px;
 }
@@ -28,7 +27,6 @@ margin:10px;
     color:#ff6634;
     font-family:'helvetica';
     text-align: right;
-    font-weight:bold;
     text-align: center;
     font-size:20px;
 }

@@ -115,7 +115,7 @@ img {
 
 .text {
   color: white;
-  font-size: 16px;
+  font-size: 13px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -171,16 +171,16 @@ img {
 }
 
 .text_price1{
-font-size:15px;
+font-size:17px;
 color:#bbbbbb;
-font-weight: bold;
 margin-left: -15px;
+bottom: -10px;
 }
 .text_price2{
   padding-left:30px;
-  font-size:15px;
+  font-size:17px;
   color:#ff5e0d;
-  font-weight: bold;
+  bottom: -10px;
 }
 
 span{
@@ -320,10 +320,9 @@ $pro_none = $query->result();
                                 <div class="col-12 text_title"><?php echo $pros->name;?></div>
                                 <div class="col-12" style="height:10px;"></div>
 
-                                <div class="col-2 text_price1"><s>฿<?php echo $pros->discount_price;?></s></div>
-                                <div class="col-2 text_price2">฿<?php echo $pros->price;?></div>
-                                <div class="col-5"></div>
-                                <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
+                                <div class="col-3 text_price1"><s>฿<?php echo $pros->discount_price;?></s></div>
+                                <div class="col-3 text_price2">฿<?php echo $pros->price;?></div>
+                                <div class="col-6"><img src="<?php echo base_url();?>img/promotion/cart.png" style="width:30px; float: right; margin-right: -28px;"></div>
                             </div>
                             <br>
                             <br>
@@ -351,10 +350,9 @@ $pro_none = $query->result();
                                 <div class="col-12 text_title"><?php echo $pro_saves->name;?></div>
                                 <div class="col-12" style="height:10px;"></div>
                                 
-                                <div class="col-2 text_price1"><s>฿<?php echo $pro_saves->discount_price;?></s></div>
-                                <div class="col-2 text_price2">฿<?php echo $pro_saves->price;?></div>
-                                <div class="col-5"></div>
-                                <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
+                                <div class="col-3 text_price1"><s>฿<?php echo $pro_saves->discount_price;?></s></div>
+                                <div class="col-3 text_price2">฿<?php echo $pro_saves->price;?></div>
+                                <div class="col-6"><img src="<?php echo base_url();?>img/promotion/cart.png" style="width:30px; float: right; margin-right: -28px;"></div>
                             </div> 
                             <br>
                             <br>
@@ -382,10 +380,9 @@ $pro_none = $query->result();
                                 <div class="col-12 text_title"><?php echo $pro_news->name;?></div>
                                 <div class="col-12" style="height:10px;"></div>
                                 
-                                <div class="col-2 text_price1"><s>฿<?php echo $pro_news->discount_price;?></s></div>
-                                <div class="col-2 text_price2">฿<?php echo $pro_news->price;?></div>
-                                <div class="col-5"></div>
-                                <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
+                                <div class="col-3 text_price1"><s>฿<?php echo $pro_news->discount_price;?></s></div>
+                                <div class="col-3 text_price2">฿<?php echo $pro_news->price;?></div>
+                                <div class="col-6"><img src="<?php echo base_url();?>img/promotion/cart.png" style="width:30px; float: right; margin-right: -28px;"></div>
                             </div>
                             <br>
                             <br>
@@ -411,10 +408,9 @@ $pro_none = $query->result();
                             <div class="row">
                                 <div class="col-12 text_title"><?php echo $pro_nones->name;?></div>
                                 <div class="col-12" style="height:10px;"></div>
-                                <div class="col-2 text_price1"><s>฿<?php echo $pro_nones->discount_price;?></s></div>
-                                <div class="col-2 text_price2">฿<?php echo $pro_nones->price;?></div>
-                                <div class="col-5"></div>
-                                <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
+                                <div class="col-3 text_price1"><s>฿<?php echo $pro_nones->discount_price;?></s></div>
+                                <div class="col-3 text_price2">฿<?php echo $pro_nones->price;?></div>
+                                <div class="col-6"><img src="<?php echo base_url();?>img/promotion/cart.png" style="width:30px; float: right; margin-right: -28px;"></div>
                             </div>
                             <br>
                             <br>

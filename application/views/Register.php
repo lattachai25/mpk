@@ -4,14 +4,13 @@
     font-family:'helvetica';
     font-weight:bold;
     font-size:30px;
-    margin-top:80px;
+    margin-top:50px;
 }
 
 #text_name{
     color:#FFF;
     font-family:'helvetica';
-    font-weight:bold;
-    font-size:25px;
+    font-size:18px;
 	
 }
 
@@ -43,12 +42,13 @@
 
 <div class="row" style="margin-top:120px;">
 		<img src="<?php echo base_url();?>img/register/register_02.png" width="100%">	
-		<div style="width: 100%; min-height:750px; background-image: url(img/register/adsa.png); background-repeat: no-repeat;background-size:cover;">
+		<div style="width: 100%; min-height:700px; background-image: url(img/register/adsa.png); background-repeat: no-repeat;background-size:cover;">
 					<form action="action_page.php">
 						<div class="row">
 							<div class="col-6">
+						<div style="margin-left: 35px; margin-right: 0px !important;">
 								<div class="text_title2"> &nbsp; CREATE AN ACCOUNT</div>
-								<div class="col-12" style="margin-top:50px;">
+							<div class="col-12" style="margin-top:50px;">
 								<div class="row">
 									<div class="col-6" style="margin-left:-15px" >
 									<div id="text_name">NAME</div>
@@ -101,10 +101,10 @@
 
 								</div>
 							</div>
-							
+						</div>	
 						</div>
                   
-							<div class="col-1" style="padding-left:60px;"><center><img src="<?php echo base_url();?>img/register/centerAA.png"></center></div>
+							<div style="margin-left: 0px !important; margin-right: 0px !important;"><center><img src="<?php echo base_url();?>img/register/centerAA.png" style="margin-left: 44px;"></center></div>
 
 							<div class="col-5">
 					
@@ -113,8 +113,8 @@
 									<div class="row">
 										
 
-										<div class="col-9" style="margin-left:10px;">
-										<div class="col-12 text_title2" style="margin-top:81px;">LOG IN</div>	
+										<div class="col-9" style="margin-left: 8px;">
+										<div class="col-12 text_title2" style="margin-top:48px;">LOG IN</div>	
 										<div class="col-12" style="margin-top:50px;">
 									
 										<div id="text_name" style="color:#fff;">E-MAIL</div>
