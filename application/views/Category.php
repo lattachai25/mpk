@@ -1,268 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
-<style>
-.bg_select{
-    height:500px;
-    background-image: url('<?php echo base_url();?>img/product/BG_Selectyourvehicle.png');
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-size:100% 100%;
+	<style>
+	.bg_select{
+		height:500px;
+		background-image: url('<?php echo base_url();?>img/product/BG_Selectyourvehicle.png');
+		background-repeat: no-repeat;
+		background-size:cover;
+		background-size:100% 100%;
+	}
+	.text_select{
+		color:#ffff;
+		text-align: center;
+		font-size:35px;
+		font-weight: 600;
+	}
+	
+	#inputState{
+		text-align:center;
+		font-weight:bold;
+		color:#ff6634;
+		padding-left: 60px;
+	}
+	.bottom_searce{
+		text-align:center;
+		font-weight:bold;
+		color:#fff;
+		background:#ff6634;
+	}
+	.bottom_searce a{
+		padding-top:7px;
+		color:#fff;
+	
+	}
+	.bar_item{
+		width:100%;
+		min-height:135px;
+		background-image: url('<?php echo base_url();?>img/product/bar_top2.png');
+		background-repeat: no-repeat;
+		background-size:cover;
+		background-size:100% 100%;
+	}
+	.textbrand{
+		margin-top:20px;
+		font-size:35px;
+		text-align:center;
+		font-weight:bold;
+		color:#ff6634;
+	}
+	.textbrand_sub{
+		margin-top:10px;
+		font-size:18px;
+		text-align:center;
+		font-weight:bold;
+		color:#666666;  
+	}
+	.text_bmw{
+		margin-left:50px;
+		margin-top:100px;
+		font-size:18px;
+		text-align:left;
+		font-weight:bold;
+		color:#666666;   
+	}
+	
+	
+	
+	.container1 {
+	  position: relative;
+	  width: 200px;
+		height: 200px;
+	  border:1px solid #bbbbbb;
+	  padding-bottom: 15px;
+	}
+	
+	.image {
+	  display: block;
+	  width: 100%;
+	  background-size: cover;
+	  margin-bottom: -15px;
+	}
+	
+	.overlay {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  height: 100%;
+	  width: 100%;
+	  opacity: 0;
+	  transition: .5s ease;
+	  background-color: #ff5e0d;
+	}
+	
+	.container1:hover .overlay {
+	  opacity: 0.8;
+	}
+	
+	.text {
+	  color: white;
+	  font-size: 20px;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  -webkit-transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  transform: translate(-50%, -50%);
+	  text-align: center;
+	  border:2px solid #fff;
+	  padding:10px;
+	  width:200px;
+	}
+	
+	.show_top{
+		width:150px;
+		margin-top: -5px;
+		margin-left: -5px;
+		position: absolute;
+		color:#FFF;
+		font-size: 15px;
+		font-weight: 700;
+		background-image:url('<?php echo base_url();?>img/promotion/orange.png');
+		background-repeat: no-repeat, repeat;
+	}
+	.show_top2{
+		width:150px;
+		margin-top: -5px;
+		margin-left: -5px;
+		position: absolute;
+		color:#FFF;
+		font-size: 15px;
+		font-weight: 700;
+		background-image:url('<?php echo base_url();?>img/promotion/red.png');
+		background-repeat: no-repeat, repeat;
+	}
+	
+	.show_top3{
+		width:150px;
+		margin-top: -5px;
+		margin-left: -5px;
+		position: absolute;
+		color:#FFF;
+		font-size: 15px;
+		font-weight: 700;
+		background-image:url('/asset/img/promotion/blue.png');
+		background-repeat: no-repeat, repeat;
+	}
+	
+	
+	
+	.text_title{
+		margin-top:10px;
+		font-size:17px;
+		color:#000;
+		font-weight: bold;
+	}
+	.text_price1{
+	font-size:15px;
+	color:#bbbbbb;
+	font-weight: bold;
+	}
+	.text_price2{
+	  padding-left:30px;
+	  font-size:15px;
+	  color:#ff5e0d;
+	  font-weight: bold;
+	}
+	
+	span{
+	   color:#ff6633; 
+	}
+	
+	.textmenu{
+		font-size:14.5px;
+	}
+	.textmenu2{
+		padding-left:25px;
+		font-weight: 600;
+		font-size:13.5px;
+	}
+	
+	
+	
+	.sizemenu{
+		color:#666666; 
+		font-weight:bold; 
+		padding-top:8px; 
+		padding-bottom:8px;
+	}
+	.search{
+		color:#ff6634;
+		margin-top:25px;
+	}
+	
+	.search_input{
+	  margin-top:20px;
+	  width:111%;
+	  height:30px;  
+	  border: none;
+	  border-bottom: 2px solid #ff6634;
+	  float:left;
+	  margin-left: -13px;
+	}
+	.search_input:focus {
+		outline: none;
+	}
+	.unline{
+		width:100%;
+		border-bottom:1px solid #000;
+		margin-bottom:10px;
+	}
+	.text_cate{
+	font-size:50px;
+	color:#ff6634;
+	}
+	
+	
+	#nav a.active {
+		font-size: 16px;
+		font-weight: 600;
+		color: #ffffff!important;
+	}
+	
+	
+	.tel{
+		border:2px solid #979797; 
+		background-color: #a3a3a3;
+	}
+	
+	#nav a {
+		padding: 8px 45px !important;
+		margin: 8px 1px;
+		padding: 8px 36px !important;
+		margin: 0 10px;
+		font-weight: 400;
+		color: #2c3e50;
+		text-decoration: none;
+	}
+	
+	.menuside{
+		color:#666666; 
+		font-weight:bold; 
+		margin-top:15px; 
+		padding-top:8px; 
+		padding-bottom:8px;
+	}
+	
+	.active{
+		color:#ff6634;
+		font-weight:bold;
+		background-color:#fff;
+	}
+	
+	.dropdown-container {
+	  display: none;
+	  background-color: #fff;
+	  padding-left: 8px;
+	}
+	
+	.sidenav a, .dropdown-btn {
+	  padding: 6px 8px 6px 16px;
+	  text-decoration: none;
+	  font-size: 15px;
+	  color: #818181;
+	  display: block;
+	  border: none;
+	  background: none;
+	  width: 100%;
+	  text-align: left;
+	  cursor: pointer;
+	  outline: none;
+	}
+	
+.headDropdown{
+	font-weight: 600; 
+	font-size:medium; 
+	color: #666666;
 }
-.text_select{
-    color:#ffff;
-    text-align: center;
-    font-size:35px;
-    font-weight: 600;
+
+.dropdownMenu{
+	color:gray;
+	font-size: 14px;
 }
 
-#inputState{
-    text-align:center;
-    font-weight:bold;
-    color:#ff6634;
-    padding-left: 60px;
-}
-.bottom_searce{
-    text-align:center;
-    font-weight:bold;
-    color:#fff;
-    background:#ff6634;
-}
-.bottom_searce a{
-    padding-top:7px;
-    color:#fff;
-
-}
-.bar_item{
-    width:100%;
-    min-height:135px;
-    background-image: url('<?php echo base_url();?>img/product/bar_top2.png');
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-size:100% 100%;
-}
-.textbrand{
-    margin-top:20px;
-    font-size:35px;
-    text-align:center;
-    font-weight:bold;
-    color:#ff6634;
-}
-.textbrand_sub{
-    margin-top:10px;
-    font-size:18px;
-    text-align:center;
-    font-weight:bold;
-    color:#666666;  
-}
-.text_bmw{
-    margin-left:50px;
-    margin-top:100px;
-    font-size:18px;
-    text-align:left;
-    font-weight:bold;
-    color:#666666;   
-}
-
-
-
-.container {
-  position: relative;
-  width: 270px;
-  height: 270px;
-  border:1px solid #bbbbbb;
-  padding: 5px;
-}
-
-.image {
-  display: block;
-  width: 220px;
-  margin-top:30px;
-  background-size: cover;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #ff5e0d;
-}
-
-.container:hover .overlay {
-  opacity: 0.8;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  border:2px solid #fff;
-  padding:10px;
-  width:200px;
-}
-
-.show_top{
-    width:150px;
-    margin-top: -5px;
-    margin-left: -5px;
-    position: absolute;
-    color:#FFF;
-    font-size: 15px;
-    font-weight: 700;
-    background-image:url('<?php echo base_url();?>img/promotion/orange.png');
-    background-repeat: no-repeat, repeat;
-}
-.show_top2{
-    width:150px;
-    margin-top: -5px;
-    margin-left: -5px;
-    position: absolute;
-    color:#FFF;
-    font-size: 15px;
-    font-weight: 700;
-    background-image:url('<?php echo base_url();?>img/promotion/red.png');
-    background-repeat: no-repeat, repeat;
-}
-
-.show_top3{
-    width:150px;
-    margin-top: -5px;
-    margin-left: -5px;
-    position: absolute;
-    color:#FFF;
-    font-size: 15px;
-    font-weight: 700;
-    background-image:url('/asset/img/promotion/blue.png');
-    background-repeat: no-repeat, repeat;
-}
-
-
-
-.text_title{
-    margin-top:10px;
-    font-size:17px;
-    color:#000;
-    font-weight: bold;
-}
-.text_price1{
-font-size:15px;
-color:#bbbbbb;
-font-weight: bold;
-}
-.text_price2{
-  padding-left:30px;
-  font-size:15px;
-  color:#ff5e0d;
-  font-weight: bold;
-}
-
-span{
-   color:#ff6633; 
-}
-
-.textmenu{
-    font-size:14.5px;
-}
-.textmenu2{
-    padding-left:25px;
-    font-weight: 600;
-    font-size:13.5px;
-}
-
-
-
-.sizemenu{
-    color:#666666; 
-    font-weight:bold; 
-    padding-top:8px; 
-    padding-bottom:8px;
-}
-.search{
-    color:#ff6634;
-    margin-top:25px;
-}
-
-.search_input{
-  margin-top:20px;
-  width:111%;
-  height:30px;  
-  border: none;
-  border-bottom: 2px solid #ff6634;
-  float:left;
-  margin-left: -13px;
-}
-.search_input:focus {
-    outline: none;
-}
-.unline{
-    width:100%;
-    border-bottom:1px solid #000;
-    margin-bottom:10px;
-}
-.text_cate{
-font-size:50px;
-color:#ff6634;
-}
-
-
-#nav a.active {
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffffff!important;
-}
-
-
-.tel{
-    border:2px solid #979797; 
-    background-color: #a3a3a3;
-}
-
-#nav a {
-    padding: 8px 45px !important;
-    margin: 8px 1px;
-    padding: 8px 36px !important;
-    margin: 0 10px;
-    font-weight: 400;
-    color: #2c3e50;
-    text-decoration: none;
-}
-
-.menuside{
-    color:#666666; 
-    font-weight:bold; 
-    margin-top:15px; 
-    padding-top:8px; 
-    padding-bottom:8px;
-}
-
-.active{
-    color:#ff6634;
-    font-weight:bold;
-    background-color:#fff;
+.oneMenu{
+	font-weight: 600; 
+	font-size:medium; 
+	color:#666666; 
+	text-decoration: none!important; 
 }
 
 
 
 
+	</style>
+<body>
+	
+
+	
+<?php
+$this->db->select("*");
+$this->db->from("brand");
+$query = $this->db->get();
+$brand = $query->result();
+?>
+<?php
+$this->db->select("*");
+$this->db->from("model");
+$query = $this->db->get();
+$model = $query->result();
+?>
+
+<?php
+$this->db->select("*");
+$this->db->from("year");
+$query = $this->db->get();
+$year = $query->result();
+?>
+
+<?php
+$this->db->select("*");
+$this->db->from("main_category");
+$query = $this->db->get();
+$category = $query->result();
+?>
+
+</body>
 
 
 
 
 
-</style>
+
+
 
 
 <div class="row" style="margin-top:120px;">
@@ -451,9 +525,40 @@ color:#ff6634;
         <div class="row" style="background:#000; font-weight:bold;color:#fff; padding-top:6px; padding-bottom:5px;"> 
             <div class="col-10 textmenu"> CATEGORY </div>
             <div class="col-1"> - </div>
-        </div>
+		</div>
+	</div>
+<br>
+
+<button class="dropdown-btn">
+<div class="row">
+<div class="col-9 headDropdown" >BRAKE SYSTEM</div>
+<div class="col-1"><i class="fa fa-plus fa-sm"></i></div>
+</div>
+</button>
+  <div class="dropdown-container "  >
+		<a class="dropdownMenu <?php if($this->uri->segment(1)==""){echo "active";}?>" href="#">BRAKE MASTER CYLINDER</a><br>
+		<a class="dropdownMenu" href="#">CLUTCH MASTER CYLINDER</a><br>
+		<a class="dropdownMenu" href="#">REAR BRAKE MASTER CYLINDER</a><br>
+		<a class="dropdownMenu" href="#">FRONT CALIPER</a><br>
+		<a class="dropdownMenu" href="#">REAR CALIPER</a><br>
+		<a class="dropdownMenu" href="#">DISC BRAKE</a><br>
+		<a class="dropdownMenu" href="#">BRAKE PAD</a><br>
+		<a class="dropdownMenu" href="#">SWITCH</a><br>		
+  </div>
+
+  <button class="dropdown-btn">
+<div class="row">
+<div class="col-9" > <a class="oneMenu" href="">CARBON PARTS</a> </div>
+</div>
+</button>
+  
 
 
+
+</div>
+</div>
+ 
+	
 
 
 
@@ -704,12 +809,14 @@ color:#ff6634;
     <div class="row">
     <div class="col-1"></div>
     <div class="col-10">
+
+	
     <div class="row">
                          <?php for ($i = 1; $i < 13; $i++) { ?>
                         <div class="col-4">
-                        <a href="http://">
+                        <!-- <a href="http://"> -->
                         <br>
-                            <div class="container">
+                            <div class="container1">
                                 <center>
                                 <img src="<?php echo base_url();?>img/product/category/6.png"width="100%" class="image alt=""/ >                           
                                 </center>
@@ -717,9 +824,9 @@ color:#ff6634;
                                     <div class="text">READ MORD <i class="fas fa-arrow-right"></i></div>
                                 </div> -->
                             </div>
-                            </a> 
-
-                            <div class="row">
+                            <!-- </a>  -->
+						<div class="container"  style="margin-left: -25px;"> 
+	   						<div class="row">
                                 <div class="col-12 text_title">BRAKE DISC 321X6 EVO S1000 RR 2019</div>
                                 <div class="col-12" style="height:10px;"></div>
                                 <div class="col-2 text_price1"><s>฿3,210</s></div>
@@ -729,17 +836,18 @@ color:#ff6634;
                                     <img src="<?php echo base_url();?>img/promotion/cart.png"width="20px" >                           
                                 </div>
                             </div>
+					</div>
                         </div>
                          <?php } ?>
-    </div>
+    
     </div>
     </div>
     <!-- ROW BOX -->
 
-    <br>
     <div class="row">
-                <div class="col-4"></div>
-                    <div class="col-4">
+		<div class="col-4"></div>
+		<div class="col-4">
+						<br>
                     <img src="<?php echo base_url();?>img/gallery/back_orange.png" width="10px" >
                      &nbsp; &nbsp; 1 &nbsp; &nbsp; 2 &nbsp; &nbsp; 3 &nbsp; &nbsp; 4 &nbsp; &nbsp; 5 &nbsp; &nbsp; <span> 6 </span>&nbsp; &nbsp; 
                      <img src="<?php echo base_url();?>img/gallery/next_orange.png"width="10px" >  
@@ -757,4 +865,31 @@ color:#ff6634;
 </div>
 </div><!-- row min-height -->
 
+
+
+</body>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+<script src="bootstrap/scripts/jquery.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+</html>
+
+
