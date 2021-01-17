@@ -186,12 +186,11 @@ $pro = $query->result();
 }
 
 .container2 {
-  position: relative;
-  padding-left:20px;
-  padding-right:20px;
-  width: 300px;
+position: relative;
+  width: auto;
+  height: 150px;
+  padding: 0px;
 }
-
 .image {
   display: block;
   width: 300px;
@@ -200,19 +199,20 @@ $pro = $query->result();
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -2px;
-  right: 0;
-  width: 101%;
-  height: 357px;
+
+	position: absolute;
+	top: -25px;
+    bottom: 0;
+    left: -15px;
+    right: -15px;
+    height: 175px;
+  width: auto;
   opacity: 0;
   transition: .5s ease;
   background-color: #ff5e0d;
 }
 
-.container:hover .overlay {
+.container2:hover .overlay {
   opacity: 0.8;
 }
 
@@ -302,6 +302,15 @@ span{
 }
 
 
+.image1{
+	margin-top: 10px;
+		padding-bottom: 20px;
+		padding-right: 5px;
+    padding-left: 5px;
+    height: 150px;
+    max-width: 100%;
+}
+
 </style>
  <!-- slide -->
 
@@ -372,9 +381,11 @@ span{
             <div class="col-1"></div>
         </div>
     </div>
+</div>
 <!-- Our Concept -->    
 
 <!-- SELECT YOUR BIKE -->    
+
 <div class="col-12">
 <form action="<?php echo base_url();?>Show" method="post" enctype="multipart/form-data">
     <div class="row">
@@ -427,39 +438,41 @@ span{
 <!-- SELECT YOUR BIKE --> 
 <!-- Best Seller -->
 <div class="row">
-<div class="col-1"></div>
-<div class="col-10">
-    <img src="<?php echo base_url();?>img/home/MPK_Design_001_OK_150820_1A_create_12.png" width="100%" height="100px" alt=""/>
-</div>
-<div class="col-1"></div>
+	<div class="col-1"></div>
+	<div class="col-10">
+		<img src="<?php echo base_url();?>img/home/MPK_Design_001_OK_150820_1A_create_12.png" width="100%" height="100px" alt=""/>
+	</div>
+	<div class="col-1"></div>
 </div>
 <!-- Best Seller -->
  <!-- play -->
- <div class="col-1"></div>
+ <div class="row">
+ 
+<div class="col-1"></div>
 <div class="col-10">
-<div class="bg_play">
-    <div class="row play_vdo">
-        <div class="col-2"></div>
-        <div class="col-8" style="margin-top:260px;">
-            <div class="row">
-                <div class="col-8 text_vdo">
-                <?php echo $homeplaylist->Model; ?> Review
-                </div>
-                <div class="col-4 icon_play">
-                <center>
-                PLAY
-                <a data-fancybox href=" <?php echo $homeplaylist->link_vdo; ?>">
-                <img src="<?php echo base_url();?>img/home/Play_icon.png" width="100px;"/>                
-                </a>
-                </center>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-2"></div>
-    </div>
+	<div class="bg_play">
+		<div class="row play_vdo">
+			<div class="col-2"></div>
+			<div class="col-8" style="margin-top:260px;">
+				<div class="row">
+					<div class="col-8 text_vdo">
+						<?php echo $homeplaylist->Model; ?> Review
+					</div>
+					<div class="col-4 icon_play">
+						<center>
+						PLAY
+						<a data-fancybox href=" <?php echo $homeplaylist->link_vdo; ?>">
+							<img src="<?php echo base_url();?>img/home/Play_icon.png" width="100px;"/>                
+						</a>
+						</center>
+					</div>
+				</div>
+			</div>
+			<div class="col-2"></div>
+		</div>
+	</div>
 </div>
-</div>
+ </div>
  <!-- play -->
  <div class="row">
  <div class="col-1"></div>
@@ -479,12 +492,12 @@ span{
                         <div class="col-11" style="border:1px solid #000;">
                         <a href="<?php base_url();?>Promotion/view/<?php echo $pros->id;?>">
                         <br>
-                            <div class="container">
+                            <div class="container2">
                                 <center>
-                                <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pros->img1;?>" width="100%" height="200px" alt="" />
+                                <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pros->img1;?>" class="image1" alt="" />
                                 </center>
                                 <div class="overlay">
-                                    <div class="text">READ MORD <i class="fas fa-arrow-right"></i></div>
+                                    <div class="text">READ MORE <i class="fas fa-arrow-right"></i></div>
                                 </div>
                             </div>
                         </a> 

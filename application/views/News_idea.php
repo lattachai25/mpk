@@ -89,7 +89,7 @@
     border-radius: 5px;
 }
 
-.container {
+.container1 {
     position: relative;
     width: 100%;
     height: auto;
@@ -116,7 +116,7 @@
   background-color: #ff5e0d;
 }
 
-.container:hover .overlay {
+.container1:hover .overlay {
   opacity: 0.8;
 }
 
@@ -242,6 +242,7 @@ $news = $query->result();
 <div class="col-1"></div>
 </div>
 
+<div class="container">
 
 	<div class="row" style="margin-top:50px;">
         <div class="col-1"></div>
@@ -254,7 +255,7 @@ $news = $query->result();
                         <div class="col-4">
                         <br>
                         <a href="<?php echo base_url('News_show'); ?>">            
-                            <div class="container">
+                            <div class="container1">
                                 <center>
                                 <img class="image_logo_show" src="<?php echo base_url();?>assets/uploads/img_news_idea/<?php echo $news2->img;?>" class="image" style="width:100%" alt="" />
                                     <!-- <img src="<?php echo base_url();?>img/news/news1.jpg" alt="Avatar" class="image" style="width:100%" /> -->
@@ -282,6 +283,7 @@ $news = $query->result();
                 </div>
             </div>
         </div>
+</div>
 </div>
 
 

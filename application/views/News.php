@@ -89,7 +89,7 @@
     border-radius: 5px;
 }
 
-.container {
+.container1 {
     position: relative;
     width: 100%;
     height: auto;
@@ -116,7 +116,7 @@
   background-color: #ff5e0d;
 }
 
-.container:hover .overlay {
+.container1:hover .overlay {
   opacity: 0.8;
 }
 
@@ -223,66 +223,70 @@ $news = $query->result();
 
 
 <div class="bg" style="margin-top:120px;"></div>
-<div class="row">
-<div class="col-1"></div>
-<div class="col-10">
-<img src="<?php echo base_url();?>img/news/news_latest.png" width="100%" alt=""/ >
-
-<br><br>
-</div>
-<div class="col-1"></div>
-</div>
 
 
-<div class="row">
-<div class="col-1"></div>
-<div class="col-10">
-<img src="<?php echo base_url();?>img/news/slide.png" width="100%" alt=""/ >
-</div>
-<div class="col-1"></div>
-</div>
-
-
-
-<div class="row" style="margin-top:50px;">
-        <div class="col-1"></div>
-        <div class="col-10" style="min-height:500px;">
-            <div class="row justify-content-center">
-                <div class="col-11" style="min-height:500px;">
-                    <div class="row">
-<!-- box -->     
-<?php foreach($news as $news2): ?>
-                        <div class="col-4">
-                        <br>
-                        <a href="<?php echo base_url('News_show'); ?>">            
-                            <div class="container">
-                                <center>
-                                <img class="image_logo_show" src="<?php echo base_url();?>assets/uploads/img_news/<?php echo $news2->img;?>" class="image" style="width:100%" alt="" />
-                                    <!-- <img src="<?php echo base_url();?>img/news/news1.jpg" alt="Avatar" class="image" style="width:100%" /> -->
-                                </center>
-                                <div class="overlay">
-                                    <div class="text">READ MORE<i class="fas fa-arrow-right"></i></div>
-                                </div>
-                            </div>
-                        </a> 
-                            <div class="row">
-                                
-                            <div class="col-12 text_title">
-                                <center>
-                                <div class="line"></div>
-                                </center>
-                                <?php echo $news2->title_show;?></div>
-                            </div>
-                              
-                        </div>
-<?php endforeach; ?>                        
-<!-- box -->
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
+	<div class="row">
+	<div class="col-1"></div>
+	<div class="col-10">
+	<img src="<?php echo base_url();?>img/news/news_latest.png" width="100%" alt=""/ >
+	
+	<br><br>
+	</div>
+	<div class="col-1"></div>
+	</div>
+	
+	
+	<div class="row">
+	<div class="col-1"></div>
+	<div class="col-10">
+	<img src="<?php echo base_url();?>img/news/slide.png" width="100%" alt=""/ >
+	</div>
+	<div class="col-1"></div>
+	</div>
+<div class="container">
+	
+	
+	
+	<div class="row" style="margin-top:50px;">
+			<div class="col-1"></div>
+			<div class="col-10" style="min-height:500px;">
+				<div class="row justify-content-center">
+					<div class="col-11" style="min-height:500px;">
+						<div class="row">
+	<!-- box -->     
+	<?php foreach($news as $news2): ?>
+							<div class="col-4">
+							<br>
+							<a href="<?php echo base_url('News_show'); ?>">            
+								<div class="container1">
+									<center>
+									<img class="image_logo_show" src="<?php echo base_url();?>assets/uploads/img_news/<?php echo $news2->img;?>" class="image" style="width:100%" alt="" />
+										<!-- <img src="<?php echo base_url();?>img/news/news1.jpg" alt="Avatar" class="image" style="width:100%" /> -->
+									</center>
+									<div class="overlay">
+										<div class="text">READ MORE<i class="fas fa-arrow-right"></i></div>
+									</div>
+								</div>
+							</a> 
+								<div class="row">
+									
+								<div class="col-12 text_title">
+									<center>
+									<div class="line"></div>
+									</center>
+									<?php echo $news2->title_show;?></div>
+								</div>
+								  
+							</div>
+	<?php endforeach; ?>                        
+	<!-- box -->
+	
+	
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
 </div>
 
 <br><br>

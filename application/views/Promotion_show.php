@@ -37,7 +37,6 @@ color:#bbbbbb;
 font-weight: bold;
 }
 .text_price2{
-  padding-left:50px;
   font-size:15px;
   color:#ff5e0d;
   font-weight: bold;
@@ -45,14 +44,13 @@ font-weight: bold;
 .container {
   /* width: 240px;
   height: 240px; */
-	border:1px solid #bbbbbb;
 	padding: 0px;
 }
 
 .container1{
 	border:1px solid #bbbbbb;
 	padding: 0px;
-    height: 220px;
+    height: 150px;
     width: auto;
 }
 
@@ -87,13 +85,12 @@ font-weight: bold;
 }
 
 #horizon-slider ul li {
-    width: 600px;
+    width: 595px;
     height: 60% !important;
     float: left;
     display: inline;
     text-align: center;
     overflow: hidden;
-    background-size: contain;
     background-repeat: no-repeat;
     position: relative;
     background-position: center;
@@ -126,7 +123,7 @@ font-weight: bold;
 		padding-bottom: 20px;
 		padding-right: 5px;
     padding-left: 5px;
-    height: 220px;
+    height: 150px;
     max-width: 100%;
 }
 </style>
@@ -167,203 +164,194 @@ $query = $this->db->get();
 $random = $query->result();
 ?>
 
-
-
 <div class="bg" style="margin-top:80px;"></div>
-<div class="row">
-<!-- top -->
-<div class="brand_top">
-<img src="<?php echo base_url();?>img/product/product_detel/top.png"width="100%" / >
-
-</div>
-<div class="text_top">
-HOME / PRODUCT / <?php echo $id_cate->Name;?> / <span><?php echo $id_sub->name_subcategory;?></span>
-</div>
-<!-- top -->
-<!-- Center --->
-<div class="row">
-<div class="product">
-
-
-<div class="row">    
-  <div class="col-7">
-      <div
-        class="horVerSlider"
-        data-desktop="800"
-        data-tabportrait="600"
-        data-tablandscape="600"
-        data-mobilelarge="375"
-        data-mobilelandscape="500"
-        data-mobileportrait="375"
-      >
-
-<!-- 
-      <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $promos->img_slide;?>" style="width:100%" alt="" /> -->
-
-
-
-        <div class="close"></div>
-        <div class="vertical-wrapper">
-          <div id="vertical-slider">
-            <ul>
-              <li
-                data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img1;?>"
-              ></li>
-              <li
-                data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img2;?>"
-              ></li>
-              <li
-                data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img3;?>"
-              ></li>
-              <li
-              data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img4;?>"
-              ></li>
-
-            </ul>
-          </div>
-				</div>				
-		<div class="row" >
-			<div class="col-2"></div>
-			<div class="col-6">
-				<div class="horizon-wrapper" style=" margin-left: -100px; width: 605px;">
-								<div id="horizon-slider">
-									<ul style="width: 500px; height: 700px; top: 0px; left: 0px;" >
-									<!-- -->
-										<li
-											data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img1;?>"
-											
-										></li>
-										<li
-										data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img2;?>"                
-										
-										></li>
-										<li
-										data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img3;?>"                
-											
-										></li>
-										<li
-										data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img4;?>"                
-											
-										></li>
-									</ul>
-								</div>
-							</div>
-			</div>
-			<div class="col-4"></div>
+<div class="container">
+	<div class="row">
+	<!-- top -->
+		<div class="brand_top">
+			<img src="<?php echo base_url();?>img/product/product_detel/top.png"width="100%" / >
 		</div>
-        
-      </div>
-  </div>
-  <div class="col-4">
-    <div class="del" style="margin-top:80px;">
-      <div class="brand">BRAND</div>
-      <div class="text_title"><?php echo $pro->name;?></div>
-      <div class="number">ORDER CODE NO.<?php echo $pro->no_code;?></div>
-      <div class="procecut"><s><?php echo $pro->discount_price;?> BAHT</s></div>
-      <div class="price"><?php echo $pro->price;?> BAHT</div>
 
-      <div class="detel">
-      DESCRIPTION <br>
-      <?php echo $pro->detail;?>
-      </div>
-	</div>  
-	
+		<div class="text_top">
+			HOME / PRODUCT / <?php echo $id_cate->Name;?> / <span><?php echo $id_sub->name_subcategory;?></span>
+		</div>
+
+	<!-- top -->
+	<!-- Center --->
+		<div class="row">
+			<div class="product">
+				<div class="row">    
+					<div class="col-7">
+							<div
+								class="horVerSlider"
+								data-desktop="800"
+								data-tabportrait="600"
+								data-tablandscape="600"
+								data-mobilelarge="375"
+								data-mobilelandscape="500"
+								data-mobileportrait="375"
+							>
+
+			 
+								<!--<img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $promos->img_slide;?>" style="width:100%" alt="" /> -->
+
+								<div class="close"></div>
+								<div class="vertical-wrapper">
+									<div id="vertical-slider">
+										<ul>
+											<li
+												data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img1;?>"
+											></li>
+											<li
+												data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img2;?>"
+											></li>
+											<li
+												data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img3;?>"
+											></li>
+											<li
+											data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img4;?>"
+											></li>
+										</ul>
+									</div>
+								</div>				
+						<div class="row" >
+							<div class="col-2"></div>
+							<div class="col-6">
+								<div class="horizon-wrapper" style=" margin-left: -100px; width: 605px;">
+												<div id="horizon-slider">
+													<ul style="width: 400px; height: 400px; top: 0px; left: -50px;" >
+													<!-- -->
+														<li 
+															data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img1;?>"
+															
+														></li>
+														<li 
+														data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img2;?>"                
+														
+														></li>
+														<li 
+														data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img3;?>"                
+															
+														></li>
+														<li 
+														data-image="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pro->img4;?>"                
+															
+														></li>
+													</ul>
+												</div>
+											</div>
+							</div>
+							<div class="col-4"></div>
+						</div>
+								
+							</div>
+					</div>
+					<div class="col-4">
+						<div class="del" style="margin-top:80px;">
+							<div class="brand">BRAND</div>
+							<div class="text_title"><?php echo $pro->name;?></div>
+							<div class="number">ORDER CODE NO.<?php echo $pro->no_code;?></div>
+							<div class="procecut"><s><?php echo $pro->discount_price;?> BAHT</s></div>
+							<div class="price"><?php echo $pro->price;?> BAHT</div>
+
+							<div class="detel">
+							DESCRIPTION <br>
+							<?php echo $pro->detail;?>
+							</div>
+					</div>  
+					
 
 
-  <div class="box_num">
+					<div class="box_num">
+							<div class="row">
+									<div class="col-8">AVAILABLE</div>
+									<div class="col-3">QUANTITY</div>
+							</div>
 
-      <div class="row">
-          <div class="col-8">AVAILABLE</div>
-          <div class="col-3">QUANTITY</div>
-      </div>
+							<div class="row">
+									<div class="col-8">
+									<img src="<?php echo base_url();?>img/product/product_detel/color.png"width="50%" alt="" >
 
-      <div class="row">
-          <div class="col-8">
-          <img src="<?php echo base_url();?>img/product/product_detel/color.png"width="50%" alt="" >
-
-          <div class="boxshop">
-            <div class="4">
-                <div class="row">
-                <div class="col-1" style="border:1px solid #666666; color:#ff6634; padding:10px; margin-left:15px; text-align:center; padding-left:15px; padding-right:20px; margin-right:30px;">
-                2
-                </div>
-                <div class="4" style="border:1px solid #ff6634; color:#ff6634; padding:10px;"> + ADD TO CART </div>
-                </div>
-            </div>
-           
-          </div>
-          </div>
-          <div class="col-3" style="text-align:center;"><?php echo $pro->quality;?></div>
-      </div>
-
-  </div>
-</div>
-<div class="col-1"></div>
-</div>
-
-    </div>
-</div>
-
-<img src="<?php echo base_url();?>img/product/product_detel/center.png"width="100%" alt="" >
-<img src="<?php echo base_url();?>img/product/product_detel/barslide.png"width="100%" alt="" >
-
-    <div class="boxslidebar">
-      <div class="row">
-        <div class="col-1">
-            <div class="customNavigation">
-            <a class="btn prev" style="margin-top:100px;float: right; margin-right: -20px;">
-            <img src="<?php echo base_url();?>img/gallery/back_orange_slide.png"width="40px" alt="" >
-            </a>
-            </div>
-        </div>
-        <div class="col-10">
-        <!-- row -->
-        <div class="row" >
-            <div id="owl-demo" class="owl-carousel owl-theme">
-            <?php foreach($random as $randoms): ?>
-            <div class="item">
-                <div class="col-12">
-                <a href="<?php echo base_url();?>Promotion/view/<?php echo $randoms->id;?>">
-                <div class="container1 " >
-								<center>
-									<img  class="image1" src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $randoms->img1;?>"   />	
-								</center>
-								</div>  
-									<div class="col-12 text_title2"><?php echo $pro->name;?></div> 
-									<div class="col-12" style="height:10px;"></div>
-
-								<div >
-									<div class="row">
-										<div class="col-2 text_price1">
-											<div ><s>฿<?php echo $randoms->discount_price;?></s></div>
-										</div>
-										<div class="col-3" ></div>
-										<div class="col-2 text_price2" style="float: left;">
-											<div >฿<?php echo $randoms->price;?></div>
-										</div>
-										<div class="col-1" ></div>
-										<div class="col-2 card_2" >
-											<img src="<?php echo base_url();?>img/promotion/cart.png" width="30px" >
+									<div class="boxshop">
+													<div class="col-1" style="border:1px solid #666666; color:#ff6634; padding:10px;  text-align:center; padding-left:15px; padding-right:20px; ">
+													2
+													</div>
+													<div class="col-10" style="border:1px solid #ff6634; color:#ff6634; padding:10px;"> + ADD TO CART </div>	
+													<div class="col-1"></div>
 										</div>
 									</div>
-								</div>  
-                  </a>  
-                </div>
-            </div>
-            <?php endforeach; ?>
-            </div>
-        </div>
-        <!-- row -->
-        </div>
-        <div class="col-1"> 
-            <div class="customNavigation">
-            <a class="btn next" style="margin-top:100px;float: left; margin-left: -16px;">
-            <img src="<?php echo base_url();?>img/gallery/next_orange_slide.png" width="40px" >
-            </a>
-            </div>
-        </div>
-    </div>
-  </div>
+									<div class="col-3" style="text-align:center;"><?php echo $pro->quality;?></div>
+							</div>
+
+					</div>
+				</div>
+				<div class="col-1"></div>
+				</div>
+			</div>
+		</div>
+
+	<img src="<?php echo base_url();?>img/product/product_detel/center.png"width="100%" alt="" >
+	<img src="<?php echo base_url();?>img/product/product_detel/barslide.png"width="100%" alt="" >
+
+			<div class="boxslidebar">
+				<div class="row">
+					<div class="col-1">
+							<div class="customNavigation">
+							<a class="btn prev" style="margin-top:100px;float: right; margin-right: -20px;">
+							<img src="<?php echo base_url();?>img/gallery/back_orange_slide.png"width="40px" alt="" >
+							</a>
+							</div>
+					</div>
+					<div class="col-10">
+					<!-- row -->
+					<div class="row" >
+							<div id="owl-demo" class="owl-carousel owl-theme">
+							<?php foreach($random as $randoms): ?>
+							<div class="item">
+									<div class="col-12">
+									<a href="<?php echo base_url();?>Promotion/view/<?php echo $randoms->id;?>">
+									<div class="container1 " >
+									<center>
+										<img  class="image1" src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $randoms->img1;?>"   />	
+									</center>
+									</div>  
+										<div class="col-12 text_title2"><?php echo $pro->name;?></div> 
+										<div class="col-12" style="height:10px;"></div>
+
+									<div >
+										<div class="row">
+											<div class="col-2 text_price1">
+												<div ><s>฿<?php echo $randoms->discount_price;?></s></div>
+											</div>
+											<div class="col-1"></div>
+											<div class="col-2 text_price2" >
+												<div >฿<?php echo $randoms->price;?></div>
+											</div>
+											<div class="col-1" ></div>
+											<div class="col-2 card_2" >
+												<img src="<?php echo base_url();?>img/promotion/cart.png" width="20px" >
+											</div>
+											<div class="col-1" ></div>
+										</div>
+									</div>  
+										</a>  
+									</div>
+							</div>
+							<?php endforeach; ?>
+							</div>
+					</div>
+					<!-- row -->
+					</div>
+					<div class="col-1"> 
+							<div class="customNavigation">
+							<a class="btn next" style="margin-top:100px;float: left; margin-left: -16px;">
+							<img src="<?php echo base_url();?>img/gallery/next_orange_slide.png" width="40px" >
+							</a>
+							</div>
+					</div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- Center --->
 <img src="<?php echo base_url();?>img/product/product_detel/footer.png" width="100%" >

@@ -11,9 +11,11 @@ html {
 box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.93);
 margin:10px;
 }
+
 .icon_m{
     padding:22px;
     text-align: center;
+	
 }
 
 .text{
@@ -135,16 +137,16 @@ $query = $this->db->get();
 $service = $query->result();
 ?>
 
+<div class="col-md-12" style="margin-top:120px;"></div>
+<div class="row">
+	<div class="col-1"></div>
+	<div class="col-10">
+		<div class="row">
+			<img src="<?php echo base_url(); ?>img/service/topbar.png" width="100%" alt=""/>
 
-<div class="col-md-12" style="margin-top:120px;">
-<div class="row">
-<div class="col-1"></div>
-<div class="col-10">
-<div class="row">
-<img src="<?php echo base_url(); ?>img/service/topbar.png" width="100%" alt=""/>
+<div class="container">
 
 <div class="row"></div>
-
     <div class="col-12">
     <div class="row">
     <div class="col-2"></div>
@@ -233,32 +235,33 @@ $service = $query->result();
 <br>
 <br>
 <br>
-</div>
 
 
 <?php foreach($service as $service2): ?>
-<div class="row" id="service<?php echo $service2->id;?>">
-<img src="<?php echo base_url();?>assets/uploads/img_service/<?php echo $service2->img;?>" width="100%" alt="" />
-<!-- <img src="<?php echo base_url(); ?>img/service/bg_01.png" width="100%" alt=""/> -->
-</div>
-<?php endforeach; ?>  
-<!-- <div class="row" id="service2">
-<img src="<?php echo base_url(); ?>img/service/bg_02.png" width="100%" alt=""/>
-</div>
-<div class="row" id="service3">
-<img src="<?php echo base_url(); ?>img/service/bg_03.png" width="100%" alt=""/>
-</div>
-<div class="row" id="service4">
-<img src="<?php echo base_url(); ?>img/service/bg_04.png" width="100%" alt=""/>
+	<div class="row" id="service<?php echo $service2->id;?>">
+		<img src="<?php echo base_url();?>assets/uploads/img_service/<?php echo $service2->img;?>" width="100%" alt="" />
+		<!-- <img src="<?php echo base_url(); ?>img/service/bg_01.png" width="100%" alt=""/> -->
+	</div>
+	<?php endforeach; ?>  
+	<!-- <div class="row" id="service2">
+		<img src="<?php echo base_url(); ?>img/service/bg_02.png" width="100%" alt=""/>
+	</div>
+	<div class="row" id="service3">
+		<img src="<?php echo base_url(); ?>img/service/bg_03.png" width="100%" alt=""/>
+	</div>
+	<div class="row" id="service4">
+		<img src="<?php echo base_url(); ?>img/service/bg_04.png" width="100%" alt=""/>
 </div>
 <div class="row" id="service5">
-<img src="<?php echo base_url(); ?>img/service/bg_05.png" width="100%" alt=""/>
+	<img src="<?php echo base_url(); ?>img/service/bg_05.png" width="100%" alt=""/>
 </div>
 <div class="row" id="service6">
-<img src="<?php echo base_url(); ?>img/service/bg_06.png" width="100%" alt=""/>
+	<img src="<?php echo base_url(); ?>img/service/bg_06.png" width="100%" alt=""/>
 </div> -->
 
 </div>
 </div>
 </div>
+</div>
+
 </div>
