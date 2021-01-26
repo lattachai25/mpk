@@ -59,7 +59,7 @@
 }
 
 .box_cart{
-  margin-left:-20px;
+  margin-left:35px;
   margin-top:50px;
   font-size:13px;
   padding:15px;
@@ -105,10 +105,10 @@
 
   top: 0;
   bottom: 0;
-  left: 0px;
+  left: -5px;
   right: 0;
   height: 56%;
-  width: 100%;
+  width: 108%;
   opacity: 0;
   transition: .5s ease;
   background-color: #f35a24;
@@ -125,10 +125,10 @@
 	
   top: 0;
   bottom: 0;
-  left: 20px;
+  left: 13px;
   right: 0;
   height: 56%;
-  width: 100%;
+  width: 110%;
   opacity: 0;
   transition: .5s ease;
   background-color: #f35a24;
@@ -143,10 +143,10 @@
 	
   top: 0;
   bottom: 0;
-  left: 40px;
+  left: 35px;
   right: 0;
   height: 56%;
-  width: 100%;
+  width: 110%;
   opacity: 0;
   transition: .5s ease;
   background-color: #f35a24;
@@ -162,10 +162,10 @@
 	
   top: 0;
   bottom: 0;
-  left: 60px;
+  left: 53px;
   right: 0;
   height: 56%;
-  width: 100%;
+  width: 110%;
   opacity: 0;
   transition: .5s ease;
   background-color: #f35a24;
@@ -278,7 +278,7 @@ $bike = $query->result();
  <!-- boxcontent -->
 
 
- <div class="boxcontent" style="min-height:800px; position:absolute;">
+ <div class="boxcontent" style="min-height:800px; width: 110% !important; position:absolute;">
  <div class="row" style="margin-top:115px;">
       <div class="col-3">
 
@@ -313,8 +313,7 @@ $bike = $query->result();
             <div class="col-6">
                 <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $bikes->img1;?>" width="100%" style="margin-left:20px;" alt="" />
             </div>
-            <div class="col-1"></div>
-            <div class="col-5">
+            <div class="col-6">
             <div class="row"><!---- row  ----->
               <div class="col-12">
                   <div class="text_title_product"> <?php echo $brand->name;?> <br> <?php echo $model->name;?> </div>
@@ -322,7 +321,7 @@ $bike = $query->result();
                   <div class="text_price"> <?php echo $bikes->prict;?> BAHT </div>
                   <br><br>
               </div> 
-              <div class="col-11 csall_bar"> <!----  csall_bar  ----->
+              <div class="col-12 csall_bar"> <!----  csall_bar  ----->
                         <p>
                           <div style="font-weight:bold; font-size:20px;">DESCRIPTION</div><br>
                           <?php echo $bikes->descripion;?>
@@ -331,6 +330,7 @@ $bike = $query->result();
             </div><!---- End csall_bar  ----->
             <div class="col-12"> <!---- col-12  ----->
               <div class="row">
+              <div class="col-3"></div>
                   <div class="col-9">
                     <div class="box_cart"> + ADD TO CART
                       <img src="<?php echo base_url();?>img/product/bike/cart.png" width="25px" alt=""/ >
@@ -348,8 +348,8 @@ $bike = $query->result();
           <!--End row scall -->
         </div>
         <!-- End box scall-->
-        <div class="row"  style="width:100%; margin-top:-140px; margin-left: 50px;">
-          <div class="col-3"></div>
+        <div class="row"  style="width:100%; margin-top:-70px; margin-left: 194px;">
+          <div class="col-1"></div>
           <div class="col-9"><!--col-8-->
           <div class="row"> <!--row-->
 

@@ -15,4 +15,26 @@ class Category extends CI_Controller {
 		$this->load->view('template2',$template);
 	
 	}
+
+
+	public function view($id=null){
+
+	
+		$contents['cart_session'] = $this->session->userdata('cart_session');
+		$template=array(
+			'title'   => 'MPK CateGory',
+			'keywords' => 'MPK',
+			'description' => 'MPK',
+			'id' => $id
+			);
+	
+		 $contents['id'] = $id;
+		 $template['content'] = $this->load->view('Category',$contents,TRUE);
+		 $this->load->view('template2',$template);
+		}
+
+
+
+
+
 }

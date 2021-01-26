@@ -567,6 +567,80 @@ function statusDis($value)
 		}
 
 
+		function new_arrivals(){
+			$crud = new grocery_CRUD();
+			$crud->set_theme("bootstrap");
+			$crud->set_table("new_arrivals")
+			->order_by('new_arrivals_id','new_arrivals_id')
+			->display_as('img1','Size 222 x 226 px .PNG')
+			->display_as('img2','Size 222 x 226 px .PNG')
+			->display_as('img3','Size 222 x 226 px .PNG')
+			->display_as('img4','Size 222 x 226 px .PNG')
+	
+			->display_as('brand','Brand')	
+			->display_as('name','Name product')
+			->display_as('price','price')
+			->display_as('discount_price','discount Price')	
+			->display_as('detail','detail')
+			->display_as('color','color')
+			->display_as('quality','Quality')
+			->display_as('date',' date');
+			$crud->order_by('new_arrivals_id','desc');
+	
+
+
+			$crud->set_relation('brand','brand','name');
+			$crud->set_relation('color','color','name_color');
+
+
+			$crud->field_type('status','dropdown',array('1' => 'Active', '0' => 'Inactive'));
+			$crud->set_field_upload('img1','assets/uploads/new_arrivals');
+			$crud->set_field_upload('img2','assets/uploads/new_arrivals');
+			$crud->set_field_upload('img3','assets/uploads/new_arrivals');
+			$crud->set_field_upload('img4','assets/uploads/new_arrivals');
+			
+			$output = $crud->render();
+			$this->_example_output($output);
+		}
+
+		function best_seller(){
+			$crud = new grocery_CRUD();
+			$crud->set_theme("bootstrap");
+			$crud->set_table("best_seller")
+			->order_by('best_seller_id','best_seller_id')
+			->display_as('img1','Size 222 x 226 px .PNG')
+			->display_as('img2','Size 222 x 226 px .PNG')
+			->display_as('img3','Size 222 x 226 px .PNG')
+			->display_as('img4','Size 222 x 226 px .PNG')
+	
+			->display_as('brand','Brand')	
+			->display_as('name','Name product')
+			->display_as('price','price')
+			->display_as('discount_price','discount Price')	
+			->display_as('detail','detail')
+			->display_as('color','color')
+			->display_as('quality','Quality')
+			->display_as('date',' date');
+			$crud->order_by('best_seller_id','desc');
+	
+
+
+			$crud->set_relation('brand','brand','name');
+			$crud->set_relation('color','color','name_color');
+
+
+			$crud->field_type('status','dropdown',array('1' => 'Active', '0' => 'Inactive'));
+			$crud->set_field_upload('img1','assets/uploads/best_seller');
+			$crud->set_field_upload('img2','assets/uploads/best_seller');
+			$crud->set_field_upload('img3','assets/uploads/best_seller');
+			$crud->set_field_upload('img4','assets/uploads/best_seller');
+			
+			$output = $crud->render();
+			$this->_example_output($output);
+		}
+
+
+
 		function color(){
 			$crud = new grocery_CRUD();
 			$crud->set_theme("bootstrap");

@@ -32,6 +32,14 @@ width:80%;
   align-items: center;
 }
 }
+nav a {
+    line-height: 40px !important;
+}
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 50px !important;
+}
 </style>
 
 <?php
@@ -62,11 +70,11 @@ $main_category = $query->result();
            
             <ul>
                 <li><a  href="<?php echo base_url('select_your_bike');?>">SELECT YOUR BIKE</a></li>
-                <li><a  style="color:black;" href="<?php echo base_url('category');?>">CATEGORY</a>
+                <li><a  style="color:black;">CATEGORY</a>
       
               <ul>
                 <?php foreach($main_category as $main_categorys): ?>
-                    <li><a href="<?php echo base_url('');?>"><?php echo $main_categorys->Name;?></a></li>
+                    <li><a href="<?php echo base_url();?>category/view/<?php echo $main_categorys->category_id;?>"><?php echo $main_categorys->Name;?></a></li>
                 <?php endforeach; ?>
               </ul>      
               

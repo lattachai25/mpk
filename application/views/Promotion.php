@@ -97,7 +97,7 @@
 }
 
 img {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
 }
 
@@ -120,7 +120,7 @@ img {
 
 .text {
   color: white;
-  font-size: 13px;
+  font-size: 12px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -280,9 +280,8 @@ $pro_none = $query->result();
 
 	<div >
 		<div class="row">
-			<div class="col-1"></div>
-			<div class="col-10">
-			<img src="<?php echo base_url();?>img/promotion/2_01_02.png" width="100%" alt=""/>
+			<div class="col-12">
+			<img src="<?php echo base_url();?>img/promotion/2_01_02.png" style="width:100% !important;" alt=""/>
 			<br><br>
 				<div class="bxslider">
 					<?php foreach($promo as $promos): ?>
@@ -300,8 +299,7 @@ $pro_none = $query->result();
 	
 	<div >
 		<div class="row">
-			<div class="col-1"></div>
-			<div class="col-10" style="min-height:500px;">
+			<div class="col-12" style="min-height:500px;">
 				<div class="row justify-content-center">
 					<div class="col-12" style="min-height:500px; ">
 	

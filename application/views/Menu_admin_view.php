@@ -83,9 +83,12 @@ a:hover {
                         <li>
                             <a href="<?php echo base_url('administrator/homeplaylist');?>">  <i class="fa fa-plus-circle"></i>&nbsp; Home Playlist</a>
                         </li>
-						<!-- <li>
-                            <a href="<?php echo base_url('administrator/homebike');?>">  <i class="fa fa-plus-circle"></i>&nbsp; Home Bike</a>
-                        </li> -->
+						<li>
+                            <a href="<?php echo base_url('administrator/new_arrivals');?>">  <i class="fa fa-plus-circle"></i>&nbsp; New Arrivals</a>
+                        </li>
+						<li>
+                            <a href="<?php echo base_url('administrator/best_seller');?>">  <i class="fa fa-plus-circle"></i>&nbsp; Best Seller</a>
+                        </li>
                     </ul>    
                 </li>
                 

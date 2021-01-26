@@ -222,7 +222,7 @@
 	
 	#nav a.active {
 		font-size: 16px;
-		font-weight: 600;
+		font-weight: 100;
 		color: #ffffff!important;
 	}
 	
@@ -303,7 +303,6 @@
     max-width: 100%;
 }
 
-
 	</style>
 <body>
 	
@@ -334,6 +333,54 @@ $this->db->select("*");
 $this->db->from("main_category");
 $query = $this->db->get();
 $category = $query->result();
+?>
+
+<?php
+$this->db->select('promotion_product.*, brand.*');
+$this->db->from('promotion_product');
+$this->db->where("promotion_product.category",$id);
+$this->db->join('brand', 'promotion_product.brand = brand.id');
+// $this->db->join('model', 'promotion_product.model = model.id');
+$query = $this->db->get();
+$test = $query->row();
+?>
+
+<?php $id_brand = $test->brand; ?>
+<?php $id_category = $test->category; ?>
+
+<?php
+$this->db->select("*");
+$this->db->from("brand");
+$this->db->where("brand.id",$id_brand);
+$query = $this->db->get();
+$brand1 = $query->row();
+?>
+
+<?php
+$this->db->select("*");
+$this->db->from("main_category");
+$this->db->where("main_category.category_id",$id_category);
+$query = $this->db->get();
+$category1 = $query->row();
+?>
+
+<?php
+$this->db->select("*");
+$this->db->from("promotion_product");
+$this->db->where("promotion_product.category",$id);
+
+$query = $this->db->get();
+$product = $query->result();
+?>
+
+
+<?php
+$this->db->select("*");
+$this->db->from("promotion_product");
+$this->db->where("promotion_product.category",$id);
+
+$query = $this->db->get();
+$records = $query->num_rows();
 ?>
 
 </body>
@@ -406,9 +453,9 @@ $category = $query->result();
 		<div class="col-12" style="background:#fff; height:200px;">
 				<div class="row">
 						<div class="col-4 text_bmw">
-							HOME / CATEGORY / BRAKE / DISC BRAKE
+						HOME / CATEGORY / <?php echo $brand1->name; ?> /  <?php echo $category1->Name; ?>
 							<div class="text_cate">
-								DISC BRAKE
+							<?php echo $category1->Name; ?>
 							</div> 
 						</div>   
 						<div class="col-7" style="margin-top: 40px;">
@@ -577,7 +624,7 @@ $category = $query->result();
 <div class="col-8">
 		<div class="row"><!-- row Bar -->
 				<div class="col-2" style="margin-left: 20px;
-				 color:#666666; font-size:14px; font-weight:bold; padding-top:60px;"> 15 ITEMS </div>
+				 color:#666666; font-size:14px; font-weight:bold; padding-top:60px;">  <?php echo $records; ?> ITEMS </div>
 				<div class="col-10"> </div>
 		</div><!-- row Bar -->
 
@@ -590,34 +637,33 @@ $category = $query->result();
 
 	
 		<div class="row">
-												 <?php for ($i = 1; $i < 13; $i++) { ?>
-												<div class="col-4">
-												<!-- <a href="http://"> -->
-												<br>
-														<div class="container1">
-																<center>
-																<img class="image1" src="<?php echo base_url();?>img/product/category/6.png" class="image" alt="" />                           
-																</center>
-																<!-- <div class="overlay">
-																		<div class="text">READ MORE <i class="fas fa-arrow-right"></i></div>
-																</div> -->
-														</div>
-														<!-- </a>  -->
+
+		<?php foreach($product as $products): ?>						
+				<div class="col-4">
+					<!-- <a href="http://"> -->
+				<br>
+				<div class="container1">
+				<center>
+				<img class="image1" src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $products->img1; ?>" class="image" alt="" />                           
+				</center>
+				<!-- <div class="overlay">
+					<div class="text">READ MORE <i class="fas fa-arrow-right"></i></div>
+				</div> -->
+				</div>
+				<!-- </a>  -->
 						
-								 <div class="row">
-																<div class="col-12 text_title">BRAKE DISC 321X6 EVO S1000 RR 2019</div>
-																<div class="col-12" style="height:10px;"></div>
-																<div class="col-3 text_price1"><s>฿3,210</s></div>
-																<div class="col-3 text_price2">฿1,234</div>
-																<div class="col-5">
-																	<img src="<?php echo base_url();?>img/promotion/cart.png"  style="width:20px; float: right; margin-right: -20px; margin-top: 0px;" >                           
-																</div>
-																
-																
-														</div>
-				
-												</div>
-												 <?php } ?>
+				<div class="row">
+					<div class="col-12 text_title"><?php echo $products->name; ?></div>
+					<div class="col-12" style="height:10px;"></div>
+					<div class="col-3 text_price1"><s>฿<?php echo $products->price; ?></s></div>
+					<div class="col-3 text_price2">฿<?php echo $products->discount_price; ?></div>
+				<div class="col-5">
+					<img src="<?php echo base_url();?>img/promotion/cart.png"  style="width:20px; float: right; margin-right: -20px; margin-top: 0px;" >                           
+				</div>
+									
+				</div>
+			</div>
+		<?php endforeach; ?>									
 		
 		</div>
 		</div>

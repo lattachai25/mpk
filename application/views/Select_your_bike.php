@@ -61,7 +61,7 @@
     color:#666666;  
 }
 .text_bmw {
-    margin-left: 117px;
+    margin-left: 148px;
     margin-top: 23px;
     font-size: 18px;
     text-align: left;

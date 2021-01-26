@@ -243,15 +243,14 @@ $news = $query->result();
 	</div>
 	<div class="col-1"></div>
 	</div>
-<div class="container">
+<div class="container" style="width: 1700px !important;">
 	
 	
 	
 	<div class="row" style="margin-top:50px;">
-			<div class="col-1"></div>
-			<div class="col-10" style="min-height:500px;">
+			<div class="col-12" style="min-height:500px;">
 				<div class="row justify-content-center">
-					<div class="col-11" style="min-height:500px;">
+					<div class="col-12" style="min-height:500px;">
 						<div class="row">
 	<!-- box -->     
 	<?php foreach($news as $news2): ?>

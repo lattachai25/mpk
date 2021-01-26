@@ -123,7 +123,7 @@ div {margin: 0 auto}
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: 13px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -133,7 +133,7 @@ div {margin: 0 auto}
   text-align: center;
   border:2px solid #fff;
   padding:10px;
-  width:200px;
+  width:125px;
 }
 
 .show_top{
@@ -219,7 +219,6 @@ $this->db->from("model_category");
 $query = $this->db->get();
 $model = $query->result();
 ?>
-
 
 <div class="bg" style="margin-top:100px;"></div>
     

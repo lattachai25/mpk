@@ -53,8 +53,25 @@ $query = $this->db->get();
 $pro = $query->result();
 ?>
 
+<?php
+$this->db->select("*");
+$this->db->from("new_arrivals");
+$this->db->where("status",1);
+$this->db->limit(3, 0); 
+$this->db->order_by('new_arrivals_id','desc');
+$query = $this->db->get();
+$new_arrival = $query->result();
+?>
 
-
+<?php
+$this->db->select("*");
+$this->db->from("best_seller");
+$this->db->where("status",1);
+$this->db->limit(3, 0); 
+$this->db->order_by('best_seller_id','desc');
+$query = $this->db->get();
+$best_seller = $query->result();
+?>
 
 
 
@@ -188,7 +205,7 @@ $pro = $query->result();
 .container2 {
 position: relative;
   width: auto;
-  height: 150px;
+  height: 190px;
   padding: 0px;
 }
 .image {
@@ -205,7 +222,7 @@ position: relative;
     bottom: 0;
     left: -15px;
     right: -15px;
-    height: 175px;
+    height: 215px;
   width: auto;
   opacity: 0;
   transition: .5s ease;
@@ -218,7 +235,7 @@ position: relative;
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: 13px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -228,7 +245,7 @@ position: relative;
   text-align: center;
   border:2px solid #fff;
   padding:10px;
-  width:200px;
+  width:120px;
 }
 
 .text_title{
@@ -273,7 +290,7 @@ span{
 
 .bgcar{
     background: #fff;
-    min-height: 400px;
+    min-height: 300px;
 }
 .bg_slide{
     z-index:-9;
@@ -483,18 +500,15 @@ span{
 
         <div class="col-12">
         <div class="row">
-        
-          
 
-
-        <?php foreach($pro as $pros): ?>
+        <?php foreach($new_arrival as $new_arrivals): ?>
                         <div class="col-3">
                         <div class="col-11" style="border:1px solid #000;">
-                        <a href="<?php base_url();?>Promotion/view/<?php echo $pros->id;?>">
+                        <a href="<?php base_url();?>new_arrivals/view/<?php echo $new_arrivals->id;?>">
                         <br>
                             <div class="container2">
                                 <center>
-                                <img src="<?php echo base_url();?>assets/uploads/img_promotion_product/<?php echo $pros->img1;?>" class="image1" alt="" />
+                                <img src="<?php echo base_url();?>assets/uploads/new_arrivals/<?php echo $new_arrivals->img1;?>" class="image1" alt="" />
                                 </center>
                                 <div class="overlay">
                                     <div class="text">READ MORE <i class="fas fa-arrow-right"></i></div>
@@ -502,17 +516,6 @@ span{
                             </div>
                         </a> 
 
-                            <!-- <div class="row">
-                                
-                                <div class="col-12 text_title"><?php echo $pros->name;?></div>
-                                <div class="col-12" style="height:10px;"></div>
-                                
-                                <div class="col-2 text_price1"><s>฿<?php echo $pros->discount_price;?></s></div>
-                                <div class="col-2 text_price2">฿<?php echo $pros->price;?></div>
-                                <div class="col-5"></div>
-                                <div class="col-2"><img src="<?php echo base_url();?>img/promotion/cart.png" width="20px"></div>
-                                <div class="col-12" style="height:40px;"></div>
-                            </div> -->
                         </div>    
                         </div>
         <?php endforeach; ?>
@@ -535,38 +538,34 @@ span{
 <!-- New Arrivals -->
 <div class="row">
 <div class="col-1"></div>
-<div class="col-10" style="min-height:700px;">
+<div class="col-10" style="min-height:475px;">
     <img src="<?php echo base_url();?>img/home/MPK_Design_001_OK_150820_1A_create_16.png" width="100%" alt=""/>
-
+    <br><br>
     <!-- ROW BOX -->
     <div class="row">
-
         <div class="col-12">
-
         <div class="row">
-            <?php for ($i = 1; $i < 5; $i++) { ?>
-            <div class="col-3" style="padding-right: 0px !important; padding-left: 0px !important;">
-                <div class="row">
-                    <div style="border:3px solid #e8e8e8; margin:10px; height:400px; backgrount-color:#fff;">
-                        <img src="<?php echo base_url();?>img/home/2/<?php echo $i ?>.png" width="100%" />
-                    <div class="row" style="margin-top:10px;">
-                    <div class="col-9 text_price3">
-                    &nbsp; &nbsp; Brembo GP4 MS <br><br>
-                    <span>&nbsp; &nbsp; Monoblock 100mm ปั้นเบรมโบ้</span>
-                    </div>
-                    <div class="col-2 text_price3">
-                        9,999฿
-                    </div>
-                    </div>    
-                    </div> 
-                </div>   
-            </div>
-            <?php } ?>
+        <?php foreach($best_seller as $best_sellers): ?>
+                        <div class="col-3">
+                        <div class="col-11" style="border:1px solid #000;">
+                        <a href="<?php base_url();?>best_seller/view/<?php echo $best_sellers->id;?>">
+                        <br>
+                            <div class="container2">
+                                <center>
+                                <img src="<?php echo base_url();?>assets/uploads/best_seller/<?php echo $best_sellers->img1;?>" class="image1" alt="" />
+                                </center>
+                                <div class="overlay">
+                                    <div class="text">READ MORE <i class="fas fa-arrow-right"></i></div>
+                                </div>
+                            </div>
+                        </a> 
+
+                        </div>    
+                        </div>
+        <?php endforeach; ?>
+
         </div>
         <br>
-        <center>
-        <img src="<?php echo base_url();?>img/home/poit.png" alt="">
-        </center>
         </div>
     </div>
     <!-- ROW BOX -->
