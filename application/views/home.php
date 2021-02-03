@@ -216,17 +216,16 @@ position: relative;
 }
 
 .overlay {
-
-	position: absolute;
-	top: -25px;
+    position: absolute;
+    top: -20px;
     bottom: 0;
-    left: -15px;
-    right: -15px;
-    height: 215px;
-  width: auto;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #ff5e0d;
+    left: 0px;
+    right: 0px;
+    height: 254px;
+    width: 105%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #ff5e0d;
 }
 
 .container2:hover .overlay {
@@ -320,12 +319,12 @@ span{
 
 
 .image1{
-	margin-top: 10px;
-		padding-bottom: 20px;
-		padding-right: 5px;
-    padding-left: 5px;
-    height: 150px;
-    max-width: 100%;
+    margin-top: -20px;
+    /* padding-bottom: 20px; */
+    /* padding-right: 5px; */
+    /* padding-left: 5px; */
+    /* height: 150px; */
+    max-width: 105%;
 }
 
 </style>
@@ -503,7 +502,7 @@ span{
 
         <?php foreach($new_arrival as $new_arrivals): ?>
                         <div class="col-3">
-                        <div class="col-11" style="border:1px solid #000;">
+                        <div class="col-11">
                         <a href="<?php base_url();?>new_arrivals/view/<?php echo $new_arrivals->id;?>">
                         <br>
                             <div class="container2">
@@ -547,8 +546,8 @@ span{
         <div class="row">
         <?php foreach($best_seller as $best_sellers): ?>
                         <div class="col-3">
-                        <div class="col-11" style="border:1px solid #000;">
-                        <a href="<?php base_url();?>best_seller/view/<?php echo $best_sellers->id;?>">
+                        <div class="col-12">
+                        <a href="<?php base_url();?>best_seller/view/<?php echo $best_sellers->best_seller_id;?>">
                         <br>
                             <div class="container2">
                                 <center>
