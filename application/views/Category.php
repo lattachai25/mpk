@@ -59,7 +59,7 @@
 		color:#666666;  
 	}
 	.text_bmw{
-		margin-left:50px;
+		margin-left:85px;
 		margin-top:100px;
 		font-size:18px;
 		text-align:left;
@@ -458,7 +458,7 @@ $records = $query->num_rows();
 							<?php echo $category1->Name; ?>
 							</div> 
 						</div>   
-						<div class="col-7" style="margin-top: 40px;">
+						<div class="col-6" style="margin-top: 40px;">
 							<img src="<?php echo base_url();?>img/product/bar_right.png"width="100%" alt="" />
 						</div>
 				</div>
