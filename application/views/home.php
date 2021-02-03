@@ -57,7 +57,7 @@ $pro = $query->result();
 $this->db->select("*");
 $this->db->from("new_arrivals");
 $this->db->where("status",1);
-$this->db->limit(3, 0); 
+$this->db->limit(4, 0); 
 $this->db->order_by('new_arrivals_id','desc');
 $query = $this->db->get();
 $new_arrival = $query->result();
@@ -67,7 +67,7 @@ $new_arrival = $query->result();
 $this->db->select("*");
 $this->db->from("best_seller");
 $this->db->where("status",1);
-$this->db->limit(3, 0); 
+$this->db->limit(4, 0); 
 $this->db->order_by('best_seller_id','desc');
 $query = $this->db->get();
 $best_seller = $query->result();
@@ -221,8 +221,8 @@ position: relative;
     bottom: 0;
     left: 0px;
     right: 0px;
-    height: 254px;
-    width: 105%;
+    height: 295px;
+    width: 135%;
     opacity: 0;
     transition: .5s ease;
     background-color: #ff5e0d;
@@ -324,7 +324,7 @@ span{
     /* padding-right: 5px; */
     /* padding-left: 5px; */
     /* height: 150px; */
-    max-width: 105%;
+    max-width: 135%;
 }
 
 </style>
@@ -492,18 +492,17 @@ span{
  <!-- play -->
  <div class="row">
  <div class="col-1"></div>
-<div class="col-10" style="position:relative; margin-top:-150px;">
+<div class="col-10" style="height:700px;">
  <img src="<?php echo base_url();?>img/home/carbar.png" width="101%"/>
     <div class="row bgcar">
             <!-- ROW BOX -->
 
         <div class="col-12">
         <div class="row">
-
         <?php foreach($new_arrival as $new_arrivals): ?>
                         <div class="col-3">
                         <div class="col-11">
-                        <a href="<?php base_url();?>new_arrivals/view/<?php echo $new_arrivals->id;?>">
+                        <a href="<?php base_url();?>new_arrivals/view/<?php echo $new_arrivals->new_arrivals_id;?>">
                         <br>
                             <div class="container2">
                                 <center>
@@ -518,10 +517,6 @@ span{
                         </div>    
                         </div>
         <?php endforeach; ?>
-
-
-
-
         </div>
         <br>
         <center>
@@ -537,7 +532,7 @@ span{
 <!-- New Arrivals -->
 <div class="row">
 <div class="col-1"></div>
-<div class="col-10" style="min-height:475px;">
+<div class="col-10" style="min-height:520px;">
     <img src="<?php echo base_url();?>img/home/MPK_Design_001_OK_150820_1A_create_16.png" width="100%" alt=""/>
     <br><br>
     <!-- ROW BOX -->
@@ -546,7 +541,7 @@ span{
         <div class="row">
         <?php foreach($best_seller as $best_sellers): ?>
                         <div class="col-3">
-                        <div class="col-12">
+                        <div class="col-11">
                         <a href="<?php base_url();?>best_seller/view/<?php echo $best_sellers->best_seller_id;?>">
                         <br>
                             <div class="container2">

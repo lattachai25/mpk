@@ -73,7 +73,7 @@ div {margin: 0 auto}
 }
 
 .owl-item{
-    width: 185px !important;
+    width: 160px !important;
 }
 
 .itembox{
@@ -202,6 +202,7 @@ $gallery = $query->row();
 <?php
 $this->db->select("*");
 $this->db->from("gallery_img_logo");
+$this->db->join('model_category','model_category.id_brand_category = gallery_img_logo.id');
 $query = $this->db->get();
 $gallery2 = $query->result();
 ?>
@@ -251,10 +252,11 @@ $model = $query->result();
                             <div class="box_logo1" style="width:100%; display:inline-block; padding-right:0px; padding-left: 0px !important; padding-right: 0px !important;">
                                 <div id="owl-demo" class="owl-carousel owl-theme">
                                 <?php foreach($gallery2 as $gallery2s): ?>
+                                    
                                     <div class="item">
-                                    <img class="image_logo_show" src="<?php echo base_url();?>assets/uploads/gallery_logo/<?php echo $gallery2s->img_logo;?>" alt="" />
+                                  <a href="<?php echo base_url();?>category/view/<?php echo $gallery2s->id_brand_category;?>"> <img class="image_logo_show" src="<?php echo base_url();?>assets/uploads/gallery_logo/<?php echo $gallery2s->img_logo;?>" alt="" /></a> 
                                     </div>
-
+                               
                                 <?php endforeach; ?>
                                 <div class="item"><img class="image_logo_show" src="<?php echo base_url();?>img/gallery/icon_color/ducati.png" /></div>
                                 </div>
@@ -295,12 +297,10 @@ $model = $query->result();
     <div class="col-3" style="min-height:600px; background:#000; margin-left:0px;">
         <div class="row">
         <?php foreach($model as $models): ?>
-            
-        <div class="col-12"> <a href="<?php echo base_url();?>Gallery" id="linkimg"> <div class="itembox"> &nbsp; &nbsp; <?php echo $models->name;?> </div> </a> </div>
-            
-            <!-- <div class="col-12 itembox avction"> &nbsp; &nbsp; S 1000 RR 2020 </div> -->
-
-            <?php endforeach; ?>
+            <div class="col-12"> <a href="<?php echo base_url();?>category/view/<?php echo $models->id_brand_category;?>" id="linkimg"> 
+                <div class="itembox"> &nbsp; &nbsp; <?php echo $models->name;?></div> </a> 
+            </div>
+        <?php endforeach; ?>
         </div>
     </div>
     <!-- menu_left -->

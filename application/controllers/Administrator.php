@@ -391,8 +391,10 @@ function statusDis($value)
 			$crud->set_theme("bootstrap");
 			$crud->set_table("model_category")
 			->order_by('id','id')
-			->display_as('name','Name Model');
-	
+			->display_as('name','Name Model')
+			->display_as('id_brand_category','brand_category');
+
+			$crud->set_relation('id_brand_category','gallery_img_logo','name_brand');
 			// $crud->field_type('status','dropdown',array('1' => 'Active', '0' => 'Inactive'));
 			// $crud->set_field_upload('img_logo','assets/uploads/gallery_logo');
 			
