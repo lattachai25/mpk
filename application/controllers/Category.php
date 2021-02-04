@@ -29,7 +29,7 @@ class Category extends CI_Controller {
 			);
 	
 		 $contents['id'] = $id;
-		 $template['content'] = $this->load->view('Category',$contents,TRUE);
+		 $template['content'] = $this->load->view('Category_show',$contents,TRUE);
 		 $this->load->view('template2',$template);
 		}
 

@@ -329,8 +329,9 @@ $year = $query->result();
 <?php
 $this->db->select("*");
 $this->db->from("main_category");
+$this->db->where("main_category.category_id",$id);
 $query = $this->db->get();
-$category = $query->result();
+$id_category = $query->result();
 ?>
 
 <?php
@@ -343,8 +344,8 @@ $query = $this->db->get();
 $test = $query->row();
 ?>
 
-<?php $id_brand = $test->brand; ?>
-<?php $id_category = $test->category; ?>
+<!-- <?php $id_brand = $test->brand; ?>
+<?php $id_category = $test->category; ?> -->
 
 <?php
 $this->db->select("*");
@@ -448,12 +449,13 @@ $records = $query->num_rows();
 <!-- row min-height -->
 <div class="container">
 	<div class="row">
-		<div class="col-12" style="background:#fff; height:200px;">
+		<div class="col-12" style="background:#fff; height:15px;">
 				<div class="row">
-						<div class="col-4 text_bmw">
-						HOME / CATEGORY / <?php echo $brand1->name; ?> /  <?php echo $category1->Name; ?>
+						<div class="col-4 text_bmw" style="margin-top:43px !important;">
+						HOME / CATEGORY / 
+                        <!-- <?php echo $brand1->name; ?> /  <?php echo $category1->Name; ?> -->
 							<div class="text_cate">
-							<?php echo $category1->Name; ?>
+							<!-- <?php echo $category1->Name; ?> -->
 							</div> 
 						</div>   
 						<div class="col-6" style="margin-top: 40px;">
@@ -692,7 +694,7 @@ $records = $query->num_rows();
 </div><!-- row min-height -->
 
 
-        <img src="<?php echo base_url();?>img/product/bat_footer.png" width="100%" alt=""/>  
+        <img src="<?php echo base_url();?>img/product/bat_footer.png" width="100%" height="130px;" alt=""/>  
 
 
 

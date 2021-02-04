@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Show extends CI_Controller {
+class Show2 extends CI_Controller {
 	public function index()
 	{
 		$contents['cart_session'] = $this->session->userdata('cart_session');
@@ -16,7 +16,7 @@ class Show extends CI_Controller {
 		//   echo $model = $_POST['model'];
 		//   echo $year = $_POST['year'];
 		  
-		$template['content'] = $this->load->view('Show',$contents,TRUE);
+		$template['content'] = $this->load->view('Show2',$contents,TRUE);
 		$this->load->view('template2',$template);
 	
 	}

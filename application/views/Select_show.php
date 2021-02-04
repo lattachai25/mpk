@@ -128,16 +128,16 @@ $this->db->select("*");
 $this->db->from("main_category");
 $this->db->where("main_category.category_id",$id_category);
 $query = $this->db->get();
-$id_cate= $query->row();
+$id_cate = $query->row();
 ?>
 
-<?php $sub_category_id = $select->sub_category; ?>
+<?php echo $sub_category_id = $select->sub_category; ?>
 <?php
 $this->db->select("*");
 $this->db->from("sub_category");
 $this->db->where("sub_category.sub_category_id",$sub_category_id);
 $query = $this->db->get();
-$sub_cat= $query->row();
+echo $sub_cat = $query->row();
 ?>
 
 <div class="bg" style="margin-top:75px;"></div>
@@ -148,12 +148,13 @@ $sub_cat= $query->row();
 <img src="<?php echo base_url();?>img/product/product_detel/top.png" width="100%"/>
 </div>
 <div class="text_top">
-HOME / SELECT YOUR BIKE / <?php echo $id_cate->Name;?> / <span><?php echo $sub_cat->name_subcategory;?></span>
+<?php echo $sub_cat->name_subcategory; ?>
+HOME / SELECT YOUR BIKE / <?php echo $id_cate->Name;?> / <span></span>
 </div>
 <!-- top -->
 <!-- Center --->
 <div class="row">
-<div class="product">
+<div class="product"></div>
 
 <div class="row">    
   <div class="col-7">

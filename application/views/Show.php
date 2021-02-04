@@ -249,43 +249,64 @@ $category = $query->result();
 ?>
 
 <?php
-$brand = $_POST['brand'];
-$model = $_POST['model'];
-$year = $_POST['year'];
+ $brand = $_POST['brand'];
+ $model = $_POST['model'];
+ $year = $_POST['year'];
 ?>
-
-
 <?php
 $this->db->select("*");
-$this->db->from("select_your_bike")
-->where('select_your_bike.brand', $brand)
-->where('select_your_bike.model', $model)
-->where('select_your_bike.name_year', $year);
-$query = $this->db->get();
-$select_your_bike = $query->result();
-?>
-
-<?php
-$this->db->select("*");
-$this->db->from("brand");
+$this->db->from("brand")
+->where('brand.name', $brand);
 $query = $this->db->get();
 $brand = $query->result();
 ?>
 <?php
 $this->db->select("*");
-$this->db->from("model");
+$this->db->from("model")
+->where('model.name', $model);
 $query = $this->db->get();
 $model = $query->result();
 ?>
 
 <?php
 $this->db->select("*");
-$this->db->from("year");
+$this->db->from("year")
+->where('year.name_year', $year);
 $query = $this->db->get();
 $year = $query->result();
 ?>
 
+<?php
+$this->db->select("*");
+$this->db->from("select_your_bike");
+// ->where('select_your_bike.brand', $brand)
+// ->or_where('select_your_bike.model', $model)
+// ->or_where('select_your_bike.name_year', $year);
+$query = $this->db->get();
+$select_your_bike = $query->result();
+?>
+<?php
+$this->db->select("*");
+$this->db->from("brand");
+$query = $this->db->get();
+$brand1 = $query->result();
+?>
+<?php
+$this->db->select("*");
+$this->db->from("model");
+$query = $this->db->get();
+$model1 = $query->result();
+?>
 
+<?php
+$this->db->select("*");
+$this->db->from("year");
+$query = $this->db->get();
+$year1 = $query->result();
+?>
+<div class="row">
+<div class="col-1"></div>
+<div class="col-10">
 <div class="bg" style="margin-top:120px;"></div>
 <div class="row">
 <div class="col-1"></div>
@@ -305,12 +326,12 @@ $year = $query->result();
 <div class="col-2"></div>
 <div class="col-8">
 
-<form action="<?php echo base_url();?>Show" method="post" enctype="multipart/form-data">
+<form action="<?php echo base_url();?>Show2" method="post" enctype="multipart/form-data">
     <div class="form-row">
     <div class="form-group col-md-3">
         <select id="inputState" class="form-control" name="brand">
             <option selected> BRAND <i class="far fa-caret-circle-down"></i> </option>
-            <?php foreach($brand as $brands): ?>
+            <?php foreach($brand1 as $brands): ?>
             <option value="<?php echo $brands->name;?>"><?php echo $brands->name;?></option>
             <?php endforeach; ?>
         </select>
@@ -319,7 +340,7 @@ $year = $query->result();
         <div class="form-group col-md-3">
         <select id="inputState" class="form-control" name="model">
             <option selected> MODEL <i class="far fa-caret-circle-down"></i></option>
-            <?php foreach($model as $models): ?>
+            <?php foreach($model1 as $models): ?>
             <option value="<?php echo $models->name;?>"><?php echo $models->name;?></option>
             <?php endforeach; ?>
         </select>
@@ -328,7 +349,7 @@ $year = $query->result();
         <div class="form-group col-md-3">
         <select id="inputState" class="form-control" name="year">
             <option selected> YEAR <i class="far fa-caret-circle-down"></i></option>
-            <?php foreach($year as $years): ?>
+            <?php foreach($year1 as $years): ?>
             <option value="<?php echo $years->name_year;?>"><?php echo $years->name_year;?></option>
             <?php endforeach; ?>
             
@@ -352,7 +373,7 @@ $year = $query->result();
         <br><br>
 
                 <div class="col-12 textbrand"><center> <?php echo $brand = $_POST['brand'];?> - <?php echo $model = $_POST['model']; ?> - <?php echo $year = $_POST['year']; ?> </center></div>
-                <div class="col-12 textbrand_sub"><center> 25 ITEMS FOUND </center></div>
+                <div class="col-12 textbrand_sub"><center> 1125 ITEMS FOUND </center></div>
 
         </div>
     </div>    
@@ -619,6 +640,8 @@ $year = $query->result();
 
 </div>
 </div><!-- row min-height -->
+</div>
+</div>
 </body>
 
 <script>

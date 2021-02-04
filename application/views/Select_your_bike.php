@@ -274,8 +274,6 @@ $year = $query->result();
 $this->db->select('main_category.*, sub_category.*');
 $this->db->from('main_category');
 $this->db->join('sub_category', 'main_category.category_id = sub_category.category_id');
-    //  ->where('main_category.category_id', $id)
-
 $query = $this->db->get();
 $category = $query->result();
 ?>
@@ -293,41 +291,12 @@ $this->db->from("select_your_bike");
 $query = $this->db->get();
 $select_2 = $query->row();
 ?>
-
-<?php $select_band = $select_2->brand; ?>
 <?php
 $this->db->select("*");
-$this->db->from("brand");
-$this->db->where("brand.id",$select_band);
+$this->db->from("select_your_bike");
 $query = $this->db->get();
-$band_id = $query->row();
+$num = $query->num_rows();
 ?>
-
-<?php  $select_model = $select_2->model; ?>
-<?php
-$this->db->select("*");
-$this->db->from("model");
-$this->db->where("model.id",$select_model);
-$query = $this->db->get();
-$model_id = $query->row();
-?>
-
-<?php  $select_year = $select_2->name_year; ?>
-<?php
-$this->db->select("*");
-$this->db->from("year");
-$this->db->where("year.id",$select_year);
-$query = $this->db->get();
-$year_id = $query->row();
-?>
-
-
-
-
-
-
-
-
 
 <div class="bg" style="margin-top:120px;"></div>
 
@@ -396,9 +365,10 @@ $year_id = $query->row();
 			<div class="col-10" style="padding-right: 0px !important; padding-left: 0px !important;">
 					<div class="bar_item">
 					<br><br>
-									<div class="col-12 textbrand"><center> <?php echo $band_id->name; ?> - <?php echo $model_id->name; ?> - <?php echo $year_id->name_year; ?> </center></div>
-									<div class="col-12 textbrand_sub"><center> 25 ITEMS FOUND </center></div>
-
+									<div class="col-12 textbrand"><center> 
+									<!-- <?php echo $band->name; ?> - <?php echo $model_id->name; ?> - <?php echo $year_id->name_year; ?>  -->
+									</center></div>
+									<div class="col-12 textbrand_sub"><center> <?php echo $num;?> ITEMS FOUND </center></div>
 					</div>
 			</div>    
 	</div>
@@ -413,8 +383,8 @@ $year_id = $query->row();
 					<div class="col-6 text_bmw">
 					<a style="color: #666666; text-decoration: none;" href="<?php echo base_url();?>home">  HOME </a> / 
 					<a style="color: #666666; text-decoration: none;" href="<?php echo base_url();?>select_your_bike">SELECT YOUR BIKE</a> /
-					<?php echo $band_id->name; ?>  / <?php echo $model_id->name; ?> /
-					<?php echo $year_id->name_year; ?>
+					<!-- <?php echo $band->name; ?>  / <?php echo $model->name; ?> /
+					<?php echo $year->name_year; ?> -->
 
 					</div>
 			</div>
@@ -437,37 +407,14 @@ $year_id = $query->row();
 						
 					</div>
 
-	<!-- <?php foreach($category as $categorys): ?>
-	<button class="dropdown-btn">
-	<div class="row">
-	<div class="col-9"><?php echo $categorys->Name; ?></div>
-	<div class="col-1"><i class="fa fa-plus fa-sm"></i></div>
-	</div>
-	</button>
-
-		<div class="dropdown-container">
-			<a href="<?php echo $categorys->id; ?>"><?php echo $categorys->name_subcategory; ?> <?php echo $categorys->id; ?>
-			</a>
-		</div>
-		<?php endforeach; ?> -->
-
-
 	<div class="dropdown">
 		<button class="btn dropdown-toggle <?php if($this->uri->segment(1)==""){echo "active";}?> menuside" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" >
 		BRAKE SYSTEM
 		</button>
 		<ul class="dropdown-menu" >
-			<!-- <li><a class="<?php if($this->uri->segment(1)==""){echo "active";}?> dropdown-item menuside" href="">BRAKE MASTER CYLINDER</a></li> -->
 			<?php foreach($category as $categorys): ?>
 				<li> <a class="dropdown-item menuside" href="<?php echo base_url();?>Select_your_bike/view2/<?php echo $categorys->sub_category_id;?>"><?php echo $categorys->name_subcategory; ?></a></li>
 			<?php endforeach; ?>
-			<!-- <li><a class="dropdown-item menuside" href="#">CLUTCH MASTER CYLINDER</a></li>
-			<li><a class="dropdown-item menuside" href="#">REAR BRAKE MASTER CYLINDER</a></li>
-			<li><a class="dropdown-item menuside" href="#">FRONT CALIPER</a></li>
-			<li><a class="dropdown-item menuside" href="#">REAR CALIPER</a></li>
-			<li><a class="dropdown-item menuside" href="#" >DISC BRAKE</a></li>
-			<li><a class="dropdown-item menuside" href="#">BRAKE PAD</a></li>
-			<li><a class="dropdown-item menuside" href="#">SWITCH</a></li> -->
 		</ul>
 	</div>
 

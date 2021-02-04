@@ -420,7 +420,7 @@ span{
                 <div class="col-8">
                     <div class="form-row">
                         <div class="form-group col-md-3">
-                            <select id="inputState" class="form-control">
+                            <select id="inputState" class="form-control" name="brand">
                                 <option selected> BRAND <i class="far fa-caret-circle-down"></i> </option>
                                 <?php foreach($brand as $brands): ?>
                                      <option><?php echo $brands->name;?></option>
@@ -428,7 +428,7 @@ span{
                             </select>
                         </div>
                         <div class="form-group col-md-3">
-                            <select id="inputState" class="form-control">
+                            <select id="inputState" class="form-control" name="model">
                                 <option selected> MODEL <i class="far fa-caret-circle-down"></i></option>
                                 <?php foreach($model as $models): ?>
                                     <option><?php echo $models->name;?></option>
@@ -436,7 +436,7 @@ span{
                             </select>
                         </div>
                         <div class="form-group col-md-3">
-                            <select id="inputState" class="form-control">
+                            <select id="inputState" class="form-control" name="year">
                                 <option selected> YEAR <i class="far fa-caret-circle-down"></i></option>
                                 <?php foreach($year as $years): ?>
                                     <option><?php echo $years->name_year;?></option>

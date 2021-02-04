@@ -24,10 +24,10 @@ class Select_your_bike extends CI_Controller {
         $template["base_url"] = base_url() . "select_your_bike";
         $template["total_rows"] = $this->Select_your_bike_model->get_count();
         $template["per_page"] = 15;
-        $template["uri_segment"] = 2;
+        $template["uri_segment"] = 3;
 
         $this->pagination->initialize($template);
-        $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
         $contents["links"] = $this->pagination->create_links();
         $contents['select_your_bike'] = $this->Select_your_bike_model->get_select_your_bike($template["per_page"], $page);
 		$template['content'] = $this->load->view('Select_your_bike',$contents,TRUE);

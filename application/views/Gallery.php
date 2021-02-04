@@ -316,13 +316,13 @@ $model = $query->result();
             <div class="row">
             <?php foreach($product as $products): ?>
             <div class="col-4">
-                <a href="http://">
+            
                         <br>
                     <div class="container">
                         <img src="<?php echo base_url();?>assets/uploads/product_category/<?php echo $products->name;?>"  width="40px" class="image" alt=""/ >
                         <div class="overlay"><div class="text">FULL IMAGE</div></div>
                     </div>
-                </a> 
+            
             </div>
             <?php endforeach; ?>
             </div>

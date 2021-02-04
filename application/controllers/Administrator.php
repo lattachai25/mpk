@@ -455,15 +455,10 @@ function statusDis($value)
 
 			->display_as('date','date');
 
-
-			
-
-			// $crud->set_relation('id','main_Category','name');
-			// $crud->set_relation('id','sub_category','name');
 			$crud->set_relation('name_color','color','name_color');
 			$crud->set_relation('name_year','year','name_year');
 			$crud->set_relation('name_size','Size_product','name_size');
-			$crud->set_relation('name','model_category','name');
+			$crud->set_relation('name_model','model','name');
 			$crud->set_relation('Type','product_status','name');
 			$crud->set_relation('main_category','main_category','name');
 			$crud->set_relation('name_subcategory','sub_category','name_subcategory');
