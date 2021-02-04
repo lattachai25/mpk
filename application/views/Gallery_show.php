@@ -67,7 +67,6 @@ div {margin: 0 auto}
 
 .image_logo_show:hover{
          filter: grayscale(0%);
-         width:180px;
         background-image: url('<?php echo base_url();?>img/gallery/box_03.png');
         background-repeat:no-repeat;
 
@@ -189,7 +188,11 @@ div {margin: 0 auto}
 span{
     color: #ff5e0d;
 }
-
+/* .owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100% !important;
+} */
 
 </style>
 <?php
@@ -208,9 +211,13 @@ $query = $this->db->get();
 $gallery2 = $query->result();
 ?>
 
+
+<?php echo $id; ?> 
+
 <?php
 $this->db->select("*");
 $this->db->from("product_category");
+$this->db->where("product_category.id_brand_category",$id);
 $query = $this->db->get();
 $product = $query->result();
 ?>
@@ -267,7 +274,7 @@ $model = $query->result();
                     </div>
                     <div class="col-1" style="padding: 0px !important;">
                         <div class="customNavigation">
-                            <a class="btn next" style="margin-top:70px; float:right; margin-right:45px;">
+                            <a class="btn next" style="margin-top:70px; float:right; margin-right: 45px;">
                                 <img src="<?php echo base_url();?>img/gallery/next_orange_slide.png" width="40px" alt=""/ >
                             </a>
                         </div>
