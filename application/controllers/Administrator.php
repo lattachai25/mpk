@@ -416,14 +416,11 @@ function statusDis($value)
 			->display_as('id_model_category','model_category')
 			->display_as('date','date');
 
-
-			
-
 			$crud->set_relation('id_brand_category','gallery_img_logo','name_brand');
 			$crud->set_relation('id_model_category','model_category','name');
 
 			$crud->field_type('status','dropdown',array('1' => 'Active', '0' => 'Inactive'));
-			$crud->set_field_upload('name','assets/uploads/product_category');
+			$crud->set_field_upload('name','assets/uploads/product_category/');
 			
 			$output = $crud->render();
 			$this->_example_output($output);

@@ -72,8 +72,8 @@
 
 .container {
   position: relative;
-  width: 270px;
-  height: 270px;
+  width: 203px;
+  height: 203px;
   border:1px solid #bbbbbb;
   padding: 0px;
 }
@@ -81,8 +81,8 @@
 .image {
   margin-top:0px;
   display: block;
-  width: 268px;
-  height: 268px;
+  width: 200px;
+  height: 200px;
   background-size: cover;
 }
 

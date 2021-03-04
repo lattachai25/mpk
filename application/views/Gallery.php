@@ -4,7 +4,7 @@
 }
 .slide_bar{
     padding-top: 20px;
-    height:230px;
+    height:180px;
     background:#000;
     color:#fff;
 }
@@ -26,7 +26,7 @@ div {margin: 0 auto}
     }
 
 #owl-demo .item{
-  width: 185px;
+  width: 142px;
   border-left:1px solid #fff;
   border-right:1px solid #fff;
   padding: 0px 0px;
@@ -60,21 +60,21 @@ div {margin: 0 auto}
 .image_logo_show{
         filter: grayscale(100%);
         margin-top:2px;
-        height:180px;
-        width:180px;
+        height:140px;
+        width:140px;
         z-index: -1;
 }
 
 .image_logo_show:hover{
          filter: grayscale(0%);
-         width:180px;
-        background-image: url('<?php echo base_url();?>img/gallery/box_03.png');
+         width:140px;
+        background-image: url('<?php echo base_url();?>img/gallery/box_130.png');
         background-repeat:no-repeat;
 
 }
 
 .owl-item{
-    width: 185px !important;
+    width: 142px !important;
 }
 
 .itembox{
@@ -83,6 +83,7 @@ div {margin: 0 auto}
     padding:10px;
     padding-left:10px;
     height:50px;
+    width:100%;
 }
 
 .itembox:hover{
@@ -103,6 +104,7 @@ div {margin: 0 auto}
 .image {
   display: block;
   width: 100%;
+  height:160px;
 }
 
 .overlay {
@@ -179,13 +181,18 @@ div {margin: 0 auto}
     color:#000;
     font-weight: bold;
 }
-
-
 .text_page{
     width:2px;
     font-size:18px;
     font-weight: bold;
 }
+
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 104% !important;
+}
+
 span{
     color: #ff5e0d;
 }
@@ -243,7 +250,7 @@ $model = $query->result();
 
                         <div class="col-1" style="padding: 0px !important; margin-left: 188px !important;">
                             <div class="customNavigation">
-                                <a class="btn prev" style="margin-top:70px; float:left; margin-left:45px;">
+                                <a class="btn prev" style="margin-top:45px; float:left; margin-left:45px;">
                                 <img src="<?php echo base_url();?>img/gallery/back_orange_slide.png" width="40px" alt=""/ >
                                 </a>
                             </div>
@@ -267,7 +274,7 @@ $model = $query->result();
                     </div>
                     <div class="col-1" style="padding: 0px !important;">
                         <div class="customNavigation">
-                            <a class="btn next" style="margin-top:70px; float:right; margin-right:45px;">
+                            <a class="btn next" style="margin-top:45px; float:right; margin-right:16px;">
                                 <img src="<?php echo base_url();?>img/gallery/next_orange_slide.png" width="40px" alt=""/ >
                             </a>
                         </div>
@@ -297,16 +304,22 @@ $model = $query->result();
 </style>
 
     <!-- menu_left -->  
-    <div class="col-3" style="min-height:600px; background:#000; margin-left:0px;">
+    <div class="col-3" style="min-height:600px; background:#000; padding-left: 0 px !important; padding-right: 0 px !important;">
         <div class="row">
-        <?php foreach($model as $models): ?>
-            <div class="col-12"> <a href="<?php echo base_url();?>Gallery/view/<?php echo $models->id_brand_category;?>" id="linkimg"> 
-                <div class="itembox"> &nbsp; &nbsp; <?php echo $models->name;?></div> </a> 
-            </div>
-        <?php endforeach; ?>
+            <?php foreach($model as $models): ?>
+                <div class="itembox"> 
+                <a href="<?php echo base_url();?>Gallery/view/<?php echo $models->id_brand_category;?>" id="linkimg"> 
+                    <div> &nbsp; &nbsp; <?php echo $models->name;?></div> 
+                </a> 
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <!-- menu_left -->
+
+
+
+
     <!-- menu item show  -->
     <div class="col-9 itemshow" style="min-height:600px; background:#fff;">
     <br><br>
@@ -363,10 +376,10 @@ $(document).ready(function() {
 
  owl.owlCarousel({
      items : 5,
-     itemsDesktop : [1000,5],
+     itemsDesktop : [2000,5],
      itemsDesktopSmall : [900,5],
      itemsTablet: [600,5],
-     itemsMobile : false,
+     itemsMobile : true,
      pagination: false,
      dots: false,
  });

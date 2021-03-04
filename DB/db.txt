@@ -1,0 +1,5 @@
+
+Database:	mpkconcept_DB
+Host:	localhost
+Username:	mpkconcept_DB
+Password:	h4maqqfd

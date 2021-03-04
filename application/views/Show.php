@@ -72,17 +72,17 @@
 
 .container {
   position: relative;
-  width: 270px;
-  height: 270px;
+  width: 230px;
+  height: 230px;
   border:1px solid #bbbbbb;
   padding: 0px;
 }
 
 .image {
-  margin-top:0px;
+  margin-top:10px;
   display: block;
-  width: 268px;
-  height: 268px;
+  width: 200px;
+  height: 210px;
   background-size: cover;
 }
 
@@ -387,7 +387,7 @@ $year1 = $query->result();
     <div class="row">
     
         <div class="col-6 text_bmw">
-        HOME / SELECT YOUR BIKE /<?php echo $brand = $_POST['brand'];?> / <?php echo $model = $_POST['model']; ?> / <?php echo $year = $_POST['year']; ?>
+        HOME / SELECT YOUR BIKE /<?php echo $brand12 = $_POST['brand'];?> / <?php echo $model12 = $_POST['model']; ?> / <?php echo $year12 = $_POST['year']; ?>
         </div>
     </div>
 

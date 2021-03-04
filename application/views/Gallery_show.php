@@ -102,6 +102,7 @@ div {margin: 0 auto}
 .image {
   display: block;
   width: 100%;
+  height:160px;
 }
 
 .overlay {

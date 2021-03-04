@@ -73,7 +73,7 @@
 .container1 {
   position: relative;
   width: auto;
-  height: 150px;
+  height: 210px;
   border:1px solid #bbbbbb;
   padding: 0px;
 }
@@ -92,7 +92,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 150px;
+  height: 210px;
   width: auto;
   opacity: 0;
   transition: .5s ease;
@@ -241,7 +241,7 @@ span{
 		padding-bottom: 20px;
 		padding-right: 5px;
     padding-left: 5px;
-    height: 150px;
+    height: 190px;
     max-width: 100%;
 }
 
@@ -529,7 +529,7 @@ $num = $query->num_rows();
 			<div class="col-12" style="background:#000; color:#fff; font-weight:bold; font-size:14px; padding-top:8px; padding-bottom:8px;">BRAND</div>
 			<div class="col-12 input">
 
-			<input type="text" class="search_input" name="search" width="48">
+			<input type="text" class="search_input" name="search" width="48" id="myInput">
 			<i class="fas fa-search search" style="margin-left:-20px; position: absolute; font-size:20px; z-index:1;"></i>
 			</div>
 
@@ -551,7 +551,7 @@ $num = $query->num_rows();
 			<div class="col-10">
 			<div class="row">
 												<?php foreach($select_your_bike as $select_your_bikes): ?>
-													<div class="col-4">
+													<div class="col-4" id="myDIV">
 													<a href="<?php echo base_url();?>Select_your_bike/view/<?php echo $select_your_bikes->id;?>">
 													
 													<br>
@@ -636,6 +636,16 @@ for (i = 0; i < dropdown.length; i++) {
   }
   });
 }
+</script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myDIV *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
 </script>
 <script src="bootstrap/scripts/jquery.min.js"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
